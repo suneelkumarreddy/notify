@@ -10,13 +10,16 @@ Currently, it is being developed to make use of the following providers:
 
 > NOTE: All instructions below are based on the assumption that you are using a Linux system like Ubuntu.
 
-# Setting Up The Build Tools
+Setting Up The Build Tools
+--------------------------
 
     $ sudo apt-get install build-essential libtool automake uuid-dev gcc-multilib pkg-config -y
 
-# Compiling And Installing Protobuf Compiler
+> Also install **Apache Maven** in your system. The instructions to install it is easily available online else where, hence I am not including it here.
 
-    $ cd /tmp
+Compiling And Installing Protobuf Compiler
+--------------------------
+
     $ wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
     $ tar -xvf protobuf-2.6.1.tar.gz
     $ cd protobuf-2.6.1
@@ -24,6 +27,35 @@ Currently, it is being developed to make use of the following providers:
     $ make
     $ make check
     $ sudo make install
-    
+
+Compiling And Installing Java Protocol Buffers Runtime Library
+--------------------------
+
+Continuing in the same folder as in the above instructions...
+
+    $ cd java
+    $ mvn test
+    $ mvn install -DskipTests
+
+To install the 'Lite' version use the lite profile
+
+    $ mvn install -P lite -DskipTests
+
+The resulting artifact can be referenced as 
+
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>2.6.1</version>
+      </dependency>
+
+or for the lite version
+
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>2.6.1</version>
+        <classifier>lite</classifier>
+      </dependency>
 
 > Written with [StackEdit](https://stackedit.io/).
