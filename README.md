@@ -6,7 +6,7 @@ Currently, it is being developed to make use of the following providers:
 
  - SMTP (can configure email templates too)
  - SMS Gateway (Rest API)
- - PubSub Server (Faye)
+ - Pub-Sub System (Faye)
 
 > NOTE: All instructions below are based on the assumption that you are using a Linux system like Ubuntu.
 
