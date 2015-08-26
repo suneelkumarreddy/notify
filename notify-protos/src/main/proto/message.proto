@@ -1,0 +1,66 @@
+package notify.protos;
+
+option java_package = "in.notwork.notify.protos";
+
+option java_outer_classname = "MessageProto";
+
+message Message {
+
+    required Sender sender = 1;
+    required Receiver receiver = 2;
+    required Content content = 3;
+    optional string message_id = 4;
+    required Type type = 5;
+    optional Status status = 6;
+    optional Priority priority = 7 [default = LOW];
+}
+
+message Sender {
+    optional string email_id = 1;
+    optional string phone_number = 2;
+    optional string name = 3; // person or channel name
+}
+
+message Receiver {
+    optional string email_id = 1;
+    optional string phone_number = 2;
+    optional string name = 3; // person or channel name
+}
+
+message Content {
+    optional string subject = 1;
+    optional string body = 2;
+    optional string template_name = 3;
+    repeated MapFieldEntry template_map = 4;
+    optional ContentType content_type = 5;
+}
+
+message MapFieldEntry {
+    required string key = 1;
+    required string value = 2;
+}
+
+enum Priority {
+    LOW = 0;
+    MEDIUM = 1;
+    HIGH = 2;
+}
+
+enum Status {
+    IN = 0;
+    OUT = 1;
+    SENT = 2;
+    FAILED = 3;
+}
+
+enum Type {
+    SMS = 0;
+    EMAIL = 1;
+    PUSH = 2;
+}
+
+enum ContentType {
+    PLAIN = 0;
+    JSON = 1;
+    XML = 2;
+}

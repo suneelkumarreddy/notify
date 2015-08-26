@@ -37,10 +37,6 @@ Continuing in the same folder as in the above instructions...
     $ mvn test
     $ mvn install -DskipTests
 
-To install the 'Lite' version use the lite profile
-
-    $ mvn install -P lite -DskipTests
-
 The resulting artifact can be referenced as 
 
       <dependency>
@@ -49,7 +45,11 @@ The resulting artifact can be referenced as
         <version>2.6.1</version>
       </dependency>
 
-or for the lite version
+To install the 'Lite' version use the lite profile
+
+    $ mvn install -P lite -DskipTests
+    
+and the resulting artifact can be referenced as
 
       <dependency>
         <groupId>com.google.protobuf</groupId>
