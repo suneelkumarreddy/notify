@@ -295,41 +295,41 @@ public final class MessageProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     boolean hasSender();
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     in.notwork.notify.protos.MessageProto.Sender getSender();
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder();
 
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     boolean hasReceiver();
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     in.notwork.notify.protos.MessageProto.Receiver getReceiver();
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder();
 
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     boolean hasContent();
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     in.notwork.notify.protos.MessageProto.Content getContent();
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder();
 
@@ -547,19 +547,19 @@ public final class MessageProto {
     public static final int SENDER_FIELD_NUMBER = 1;
     private in.notwork.notify.protos.MessageProto.Sender sender_;
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     public boolean hasSender() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     public in.notwork.notify.protos.MessageProto.Sender getSender() {
       return sender_;
     }
     /**
-     * <code>required .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Sender sender = 1;</code>
      */
     public in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder() {
       return sender_;
@@ -568,19 +568,19 @@ public final class MessageProto {
     public static final int RECEIVER_FIELD_NUMBER = 2;
     private in.notwork.notify.protos.MessageProto.Receiver receiver_;
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     public boolean hasReceiver() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     public in.notwork.notify.protos.MessageProto.Receiver getReceiver() {
       return receiver_;
     }
     /**
-     * <code>required .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Receiver receiver = 2;</code>
      */
     public in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder() {
       return receiver_;
@@ -589,19 +589,19 @@ public final class MessageProto {
     public static final int CONTENT_FIELD_NUMBER = 3;
     private in.notwork.notify.protos.MessageProto.Content content_;
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     public boolean hasContent() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     public in.notwork.notify.protos.MessageProto.Content getContent() {
       return content_;
     }
     /**
-     * <code>required .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Content content = 3;</code>
      */
     public in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder() {
       return content_;
@@ -709,23 +709,7 @@ public final class MessageProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasSender()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasReceiver()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasContent()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getContent().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1052,23 +1036,7 @@ public final class MessageProto {
       }
 
       public final boolean isInitialized() {
-        if (!hasSender()) {
-          
-          return false;
-        }
-        if (!hasReceiver()) {
-          
-          return false;
-        }
-        if (!hasContent()) {
-          
-          return false;
-        }
         if (!hasType()) {
-          
-          return false;
-        }
-        if (!getContent().isInitialized()) {
           
           return false;
         }
@@ -1098,13 +1066,13 @@ public final class MessageProto {
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Sender, in.notwork.notify.protos.MessageProto.Sender.Builder, in.notwork.notify.protos.MessageProto.SenderOrBuilder> senderBuilder_;
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public boolean hasSender() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public in.notwork.notify.protos.MessageProto.Sender getSender() {
         if (senderBuilder_ == null) {
@@ -1114,7 +1082,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public Builder setSender(in.notwork.notify.protos.MessageProto.Sender value) {
         if (senderBuilder_ == null) {
@@ -1130,7 +1098,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public Builder setSender(
           in.notwork.notify.protos.MessageProto.Sender.Builder builderForValue) {
@@ -1144,7 +1112,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public Builder mergeSender(in.notwork.notify.protos.MessageProto.Sender value) {
         if (senderBuilder_ == null) {
@@ -1163,7 +1131,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public Builder clearSender() {
         if (senderBuilder_ == null) {
@@ -1176,7 +1144,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public in.notwork.notify.protos.MessageProto.Sender.Builder getSenderBuilder() {
         bitField0_ |= 0x00000001;
@@ -1184,7 +1152,7 @@ public final class MessageProto {
         return getSenderFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       public in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder() {
         if (senderBuilder_ != null) {
@@ -1194,7 +1162,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Sender sender = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Sender, in.notwork.notify.protos.MessageProto.Sender.Builder, in.notwork.notify.protos.MessageProto.SenderOrBuilder> 
@@ -1214,13 +1182,13 @@ public final class MessageProto {
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Receiver, in.notwork.notify.protos.MessageProto.Receiver.Builder, in.notwork.notify.protos.MessageProto.ReceiverOrBuilder> receiverBuilder_;
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public boolean hasReceiver() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public in.notwork.notify.protos.MessageProto.Receiver getReceiver() {
         if (receiverBuilder_ == null) {
@@ -1230,7 +1198,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public Builder setReceiver(in.notwork.notify.protos.MessageProto.Receiver value) {
         if (receiverBuilder_ == null) {
@@ -1246,7 +1214,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public Builder setReceiver(
           in.notwork.notify.protos.MessageProto.Receiver.Builder builderForValue) {
@@ -1260,7 +1228,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public Builder mergeReceiver(in.notwork.notify.protos.MessageProto.Receiver value) {
         if (receiverBuilder_ == null) {
@@ -1279,7 +1247,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public Builder clearReceiver() {
         if (receiverBuilder_ == null) {
@@ -1292,7 +1260,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public in.notwork.notify.protos.MessageProto.Receiver.Builder getReceiverBuilder() {
         bitField0_ |= 0x00000002;
@@ -1300,7 +1268,7 @@ public final class MessageProto {
         return getReceiverFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       public in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder() {
         if (receiverBuilder_ != null) {
@@ -1310,7 +1278,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Receiver receiver = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Receiver, in.notwork.notify.protos.MessageProto.Receiver.Builder, in.notwork.notify.protos.MessageProto.ReceiverOrBuilder> 
@@ -1330,13 +1298,13 @@ public final class MessageProto {
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Content, in.notwork.notify.protos.MessageProto.Content.Builder, in.notwork.notify.protos.MessageProto.ContentOrBuilder> contentBuilder_;
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public boolean hasContent() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public in.notwork.notify.protos.MessageProto.Content getContent() {
         if (contentBuilder_ == null) {
@@ -1346,7 +1314,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public Builder setContent(in.notwork.notify.protos.MessageProto.Content value) {
         if (contentBuilder_ == null) {
@@ -1362,7 +1330,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public Builder setContent(
           in.notwork.notify.protos.MessageProto.Content.Builder builderForValue) {
@@ -1376,7 +1344,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public Builder mergeContent(in.notwork.notify.protos.MessageProto.Content value) {
         if (contentBuilder_ == null) {
@@ -1395,7 +1363,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
@@ -1408,7 +1376,7 @@ public final class MessageProto {
         return this;
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public in.notwork.notify.protos.MessageProto.Content.Builder getContentBuilder() {
         bitField0_ |= 0x00000004;
@@ -1416,7 +1384,7 @@ public final class MessageProto {
         return getContentFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       public in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
@@ -1426,7 +1394,7 @@ public final class MessageProto {
         }
       }
       /**
-       * <code>required .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Content content = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           in.notwork.notify.protos.MessageProto.Content, in.notwork.notify.protos.MessageProto.Content.Builder, in.notwork.notify.protos.MessageProto.ContentOrBuilder> 
@@ -2529,6 +2497,44 @@ public final class MessageProto {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getCcList();
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    int getCcCount();
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    java.lang.String getCc(int index);
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getCcBytes(int index);
+
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getBccList();
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    int getBccCount();
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    java.lang.String getBcc(int index);
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getBccBytes(int index);
   }
   /**
    * Protobuf type {@code notify.protos.Receiver}
@@ -2600,6 +2606,24 @@ public final class MessageProto {
               name_ = bs;
               break;
             }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                cc_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              cc_.add(bs);
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                bcc_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              bcc_.add(bs);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2608,6 +2632,12 @@ public final class MessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          cc_ = cc_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          bcc_ = bcc_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2778,10 +2808,70 @@ public final class MessageProto {
       }
     }
 
+    public static final int CC_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList cc_;
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCcList() {
+      return cc_;
+    }
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    public int getCcCount() {
+      return cc_.size();
+    }
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    public java.lang.String getCc(int index) {
+      return cc_.get(index);
+    }
+    /**
+     * <code>repeated string cc = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCcBytes(int index) {
+      return cc_.getByteString(index);
+    }
+
+    public static final int BCC_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList bcc_;
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBccList() {
+      return bcc_;
+    }
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    public int getBccCount() {
+      return bcc_.size();
+    }
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    public java.lang.String getBcc(int index) {
+      return bcc_.get(index);
+    }
+    /**
+     * <code>repeated string bcc = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBccBytes(int index) {
+      return bcc_.getByteString(index);
+    }
+
     private void initFields() {
       emailId_ = "";
       phoneNumber_ = "";
       name_ = "";
+      cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2805,6 +2895,12 @@ public final class MessageProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getNameBytes());
       }
+      for (int i = 0; i < cc_.size(); i++) {
+        output.writeBytes(4, cc_.getByteString(i));
+      }
+      for (int i = 0; i < bcc_.size(); i++) {
+        output.writeBytes(5, bcc_.getByteString(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2825,6 +2921,24 @@ public final class MessageProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getNameBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cc_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(cc_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getCcList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bcc_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(bcc_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getBccList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2949,6 +3063,10 @@ public final class MessageProto {
         bitField0_ = (bitField0_ & ~0x00000002);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -2989,6 +3107,16 @@ public final class MessageProto {
           to_bitField0_ |= 0x00000004;
         }
         result.name_ = name_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          cc_ = cc_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.cc_ = cc_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          bcc_ = bcc_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.bcc_ = bcc_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3018,6 +3146,26 @@ public final class MessageProto {
         if (other.hasName()) {
           bitField0_ |= 0x00000004;
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.cc_.isEmpty()) {
+          if (cc_.isEmpty()) {
+            cc_ = other.cc_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureCcIsMutable();
+            cc_.addAll(other.cc_);
+          }
+          onChanged();
+        }
+        if (!other.bcc_.isEmpty()) {
+          if (bcc_.isEmpty()) {
+            bcc_ = other.bcc_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureBccIsMutable();
+            bcc_.addAll(other.bcc_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3299,6 +3447,192 @@ public final class MessageProto {
         return this;
       }
 
+      private com.google.protobuf.LazyStringList cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCcIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          cc_ = new com.google.protobuf.LazyStringArrayList(cc_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCcList() {
+        return cc_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public int getCcCount() {
+        return cc_.size();
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public java.lang.String getCc(int index) {
+        return cc_.get(index);
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCcBytes(int index) {
+        return cc_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public Builder setCc(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcIsMutable();
+        cc_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public Builder addCc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcIsMutable();
+        cc_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public Builder addAllCc(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCcIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cc_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public Builder clearCc() {
+        cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc = 4;</code>
+       */
+      public Builder addCcBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcIsMutable();
+        cc_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureBccIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          bcc_ = new com.google.protobuf.LazyStringArrayList(bcc_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBccList() {
+        return bcc_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public int getBccCount() {
+        return bcc_.size();
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public java.lang.String getBcc(int index) {
+        return bcc_.get(index);
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBccBytes(int index) {
+        return bcc_.getByteString(index);
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public Builder setBcc(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccIsMutable();
+        bcc_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public Builder addBcc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccIsMutable();
+        bcc_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public Builder addAllBcc(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBccIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bcc_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public Builder clearBcc() {
+        bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc = 5;</code>
+       */
+      public Builder addBccBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccIsMutable();
+        bcc_.add(value);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:notify.protos.Receiver)
     }
 
@@ -3330,55 +3664,32 @@ public final class MessageProto {
 
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     boolean hasBody();
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     java.lang.String getBody();
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     com.google.protobuf.ByteString
         getBodyBytes();
-
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    boolean hasTemplateName();
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    java.lang.String getTemplateName();
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getTemplateNameBytes();
-
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry> 
-        getTemplateMapList();
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    in.notwork.notify.protos.MessageProto.MapFieldEntry getTemplateMap(int index);
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    int getTemplateMapCount();
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    java.util.List<? extends in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder> 
-        getTemplateMapOrBuilderList();
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder getTemplateMapOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code notify.protos.Content}
@@ -3444,20 +3755,6 @@ public final class MessageProto {
               body_ = bs;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              templateName_ = bs;
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                templateMap_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.MapFieldEntry>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              templateMap_.add(input.readMessage(in.notwork.notify.protos.MessageProto.MapFieldEntry.PARSER, extensionRegistry));
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3466,9 +3763,6 @@ public final class MessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          templateMap_ = java.util.Collections.unmodifiableList(templateMap_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3547,12 +3841,22 @@ public final class MessageProto {
     private java.lang.Object body_;
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     public boolean hasBody() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     public java.lang.String getBody() {
       java.lang.Object ref = body_;
@@ -3570,6 +3874,11 @@ public final class MessageProto {
     }
     /**
      * <code>optional string body = 2;</code>
+     *
+     * <pre>
+     *    optional string template_name = 3;
+     *    repeated MapFieldEntry template_map = 4;
+     * </pre>
      */
     public com.google.protobuf.ByteString
         getBodyBytes() {
@@ -3585,88 +3894,9 @@ public final class MessageProto {
       }
     }
 
-    public static final int TEMPLATE_NAME_FIELD_NUMBER = 3;
-    private java.lang.Object templateName_;
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    public boolean hasTemplateName() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    public java.lang.String getTemplateName() {
-      java.lang.Object ref = templateName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          templateName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string template_name = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTemplateNameBytes() {
-      java.lang.Object ref = templateName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        templateName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TEMPLATE_MAP_FIELD_NUMBER = 4;
-    private java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry> templateMap_;
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    public java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry> getTemplateMapList() {
-      return templateMap_;
-    }
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    public java.util.List<? extends in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder> 
-        getTemplateMapOrBuilderList() {
-      return templateMap_;
-    }
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    public int getTemplateMapCount() {
-      return templateMap_.size();
-    }
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    public in.notwork.notify.protos.MessageProto.MapFieldEntry getTemplateMap(int index) {
-      return templateMap_.get(index);
-    }
-    /**
-     * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-     */
-    public in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder getTemplateMapOrBuilder(
-        int index) {
-      return templateMap_.get(index);
-    }
-
     private void initFields() {
       subject_ = "";
       body_ = "";
-      templateName_ = "";
-      templateMap_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3674,12 +3904,6 @@ public final class MessageProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      for (int i = 0; i < getTemplateMapCount(); i++) {
-        if (!getTemplateMap(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3692,12 +3916,6 @@ public final class MessageProto {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getBodyBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getTemplateNameBytes());
-      }
-      for (int i = 0; i < templateMap_.size(); i++) {
-        output.writeMessage(4, templateMap_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3715,14 +3933,6 @@ public final class MessageProto {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getBodyBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getTemplateNameBytes());
-      }
-      for (int i = 0; i < templateMap_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, templateMap_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3833,7 +4043,6 @@ public final class MessageProto {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getTemplateMapFieldBuilder();
         }
       }
       private static Builder create() {
@@ -3846,14 +4055,6 @@ public final class MessageProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         body_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        templateName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        if (templateMapBuilder_ == null) {
-          templateMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          templateMapBuilder_.clear();
-        }
         return this;
       }
 
@@ -3890,19 +4091,6 @@ public final class MessageProto {
           to_bitField0_ |= 0x00000002;
         }
         result.body_ = body_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.templateName_ = templateName_;
-        if (templateMapBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            templateMap_ = java.util.Collections.unmodifiableList(templateMap_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.templateMap_ = templateMap_;
-        } else {
-          result.templateMap_ = templateMapBuilder_.build();
-        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3929,48 +4117,11 @@ public final class MessageProto {
           body_ = other.body_;
           onChanged();
         }
-        if (other.hasTemplateName()) {
-          bitField0_ |= 0x00000004;
-          templateName_ = other.templateName_;
-          onChanged();
-        }
-        if (templateMapBuilder_ == null) {
-          if (!other.templateMap_.isEmpty()) {
-            if (templateMap_.isEmpty()) {
-              templateMap_ = other.templateMap_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureTemplateMapIsMutable();
-              templateMap_.addAll(other.templateMap_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.templateMap_.isEmpty()) {
-            if (templateMapBuilder_.isEmpty()) {
-              templateMapBuilder_.dispose();
-              templateMapBuilder_ = null;
-              templateMap_ = other.templateMap_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              templateMapBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getTemplateMapFieldBuilder() : null;
-            } else {
-              templateMapBuilder_.addAllMessages(other.templateMap_);
-            }
-          }
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        for (int i = 0; i < getTemplateMapCount(); i++) {
-          if (!getTemplateMap(i).isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -4072,12 +4223,22 @@ public final class MessageProto {
       private java.lang.Object body_ = "";
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public boolean hasBody() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public java.lang.String getBody() {
         java.lang.Object ref = body_;
@@ -4095,6 +4256,11 @@ public final class MessageProto {
       }
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public com.google.protobuf.ByteString
           getBodyBytes() {
@@ -4111,6 +4277,11 @@ public final class MessageProto {
       }
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public Builder setBody(
           java.lang.String value) {
@@ -4124,6 +4295,11 @@ public final class MessageProto {
       }
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public Builder clearBody() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -4133,6 +4309,11 @@ public final class MessageProto {
       }
       /**
        * <code>optional string body = 2;</code>
+       *
+       * <pre>
+       *    optional string template_name = 3;
+       *    repeated MapFieldEntry template_map = 4;
+       * </pre>
        */
       public Builder setBodyBytes(
           com.google.protobuf.ByteString value) {
@@ -4145,322 +4326,6 @@ public final class MessageProto {
         return this;
       }
 
-      private java.lang.Object templateName_ = "";
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public boolean hasTemplateName() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public java.lang.String getTemplateName() {
-        java.lang.Object ref = templateName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            templateName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTemplateNameBytes() {
-        java.lang.Object ref = templateName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          templateName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public Builder setTemplateName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        templateName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public Builder clearTemplateName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        templateName_ = getDefaultInstance().getTemplateName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string template_name = 3;</code>
-       */
-      public Builder setTemplateNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        templateName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry> templateMap_ =
-        java.util.Collections.emptyList();
-      private void ensureTemplateMapIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          templateMap_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.MapFieldEntry>(templateMap_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          in.notwork.notify.protos.MessageProto.MapFieldEntry, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder, in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder> templateMapBuilder_;
-
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry> getTemplateMapList() {
-        if (templateMapBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(templateMap_);
-        } else {
-          return templateMapBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public int getTemplateMapCount() {
-        if (templateMapBuilder_ == null) {
-          return templateMap_.size();
-        } else {
-          return templateMapBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry getTemplateMap(int index) {
-        if (templateMapBuilder_ == null) {
-          return templateMap_.get(index);
-        } else {
-          return templateMapBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder setTemplateMap(
-          int index, in.notwork.notify.protos.MessageProto.MapFieldEntry value) {
-        if (templateMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTemplateMapIsMutable();
-          templateMap_.set(index, value);
-          onChanged();
-        } else {
-          templateMapBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder setTemplateMap(
-          int index, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder builderForValue) {
-        if (templateMapBuilder_ == null) {
-          ensureTemplateMapIsMutable();
-          templateMap_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          templateMapBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder addTemplateMap(in.notwork.notify.protos.MessageProto.MapFieldEntry value) {
-        if (templateMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTemplateMapIsMutable();
-          templateMap_.add(value);
-          onChanged();
-        } else {
-          templateMapBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder addTemplateMap(
-          int index, in.notwork.notify.protos.MessageProto.MapFieldEntry value) {
-        if (templateMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTemplateMapIsMutable();
-          templateMap_.add(index, value);
-          onChanged();
-        } else {
-          templateMapBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder addTemplateMap(
-          in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder builderForValue) {
-        if (templateMapBuilder_ == null) {
-          ensureTemplateMapIsMutable();
-          templateMap_.add(builderForValue.build());
-          onChanged();
-        } else {
-          templateMapBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder addTemplateMap(
-          int index, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder builderForValue) {
-        if (templateMapBuilder_ == null) {
-          ensureTemplateMapIsMutable();
-          templateMap_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          templateMapBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder addAllTemplateMap(
-          java.lang.Iterable<? extends in.notwork.notify.protos.MessageProto.MapFieldEntry> values) {
-        if (templateMapBuilder_ == null) {
-          ensureTemplateMapIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, templateMap_);
-          onChanged();
-        } else {
-          templateMapBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder clearTemplateMap() {
-        if (templateMapBuilder_ == null) {
-          templateMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          templateMapBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public Builder removeTemplateMap(int index) {
-        if (templateMapBuilder_ == null) {
-          ensureTemplateMapIsMutable();
-          templateMap_.remove(index);
-          onChanged();
-        } else {
-          templateMapBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder getTemplateMapBuilder(
-          int index) {
-        return getTemplateMapFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder getTemplateMapOrBuilder(
-          int index) {
-        if (templateMapBuilder_ == null) {
-          return templateMap_.get(index);  } else {
-          return templateMapBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public java.util.List<? extends in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder> 
-           getTemplateMapOrBuilderList() {
-        if (templateMapBuilder_ != null) {
-          return templateMapBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(templateMap_);
-        }
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder addTemplateMapBuilder() {
-        return getTemplateMapFieldBuilder().addBuilder(
-            in.notwork.notify.protos.MessageProto.MapFieldEntry.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder addTemplateMapBuilder(
-          int index) {
-        return getTemplateMapFieldBuilder().addBuilder(
-            index, in.notwork.notify.protos.MessageProto.MapFieldEntry.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .notify.protos.MapFieldEntry template_map = 4;</code>
-       */
-      public java.util.List<in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder> 
-           getTemplateMapBuilderList() {
-        return getTemplateMapFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          in.notwork.notify.protos.MessageProto.MapFieldEntry, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder, in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder> 
-          getTemplateMapFieldBuilder() {
-        if (templateMapBuilder_ == null) {
-          templateMapBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              in.notwork.notify.protos.MessageProto.MapFieldEntry, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder, in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder>(
-                  templateMap_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
-                  getParentForChildren(),
-                  isClean());
-          templateMap_ = null;
-        }
-        return templateMapBuilder_;
-      }
-
       // @@protoc_insertion_point(builder_scope:notify.protos.Content)
     }
 
@@ -4470,655 +4335,6 @@ public final class MessageProto {
     }
 
     // @@protoc_insertion_point(class_scope:notify.protos.Content)
-  }
-
-  public interface MapFieldEntryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:notify.protos.MapFieldEntry)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required string key = 1;</code>
-     */
-    boolean hasKey();
-    /**
-     * <code>required string key = 1;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <code>required string key = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <code>required string value = 2;</code>
-     */
-    boolean hasValue();
-    /**
-     * <code>required string value = 2;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <code>required string value = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * Protobuf type {@code notify.protos.MapFieldEntry}
-   */
-  public static final class MapFieldEntry extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:notify.protos.MapFieldEntry)
-      MapFieldEntryOrBuilder {
-    // Use MapFieldEntry.newBuilder() to construct.
-    private MapFieldEntry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private MapFieldEntry(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final MapFieldEntry defaultInstance;
-    public static MapFieldEntry getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public MapFieldEntry getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MapFieldEntry(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              key_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              value_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_MapFieldEntry_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_MapFieldEntry_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              in.notwork.notify.protos.MessageProto.MapFieldEntry.class, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<MapFieldEntry> PARSER =
-        new com.google.protobuf.AbstractParser<MapFieldEntry>() {
-      public MapFieldEntry parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MapFieldEntry(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MapFieldEntry> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int KEY_FIELD_NUMBER = 1;
-    private java.lang.Object key_;
-    /**
-     * <code>required string key = 1;</code>
-     */
-    public boolean hasKey() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required string key = 1;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          key_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string key = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private java.lang.Object value_;
-    /**
-     * <code>required string value = 2;</code>
-     */
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string value = 2;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          value_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string value = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      key_ = "";
-      value_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasKey()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasValue()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getKeyBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getValueBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getKeyBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getValueBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.MapFieldEntry parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.MapFieldEntry prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code notify.protos.MapFieldEntry}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:notify.protos.MapFieldEntry)
-        in.notwork.notify.protos.MessageProto.MapFieldEntryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_MapFieldEntry_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_MapFieldEntry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                in.notwork.notify.protos.MessageProto.MapFieldEntry.class, in.notwork.notify.protos.MessageProto.MapFieldEntry.Builder.class);
-      }
-
-      // Construct using in.notwork.notify.protos.MessageProto.MapFieldEntry.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        key_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_MapFieldEntry_descriptor;
-      }
-
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry getDefaultInstanceForType() {
-        return in.notwork.notify.protos.MessageProto.MapFieldEntry.getDefaultInstance();
-      }
-
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry build() {
-        in.notwork.notify.protos.MessageProto.MapFieldEntry result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public in.notwork.notify.protos.MessageProto.MapFieldEntry buildPartial() {
-        in.notwork.notify.protos.MessageProto.MapFieldEntry result = new in.notwork.notify.protos.MessageProto.MapFieldEntry(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.key_ = key_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.value_ = value_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof in.notwork.notify.protos.MessageProto.MapFieldEntry) {
-          return mergeFrom((in.notwork.notify.protos.MessageProto.MapFieldEntry)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.MapFieldEntry other) {
-        if (other == in.notwork.notify.protos.MessageProto.MapFieldEntry.getDefaultInstance()) return this;
-        if (other.hasKey()) {
-          bitField0_ |= 0x00000001;
-          key_ = other.key_;
-          onChanged();
-        }
-        if (other.hasValue()) {
-          bitField0_ |= 0x00000002;
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasKey()) {
-          
-          return false;
-        }
-        if (!hasValue()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        in.notwork.notify.protos.MessageProto.MapFieldEntry parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (in.notwork.notify.protos.MessageProto.MapFieldEntry) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object key_ = "";
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public boolean hasKey() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            key_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public Builder clearKey() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string key = 1;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            value_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string value = 2;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:notify.protos.MapFieldEntry)
-    }
-
-    static {
-      defaultInstance = new MapFieldEntry(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:notify.protos.MapFieldEntry)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -5141,11 +4357,6 @@ public final class MessageProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_notify_protos_Content_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_notify_protos_MapFieldEntry_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_notify_protos_MapFieldEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5156,25 +4367,22 @@ public final class MessageProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\rmessage.proto\022\rnotify.protos\"\222\002\n\007Messa" +
-      "ge\022%\n\006sender\030\001 \002(\0132\025.notify.protos.Sende" +
-      "r\022)\n\010receiver\030\002 \002(\0132\027.notify.protos.Rece" +
-      "iver\022\'\n\007content\030\003 \002(\0132\026.notify.protos.Co" +
+      "ge\022%\n\006sender\030\001 \001(\0132\025.notify.protos.Sende" +
+      "r\022)\n\010receiver\030\002 \001(\0132\027.notify.protos.Rece" +
+      "iver\022\'\n\007content\030\003 \001(\0132\026.notify.protos.Co" +
       "ntent\022\022\n\nmessage_id\030\004 \001(\t\022!\n\004type\030\005 \002(\0162" +
       "\023.notify.protos.Type\022%\n\006status\030\006 \001(\0162\025.n" +
       "otify.protos.Status\022.\n\010priority\030\007 \001(\0162\027." +
       "notify.protos.Priority:\003LOW\">\n\006Sender\022\020\n" +
       "\010email_id\030\001 \001(\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n" +
-      "\004name\030\003 \001(\t\"@\n\010Receiver\022\020\n\010email_id\030\001 \001(",
-      "\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"s\n" +
-      "\007Content\022\017\n\007subject\030\001 \001(\t\022\014\n\004body\030\002 \001(\t\022" +
-      "\025\n\rtemplate_name\030\003 \001(\t\0222\n\014template_map\030\004" +
-      " \003(\0132\034.notify.protos.MapFieldEntry\"+\n\rMa" +
-      "pFieldEntry\022\013\n\003key\030\001 \002(\t\022\r\n\005value\030\002 \002(\t*" +
-      ")\n\010Priority\022\007\n\003LOW\020\000\022\n\n\006MEDIUM\020\001\022\010\n\004HIGH" +
-      "\020\002*/\n\006Status\022\006\n\002IN\020\000\022\007\n\003OUT\020\001\022\010\n\004SENT\020\002\022" +
-      "\n\n\006FAILED\020\003*$\n\004Type\022\007\n\003SMS\020\000\022\t\n\005EMAIL\020\001\022" +
-      "\010\n\004PUSH\020\002B(\n\030in.notwork.notify.protosB\014M" +
-      "essageProto"
+      "\004name\030\003 \001(\t\"Y\n\010Receiver\022\020\n\010email_id\030\001 \001(",
+      "\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\n\n" +
+      "\002cc\030\004 \003(\t\022\013\n\003bcc\030\005 \003(\t\"(\n\007Content\022\017\n\007sub" +
+      "ject\030\001 \001(\t\022\014\n\004body\030\002 \001(\t*)\n\010Priority\022\007\n\003" +
+      "LOW\020\000\022\n\n\006MEDIUM\020\001\022\010\n\004HIGH\020\002*/\n\006Status\022\006\n" +
+      "\002IN\020\000\022\007\n\003OUT\020\001\022\010\n\004SENT\020\002\022\n\n\006FAILED\020\003*$\n\004" +
+      "Type\022\007\n\003SMS\020\000\022\t\n\005EMAIL\020\001\022\010\n\004PUSH\020\002B(\n\030in" +
+      ".notwork.notify.protosB\014MessageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5205,19 +4413,13 @@ public final class MessageProto {
     internal_static_notify_protos_Receiver_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_notify_protos_Receiver_descriptor,
-        new java.lang.String[] { "EmailId", "PhoneNumber", "Name", });
+        new java.lang.String[] { "EmailId", "PhoneNumber", "Name", "Cc", "Bcc", });
     internal_static_notify_protos_Content_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_notify_protos_Content_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_notify_protos_Content_descriptor,
-        new java.lang.String[] { "Subject", "Body", "TemplateName", "TemplateMap", });
-    internal_static_notify_protos_MapFieldEntry_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_notify_protos_MapFieldEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_notify_protos_MapFieldEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Subject", "Body", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
