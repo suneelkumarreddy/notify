@@ -10,7 +10,7 @@
     <artifactId>notify-protos</artifactId>
     <packaging>jar</packaging>
 
-    <name>notify-protos</name>
+    <name>Protos For Notify</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

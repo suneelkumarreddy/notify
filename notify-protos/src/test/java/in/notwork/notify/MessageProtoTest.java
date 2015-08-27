@@ -52,7 +52,6 @@ public class MessageProtoTest extends TestCase {
                         Content.newBuilder()
                                 .setSubject("Hello!")
                                 .setBody("Hello Lily!")
-                                .setContentType(ContentType.PLAIN)
                                 .build()
                 )
                 .setMessageId(UUID.randomUUID().toString())

@@ -32,7 +32,6 @@ message Content {
     optional string body = 2;
     optional string template_name = 3;
     repeated MapFieldEntry template_map = 4;
-    optional ContentType content_type = 5;
 }
 
 message MapFieldEntry {
@@ -57,10 +56,4 @@ enum Type {
     SMS = 0;
     EMAIL = 1;
     PUSH = 2;
-}
-
-enum ContentType {
-    PLAIN = 0;
-    JSON = 1;
-    XML = 2;
 }
