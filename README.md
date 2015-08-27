@@ -10,15 +10,13 @@ Currently, it is being developed to make use of the following providers:
 
 > NOTE: All instructions below are based on the assumption that you are using a Linux system like Ubuntu.
 
-Setting Up The Build Tools
---------------------------
+## Setting Up The Build Tools
 
     $ sudo apt-get install build-essential libtool automake uuid-dev gcc-multilib pkg-config -y
 
 > Also install **Apache Maven** in your system. The instructions to install it is easily available online else where, hence I am not including it here.
 
-Compiling And Installing Protobuf Compiler
---------------------------
+## Compiling And Installing Protobuf Compiler
 
     $ wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
     $ tar -xvf protobuf-2.6.1.tar.gz
@@ -28,8 +26,7 @@ Compiling And Installing Protobuf Compiler
     $ make check
     $ sudo make install
 
-Compiling And Installing Java Protocol Buffers Runtime Library
---------------------------
+## Compiling And Installing Java Protocol Buffers Runtime Library
 
 Continuing in the same folder as in the above instructions...
 
