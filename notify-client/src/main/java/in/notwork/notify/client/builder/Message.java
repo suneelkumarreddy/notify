@@ -7,7 +7,7 @@ import java.util.UUID;
 /**
  * @author rishabh.
  */
-public class Message {
+public final class Message {
 
     private MessageProto.Message.Builder builder;
 
@@ -31,129 +31,114 @@ public class Message {
         return initBuilder(MessageType.PUSH);
     }
 
-    public Message to(String name, String emailId) {
-        MessageProto.Receiver receiver =
+    public Message to(final String name, final String emailId) {
+        mergeReceiver(
                 MessageProto.Receiver.newBuilder()
                         .setName(name)
                         .setEmailId(emailId)
-                        .build();
-        mergeReceiver(receiver);
+                        .build()
+        );
         return this;
     }
 
-    public Message cc(String emailId) {
+    public Message cc(final String emailId) {
         mergeReceiver(
                 MessageProto.Receiver.newBuilder()
                         .addCc(emailId)
-                        .build());
+                        .build()
+        );
         return this;
     }
 
-    public Message bcc(String emailId) {
-        mergeReceiver(MessageProto.Receiver.newBuilder()
-                .addBcc(emailId)
-                .build());
+    public Message bcc(final String emailId) {
+        mergeReceiver(
+                MessageProto.Receiver.newBuilder()
+                        .addBcc(emailId)
+                        .build()
+        );
         return this;
     }
 
-    public Message to(String phoneNumber) {
-        MessageProto.Receiver receiver =
+    public Message to(final String phoneNumber) {
+        mergeReceiver(
                 MessageProto.Receiver.newBuilder()
                         .setPhoneNumber(phoneNumber)
-                        .build();
-        mergeReceiver(receiver);
+                        .build()
+        );
         return this;
     }
 
-    public Message channel(String channelName) {
-        MessageProto.Receiver receiver =
+    public Message channel(final String channelName) {
+        mergeReceiver(
                 MessageProto.Receiver.newBuilder()
                         .setName(channelName)
-                        .build();
-        mergeReceiver(receiver);
+                        .build()
+        );
         return this;
     }
 
-    public Message from(String name, String emailId) {
-        MessageProto.Sender sender = MessageProto.Sender.newBuilder()
-                .setName(name)
-                .setEmailId(emailId)
-                .build();
-        mergeSender(sender);
+    public Message from(final String name, final String emailId) {
+        mergeSender(
+                MessageProto.Sender.newBuilder()
+                        .setName(name)
+                        .setEmailId(emailId)
+                        .build()
+        );
         return this;
     }
 
-    public Message from(String phoneNumber) {
-        MessageProto.Sender sender = MessageProto.Sender.newBuilder()
-                .setPhoneNumber(phoneNumber)
-                .build();
-        mergeSender(sender);
+    public Message from(final String phoneNumber) {
+        mergeSender(
+                MessageProto.Sender.newBuilder()
+                        .setPhoneNumber(phoneNumber)
+                        .build()
+        );
         return this;
     }
 
-    public Message subject(String subject) {
-        MessageProto.Content content = MessageProto.Content.newBuilder()
-                .setSubject(subject)
-                .build();
-        mergeContent(content);
+    public Message subject(final String subject) {
+        mergeContent(
+                MessageProto.Content.newBuilder()
+                        .setSubject(subject)
+                        .build()
+        );
         return this;
     }
 
-    public Message body(String body) {
-        MessageProto.Content content = MessageProto.Content.newBuilder()
-                .setBody(body)
-                .build();
-        mergeContent(content);
+    public Message body(final String body) {
+        mergeContent(
+                MessageProto.Content.newBuilder()
+                        .setBody(body)
+                        .build()
+        );
         return this;
     }
 
-    public Message message(String body) {
-        MessageProto.Content content = MessageProto.Content.newBuilder()
-                .setBody(body)
-                .build();
-        mergeContent(content);
+    public Message message(final String body) {
+        mergeContent(
+                MessageProto.Content.newBuilder()
+                        .setBody(body)
+                        .build()
+        );
         return this;
     }
 
-    public Message priority(MessagePriority priority) {
+    public Message priority(final MessagePriority priority) {
         if (null != this.builder) {
             this.builder.setPriority(getPriority(priority));
         }
         return this;
     }
 
-    public Message status(MessageStatus status) {
+    public Message status(final MessageStatus status) {
         if (null != this.builder) {
             this.builder.setStatus(getStatus(status));
         }
         return this;
     }
-/*
 
-    public Message useMap(Map<String, String> map) {
-        MessageProto.Content.Builder contentBuilder = MessageProto.Content.newBuilder();
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            contentBuilder.addTemplateMap(
-                    MessageProto.MapFieldEntry.newBuilder()
-                            .setKey(entry.getKey())
-                            .setValue(entry.getValue())
-            );
-        }
-        mergeContent(contentBuilder.build());
-        return this;
-    }
-
-    public Message useTemplate(String templateName) {
-        MessageProto.Content content = MessageProto.Content.newBuilder()
-                .setTemplateName(templateName)
-                .build();
-        mergeContent(content);
-        return this;
-    }
-*/
-
-    private static Message initBuilder(MessageType type) {
-        Message message = new Message();
+    private static Message initBuilder(final MessageType type) {
+        final Message message = new Message();
         // Set default message id and priority and init builder.
         message.builder = MessageProto.Message.newBuilder()
                 .setMessageId(UUID.randomUUID().toString())
@@ -162,7 +147,7 @@ public class Message {
         return message;
     }
 
-    private void mergeReceiver(MessageProto.Receiver receiver) {
+    private void mergeReceiver(final MessageProto.Receiver receiver) {
         if (null != this.builder) {
             if (this.builder.hasReceiver()) {
                 this.builder.mergeReceiver(receiver);
@@ -172,7 +157,7 @@ public class Message {
         }
     }
 
-    private void mergeSender(MessageProto.Sender sender) {
+    private void mergeSender(final MessageProto.Sender sender) {
         if (null != this.builder) {
             if (this.builder.hasSender()) {
                 this.builder.mergeSender(sender);
@@ -182,42 +167,58 @@ public class Message {
         }
     }
 
-    private static MessageProto.Priority getPriority(MessagePriority priority) {
+    private static MessageProto.Priority getPriority(final MessagePriority priority) {
+        MessageProto.Priority protoPriority;
         switch (priority) {
             case HIGH:
-                return MessageProto.Priority.HIGH;
+                protoPriority = MessageProto.Priority.HIGH;
+                break;
             case MEDIUM:
-                return MessageProto.Priority.MEDIUM;
+                protoPriority = MessageProto.Priority.MEDIUM;
+                break;
             default:
-                return MessageProto.Priority.LOW;
+                protoPriority = MessageProto.Priority.LOW;
+                break;
         }
+        return protoPriority;
     }
 
-    private MessageProto.Status getStatus(MessageStatus status) {
+    private MessageProto.Status getStatus(final MessageStatus status) {
+        MessageProto.Status protoStatus;
         switch (status) {
             case IN:
-                return MessageProto.Status.IN;
+                protoStatus = MessageProto.Status.IN;
+                break;
             case OUT:
-                return MessageProto.Status.OUT;
+                protoStatus = MessageProto.Status.OUT;
+                break;
             case SENT:
-                return MessageProto.Status.SENT;
+                protoStatus = MessageProto.Status.SENT;
+                break;
             default:
-                return MessageProto.Status.FAILED;
+                protoStatus = MessageProto.Status.FAILED;
+                break;
         }
+        return protoStatus;
     }
 
-    private static MessageProto.Type getType(MessageType type) {
+    private static MessageProto.Type getType(final MessageType type) {
+        MessageProto.Type protoType;
         switch (type) {
             case EMAIL:
-                return MessageProto.Type.EMAIL;
+                protoType = MessageProto.Type.EMAIL;
+                break;
             case SMS:
-                return MessageProto.Type.SMS;
+                protoType = MessageProto.Type.SMS;
+                break;
             default:
-                return MessageProto.Type.PUSH;
+                protoType = MessageProto.Type.PUSH;
+                break;
         }
+        return protoType;
     }
 
-    private void mergeContent(MessageProto.Content content) {
+    private void mergeContent(final MessageProto.Content content) {
         if (null != this.builder) {
             if (this.builder.hasContent()) {
                 this.builder.mergeContent(content);

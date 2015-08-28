@@ -26,21 +26,34 @@
 
     <name>Notify Client</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
+        <!-- Notify Dependencies -->
         <dependency>
             <groupId>in.notwork</groupId>
             <artifactId>notify-protos</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <!-- RabbitMQ Dependencies -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+        <!-- Lyra Dependencies -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jhalterman</groupId>
+            <artifactId>lyra</artifactId>
+            <version>lyra-0.5.2</version>
         </dependency>
     </dependencies>
 </project>
