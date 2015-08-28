@@ -1,4 +1,4 @@
-package in.notwork.notify.client.builder;
+package in.notwork.notify.client.message;
 
 /**
  * @author rishabh.

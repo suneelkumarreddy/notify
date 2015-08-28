@@ -1,8 +1,8 @@
 package in.notwork.notify.client;
 
-import in.notwork.notify.client.builder.Message;
 import in.notwork.notify.client.queues.Queue;
 import in.notwork.notify.client.queues.QueueFactory;
+import in.notwork.notify.protos.MessageProto;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -26,7 +26,7 @@ public final class Notify {
     }
 
     // TODO Exception handling - to shutdown queue and test
-    public static void send(final Message message) throws IOException {
+    public static void send(final MessageProto.Message message) throws IOException {
         final Queue queue = QueueFactory.getInstance().getQueue();
 
         try {
@@ -37,7 +37,7 @@ public final class Notify {
         }
 
         try {
-            queue.put(message.build().toByteArray());
+            queue.put(message.toByteArray());
         } catch (IOException e) {
             LOG.fatal("Unable to send the message...", e);
             throw new IOException("Unable to send the message...", e);
