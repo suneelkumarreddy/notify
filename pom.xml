@@ -20,8 +20,8 @@
     <artifactId>notify</artifactId>
 
     <modules>
-        <module>notify-protos</module>
         <module>notify-client</module>
+        <module>notify-server</module>
     </modules>
 
     <groupId>in.notwork</groupId>

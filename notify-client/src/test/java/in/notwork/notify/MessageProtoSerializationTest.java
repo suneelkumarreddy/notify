@@ -1,4 +1,4 @@
-package in.notwork;
+package in.notwork.notify;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import in.notwork.notify.client.message.*;

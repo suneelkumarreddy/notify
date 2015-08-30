@@ -32,14 +32,7 @@ message Receiver {
 message Content {
     optional string subject = 1;
     optional string body = 2;
-    //    optional string template_name = 3;
-    //    repeated MapFieldEntry template_map = 4;
 }
-
-//message MapFieldEntry {
-//    required string key = 1;
-//    required string value = 2;
-//}
 
 enum Priority {
     LOW = 0;
