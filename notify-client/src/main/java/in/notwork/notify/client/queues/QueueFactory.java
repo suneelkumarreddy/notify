@@ -3,8 +3,8 @@ package in.notwork.notify.client.queues;
 import in.notwork.notify.client.queues.impl.RabbitMQ;
 import in.notwork.notify.client.util.NotifyConstants;
 import in.notwork.notify.client.util.PropertiesUtil;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
  */
 public final class QueueFactory {
 
-    private static final Log LOG = LogFactory.getLog(QueueFactory.class);
+    private static final Logger LOG = LoggerFactory.getLogger(QueueFactory.class);
 
     private static QueueFactory ourInstance = new QueueFactory();
 

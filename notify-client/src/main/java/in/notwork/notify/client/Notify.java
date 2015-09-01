@@ -5,6 +5,8 @@ import in.notwork.notify.client.queues.QueueFactory;
 import in.notwork.notify.protos.MessageProto;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -14,7 +16,7 @@ import java.util.concurrent.TimeoutException;
  */
 public final class Notify {
 
-    private static final Log LOG = LogFactory.getLog(Notify.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Notify.class);
 
 //    private static Notify ourInstance = new Notify();
 //
@@ -32,21 +34,21 @@ public final class Notify {
         try {
             queue.connect();
         } catch (IOException | TimeoutException e) {
-            LOG.fatal("Unable to connect to the queue...", e);
+            LOG.error("Unable to connect to the queue...", e);
             throw new IOException("Unable to connect to the queue...", e);
         }
 
         try {
-            queue.put(message.toByteArray());
+            queue.publish(message.toByteArray());
         } catch (IOException e) {
-            LOG.fatal("Unable to send the message...", e);
+            LOG.error("Unable to send the message...", e);
             throw new IOException("Unable to send the message...", e);
         }
 
         try {
             queue.disconnect();
         } catch (IOException | TimeoutException e) {
-            LOG.fatal("Unable to disconnect from the queue...", e);
+            LOG.error("Unable to disconnect from the queue...", e);
             throw new IOException("Unable to disconnect from the queue...", e);
         }
     }

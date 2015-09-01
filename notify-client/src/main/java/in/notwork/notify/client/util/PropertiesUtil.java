@@ -6,6 +6,8 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +21,7 @@ import java.util.List;
  */
 public final class PropertiesUtil {
 
-    private static final Log LOG = LogFactory.getLog(PropertiesUtil.class);
+    private static final Logger LOG = LoggerFactory.getLogger(PropertiesUtil.class);
     private static CompositeConfiguration compositeConfig = null;
 
     /**

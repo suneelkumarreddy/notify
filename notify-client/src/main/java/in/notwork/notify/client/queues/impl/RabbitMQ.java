@@ -1,26 +1,26 @@
 package in.notwork.notify.client.queues.impl;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.*;
 import in.notwork.notify.client.queues.Queue;
 import in.notwork.notify.client.util.PropertiesUtil;
-import static in.notwork.notify.client.util.NotifyConstants.*;
 import net.jodah.lyra.Connections;
 import net.jodah.lyra.config.Config;
 import net.jodah.lyra.config.RecoveryPolicies;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import net.jodah.lyra.internal.util.Assert;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
+
+import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
  * @author rishabh.
  */
 public class RabbitMQ implements Queue {
 
-    private static final Log LOG = LogFactory.getLog(RabbitMQ.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RabbitMQ.class);
 
     protected String configuredQueue;
     protected String host;
@@ -59,25 +59,20 @@ public class RabbitMQ implements Queue {
 
     @Override
     public void connect() throws IOException, TimeoutException {
-
         Config config = new Config().withRecoveryPolicy(RecoveryPolicies.recoverAlways());
-
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(host);
         factory.setUsername(username);
         factory.setPassword(password);
-
         // TODO Figure out how to use SSL
         // factory.useSslProtocol();
-
         connection = Connections.create(factory, config);
         channel = connection.createChannel();
-
         channel.queueDeclare(configuredQueue, durable, exclusive, autoDelete, null);
     }
 
     @Override
-    public void put(byte[] bytes) throws IOException {
+    public void publish(byte[] bytes) throws IOException {
         if (null == channel) {
             throw new IOException("Connection unavailable. Please check if you are connected to the queue.");
         } else {
@@ -93,8 +88,27 @@ public class RabbitMQ implements Queue {
         if (null == channel || null == connection) {
             throw new IOException("Connection unavailable. Please check if you are connected to the queue.");
         } else {
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Closing channel...");
+            }
             channel.close();
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Closing connection...");
+            }
             connection.close();
         }
+    }
+
+    @Override
+    public void subscribe() throws IOException {
+        com.rabbitmq.client.Consumer consumer = new DefaultConsumer(channel) {
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
+                    throws IOException {
+                String message = new String(body, "UTF-8");
+                System.out.println("[" + Thread.currentThread().getName() + "] Received '" + message + "'");
+            }
+        };
+        channel.basicConsume(configuredQueue, true, consumer);
     }
 }

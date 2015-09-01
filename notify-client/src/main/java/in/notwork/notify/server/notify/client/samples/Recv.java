@@ -15,7 +15,6 @@ public class Recv {
             java.lang.InterruptedException, TimeoutException {
 
         ConnectionFactory factory = new ConnectionFactory();
-//        factory.setHost("128.199.250.208");
         factory.setHost("localhost");
         factory.setUsername("guest");
         factory.setPassword("guest");

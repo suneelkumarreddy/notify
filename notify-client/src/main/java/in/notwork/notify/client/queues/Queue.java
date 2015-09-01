@@ -8,9 +8,11 @@ import java.util.concurrent.TimeoutException;
  */
 public interface Queue {
 
-    void put(byte[] bytes) throws IOException;
+    void publish(byte[] bytes) throws IOException;
 
     void connect() throws IOException, TimeoutException;
 
     void disconnect() throws IOException, TimeoutException;
+
+    void subscribe() throws IOException;
 }

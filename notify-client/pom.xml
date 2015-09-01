@@ -62,27 +62,5 @@
             <version>2.6.1</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>1.6</version>
-        </dependency>
-        <!-- RabbitMQ Dependencies -->
-        <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-            <version>3.5.3</version>
-        </dependency>
-        <!-- Lyra Dependencies -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.jhalterman</groupId>
-            <artifactId>lyra</artifactId>
-            <version>lyra-0.5.2</version>
-        </dependency>
     </dependencies>
 </project>

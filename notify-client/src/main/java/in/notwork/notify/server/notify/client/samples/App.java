@@ -25,14 +25,11 @@ public class App {
         Config config = new Config().withRecoveryPolicy(RecoveryPolicies.recoverAlways());
 
         ConnectionFactory factory = new ConnectionFactory();
-//        factory.setHost("128.199.250.208");
-//        factory.setUsername("peterpan");
-//        factory.setPassword("p3t3rp@n");
         factory.setHost("localhost");
         factory.setUsername("guest");
         factory.setPassword("guest");
         // TODO Figure out how to use SSL
-//        factory.useSslProtocol();
+        // factory.useSslProtocol();
 
 //        Connection connection = factory.newConnection();
         Connection connection = Connections.create(factory, config);
@@ -41,8 +38,11 @@ public class App {
         // TODO Make this configurable from properties file
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
-        for (int i = 1; i <= 20; i++) {
-            String message = "Hello World " + i;
+        for (int i = 1; i <= 500; ) {
+//        int i = 1;
+//        boolean flag = true;
+//        while (flag) {
+            String message = "Hello World " + i++;
             channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
             System.out.println(" [x] Sent '" + message + "'");
         }
