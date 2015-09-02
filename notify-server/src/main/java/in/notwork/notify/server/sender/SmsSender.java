@@ -15,6 +15,6 @@ public class SmsSender extends MessageSender {
 
     @Override
     public void send(MessageProto.Message message) {
-
+        throw new UnsupportedOperationException();
     }
 }

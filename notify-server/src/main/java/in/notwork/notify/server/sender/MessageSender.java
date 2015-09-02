@@ -15,7 +15,6 @@ public abstract class MessageSender {
         this.config = config;
     }
 
-    public void send(MessageProto.Message message) {
-        throw new UnsupportedOperationException();
-    }
+    public abstract void send(MessageProto.Message message);
+
 }
