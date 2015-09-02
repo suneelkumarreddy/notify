@@ -2,6 +2,8 @@ package in.notwork.notify.server;
 
 import in.notwork.notify.client.queues.Queue;
 import in.notwork.notify.client.queues.QueueFactory;
+import in.notwork.notify.client.router.Router;
+import in.notwork.notify.server.routers.MessageRouter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,9 +14,9 @@ import java.util.concurrent.TimeoutException;
 /**
  * @author rishabh.
  */
-public class Consumer implements Callable<Queue> {
+public class Task implements Callable<Queue> {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Consumer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Task.class);
 
     @Override
     public Queue call() throws Exception {
@@ -25,14 +27,16 @@ public class Consumer implements Callable<Queue> {
             queue.connect();
         } catch (IOException | TimeoutException e) {
             LOG.error("Unable to connect to the queue..." + e.getCause(), e);
-            throw new IOException("Unable to connect to the queue..." + e.getCause(), e);
+            throw new IOException("Unable to connect to the queue... " + e.getCause(), e);
         }
 
+        Router router = new MessageRouter();
+
         try {
-            queue.subscribe();
+            queue.subscribe(router);
         } catch (IOException e) {
-            LOG.error("Unable to send the message... " + e.getCause(), e);
-            throw new IOException("Unable to send the message..." + e.getCause(), e);
+            LOG.error("Unable to retrieve the message... " + e.getCause(), e);
+            throw new IOException("Unable to retrieve the message... " + e.getCause(), e);
         }
 
         return queue;

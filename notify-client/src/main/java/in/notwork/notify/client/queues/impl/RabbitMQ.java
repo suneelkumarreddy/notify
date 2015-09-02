@@ -1,12 +1,12 @@
 package in.notwork.notify.client.queues.impl;
 
 import com.rabbitmq.client.*;
+import in.notwork.notify.client.router.Router;
 import in.notwork.notify.client.queues.Queue;
 import in.notwork.notify.client.util.PropertiesUtil;
 import net.jodah.lyra.Connections;
 import net.jodah.lyra.config.Config;
 import net.jodah.lyra.config.RecoveryPolicies;
-import net.jodah.lyra.internal.util.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -76,9 +76,6 @@ public class RabbitMQ implements Queue {
         if (null == channel) {
             throw new IOException("Connection unavailable. Please check if you are connected to the queue.");
         } else {
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Putting message to queue - " + configuredQueue);
-            }
             channel.basicPublish("", configuredQueue, null, bytes);
         }
     }
@@ -100,13 +97,16 @@ public class RabbitMQ implements Queue {
     }
 
     @Override
-    public void subscribe() throws IOException {
+    public void subscribe(Router router) throws IOException {
         com.rabbitmq.client.Consumer consumer = new DefaultConsumer(channel) {
             @Override
-            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
+            public void handleDelivery(String consumerTag, Envelope envelope,
+                                       AMQP.BasicProperties properties, byte[] body)
                     throws IOException {
+
                 String message = new String(body, "UTF-8");
                 System.out.println("[" + Thread.currentThread().getName() + "] Received '" + message + "'");
+                router.routeMessage(body);
             }
         };
         channel.basicConsume(configuredQueue, true, consumer);

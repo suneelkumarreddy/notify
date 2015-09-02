@@ -91,6 +91,6 @@ public class ServerApp {
     }
 
     private static Callable<Queue> getTasks() {
-        return new Consumer();
+        return new Task();
     }
 }

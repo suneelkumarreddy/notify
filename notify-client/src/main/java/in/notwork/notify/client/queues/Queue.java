@@ -1,5 +1,7 @@
 package in.notwork.notify.client.queues;
 
+import in.notwork.notify.client.router.Router;
+
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
@@ -14,5 +16,5 @@ public interface Queue {
 
     void disconnect() throws IOException, TimeoutException;
 
-    void subscribe() throws IOException;
+    void subscribe(Router router) throws IOException;
 }
