@@ -17,4 +17,8 @@ public abstract class MessageSender {
 
     public abstract void send(MessageProto.Message message);
 
+    public abstract void destroy();
+
+    public abstract boolean isValid();
+
 }

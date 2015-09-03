@@ -48,4 +48,14 @@ public class SmsSender extends MessageSender {
         }
 
     }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public boolean isValid() {
+        return false;
+    }
 }

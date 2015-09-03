@@ -15,13 +15,15 @@ public class App2 {
         try {
 //            Notify.send(new Notification().channel("wow").message("bow").build());
             Email email = new Email()
-                    .to("John Doe","john.doe@mailinator.com")
-                    .from("Lily Jane","lily.jane@mailinator.com")
+                    .to("John Doe", "john.doe@mailinator.com")
+                    .from("Lily Jane", "lily.jane@mailinator.com")
                     .bcc("funny.jack@mailinator.com")
                     .cc("weeping.tom@mailinator.com")
                     .cc("mary.anne@mailinator.com")
                     .subject("Hello All!").body("Hi, it's been a long time!");
             Notify.send(email.build());
+
+            Notification notif = new Notification().channel("").message("");
         } catch (IOException e) {
             e.printStackTrace();
         }
