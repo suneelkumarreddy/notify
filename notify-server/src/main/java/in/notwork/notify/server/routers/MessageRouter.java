@@ -3,9 +3,13 @@ package in.notwork.notify.server.routers;
 import com.google.protobuf.InvalidProtocolBufferException;
 import in.notwork.notify.client.router.Router;
 import in.notwork.notify.protos.MessageProto;
+import in.notwork.notify.server.pool.MessageSenderPoolController;
+import in.notwork.notify.server.pool.MessageType;
 import in.notwork.notify.server.sender.MessageSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static in.notwork.notify.server.pool.MessageType.*;
 
 /**
  * @author rishabh.
@@ -15,42 +19,59 @@ public class MessageRouter implements Router {
     private static final Logger LOG = LoggerFactory.getLogger(MessageRouter.class);
 
     @Override
-    public void routeMessage(byte[] data) {
+    public void routeMessage(final byte[] data) {
         try {
-            MessageProto.Message message = MessageProto.Message.parseFrom(data);
-            MessageSender sender = getSender(message.getType());
+            final MessageProto.Message message = MessageProto.Message.parseFrom(data);
+            final MessageSender sender = getSender(message.getType());
             sender.send(message);
+            returnSenderToPool(message.getType(), sender);
         } catch (InvalidProtocolBufferException e) {
-            // TODO Remove e.printStackTrace()
-            e.printStackTrace();
+            if (LOG.isErrorEnabled()) {
+                LOG.error("Unable to parse the message received from queue.", e);
+            }
+        } catch (IllegalStateException e) {
+            if (LOG.isErrorEnabled()) {
+                LOG.error("Error returning message sender to the pool.", e);
+            }
+        } catch (Exception e) {
+            if (LOG.isErrorEnabled()) {
+                LOG.error("Unable to get message sender object from pool", e);
+            }
         }
     }
 
-    private MessageSender getSender(final MessageProto.Type type) {
+    private void returnSenderToPool(final MessageProto.Type type, final MessageSender sender) {
+        switch (type) {
+            case EMAIL:
+                MessageSenderPoolController.getInstance().getPool().returnObject(EMAIL, sender);
+                break;
+            case SMS:
+                MessageSenderPoolController.getInstance().getPool().returnObject(SMS, sender);
+                break;
+            default:
+                MessageSenderPoolController.getInstance().getPool().returnObject(PUSH, sender);
+                break;
+        }
+    }
+
+    private MessageSender getSender(final MessageProto.Type type) throws Exception {
         MessageSender sender;
         switch (type) {
             case EMAIL:
-                sender = getEmailSenderFromPool();
+                sender = getMessageSenderFromPool(EMAIL);
                 break;
             case SMS:
-                sender = getSmsSenderFromPool();
+                sender = getMessageSenderFromPool(SMS);
                 break;
             default:
-                sender = getNotificationSenderFromPool();
+                sender = getMessageSenderFromPool(PUSH);
                 break;
         }
         return sender;
     }
 
-    private MessageSender getNotificationSenderFromPool() {
-        return null;
+    private MessageSender getMessageSenderFromPool(final MessageType messageType) throws Exception {
+        return MessageSenderPoolController.getInstance().getPool().borrowObject(messageType);
     }
 
-    private MessageSender getSmsSenderFromPool() {
-        return null;
-    }
-
-    private MessageSender getEmailSenderFromPool() {
-        return null;
-    }
 }
