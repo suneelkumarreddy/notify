@@ -16,4 +16,23 @@ public class NotifyConstants {
     public static final String RMQ_DURABLE = "rmq.queue.durable";
     public static final String RMQ_EXCLUSIVE = "rmq.queue.exclusive";
     public static final String RMQ_AUTO_DELETE = "rmq.queue.autoDelete";
+
+    public static final String EMAIL_SENDER_IMPL = "emailSender.impl";
+    public static final String SMS_SENDER_IMPL = "smsSender.impl";
+    public static final String NOTIF_SENDER_IMPL = "notificationSender.impl";
+
+    public static final String MAIL_USERNAME = "mail.username";
+    public static final String MAIL_PASSWORD = "mail.password";
+    public static final String MAIL_DEBUG = "mail.debug";
+
+    public static final String MAIL_SMTP_AUTH = "mail.smtp.auth";
+    public static final String MAIL_SMTP_STARTTTLS_ENABLE = "mail.smtp.starttls.enable";
+    public static final String MAIL_SMTP_HOST = "mail.smtp.host";
+    public static final String MAIL_SMTP_SOCK_FACTORY_PORT = "mail.smtp.socketFactory.port";
+    public static final String MAIL_SMTP_SOCK_FACTORY_CLASS = "mail.smtp.socketFactory.class";
+    public static final String MAIL_SMTP_PORT = "mail.smtp.port";
+
+    public static final String POOL_SIZE_EMAIL = "pool.size.email";
+    public static final String POOL_SIZE_SMS = "pool.size.sms";
+    public static final String POOL_SIZE_PUSH = "pool.size.push";
 }

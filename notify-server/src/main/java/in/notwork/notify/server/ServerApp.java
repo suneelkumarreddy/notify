@@ -1,25 +1,25 @@
 package in.notwork.notify.server;
 
 import in.notwork.notify.client.queues.Queue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Hello world!
  */
-public class ServerApp {
+public final class ServerApp {
 
     private static final Logger LOG = LoggerFactory.getLogger(ServerApp.class);
 
     private static int defaultCount = 5;
 
     public static void main(final String... args) {
+        checkAllPropertiesAreConfigured();
         if (validate(args)) {
             final int threadCount = getConsumerCount(args[0]);
             final List<Future<Queue>> futureList = new ArrayList<>();
@@ -33,6 +33,10 @@ public class ServerApp {
         }
     }
 
+    private static void checkAllPropertiesAreConfigured() {
+        throw new java.lang.UnsupportedOperationException("All properties are not configured!");
+    }
+
     private static void addShutdownHook(final List<Future<Queue>> futureList, final ExecutorService executor) {
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
@@ -43,38 +47,58 @@ public class ServerApp {
     }
 
     private static void shutdown(List<Future<Queue>> futureList, ExecutorService executor) {
-        LOG.warn("Interrupt received, killing server...");
+        if (LOG.isWarnEnabled()) {
+            LOG.warn("Interrupt received, killing server...");
+        }
         try {
-            LOG.warn("Attempting to shutdown queues...");
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Attempting to shutdown queues...");
+            }
             for (final Future<Queue> future : futureList) {
                 final Queue queue = future.get();
-                LOG.warn("Disconnecting queue...");
+                if (LOG.isWarnEnabled()) {
+                    LOG.warn("Disconnecting queue...");
+                }
                 queue.disconnect();
             }
-            LOG.warn("Now attempting to shutdown executor in next 10 seconds...");
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Now attempting to shutdown executor in next 10 seconds...");
+            }
             executor.shutdown();
             executor.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            LOG.warn("Tasks interrupted by shutdown process. You may have an inconsistent state!");
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Tasks interrupted by shutdown process. You may have an inconsistent state!");
+            }
         } catch (ExecutionException e) {
-            LOG.warn("Error while retrieving the result of the tasks.", e.getCause());
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Error while retrieving the result of the tasks.", e.getCause());
+            }
         } catch (TimeoutException e) {
-            LOG.warn("Timed out while waiting on the tasks to complete.", e.getCause());
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Timed out while waiting on the tasks to complete.", e.getCause());
+            }
         } catch (IOException e) {
-            LOG.warn("Error while disconnecting the queues.", e.getCause());
+            if (LOG.isWarnEnabled()) {
+                LOG.warn("Error while disconnecting the queues.", e.getCause());
+            }
         } finally {
-            if (!executor.isTerminated()) {
+            if (!executor.isTerminated() && LOG.isWarnEnabled()) {
                 LOG.warn("Forcing shutdown with non-finished tasks.");
             }
             executor.shutdownNow();
-            LOG.info("Shutdown finished.");
+            if (LOG.isInfoEnabled()) {
+                LOG.info("Shutdown finished.");
+            }
         }
     }
 
     private static int getConsumerCount(final String arg) {
         int threadCount = Integer.parseInt(arg);
         threadCount = threadCount > defaultCount ? defaultCount : threadCount;
-        LOG.info("Creating " + threadCount + " consumers only.");
+        if (LOG.isInfoEnabled()) {
+            LOG.info("Creating " + threadCount + " consumers only.");
+        }
         return threadCount;
     }
 

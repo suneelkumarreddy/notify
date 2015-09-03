@@ -9,12 +9,16 @@ import java.util.Map;
  */
 public abstract class MessageSender {
 
-    private Map<String, String> config;
+    protected Map<String, String> config;
 
     public MessageSender(Map<String, String> config) {
         this.config = config;
     }
 
     public abstract void send(MessageProto.Message message);
+
+    public abstract void destroy();
+
+    public abstract boolean isValid();
 
 }

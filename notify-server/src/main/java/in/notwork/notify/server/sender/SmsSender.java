@@ -17,4 +17,14 @@ public class SmsSender extends MessageSender {
     public void send(MessageProto.Message message) {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public boolean isValid() {
+        return false;
+    }
 }
