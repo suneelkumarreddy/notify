@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public abstract class MessageSender {
 
-    private Map<String, String> config;
+    protected Map<String, String> config;
 
     public MessageSender(Map<String, String> config) {
         this.config = config;
