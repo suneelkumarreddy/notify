@@ -23,9 +23,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public MessageSender create(MessageType messageType) throws Exception {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Creating an instance for message type: " + messageType);
-        }
+        LOG.debug("Creating an instance for message type: {0}", messageType);
         String configuredImplementation = getConfiguredImplementation(messageType);
         Map<String, String> config = loadConfiguration(messageType);
         try {
@@ -35,7 +33,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
                 | IllegalAccessException | NoSuchMethodException
                 | InvocationTargetException e) {
 
-            LOG.error("Unable to create the MessageSender implementation - " + configuredImplementation, e);
+            LOG.error("Unable to create the MessageSender implementation - {0}", configuredImplementation, e);
             throw e;
         }
     }
@@ -52,28 +50,24 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public void destroyObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Destroying " + pooledObject + " for message type: " + messageType
-                    + ", as it is no longer needed by the pool.");
-        }
+        LOG.debug("Destroying {0} for message type: {1}, as it is no longer needed by the pool.",
+                pooledObject.toString(), messageType);
         pooledObject.getObject().destroy();
     }
 
     @Override
     public boolean validateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Validating " + pooledObject + " from pool. Using key - " + messageType);
-        }
+        LOG.debug("Validating {0} from pool. Using key - {1}", pooledObject, messageType);
         return pooledObject.getObject().isValid();
     }
 
     @Override
     public void activateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        // pooledObject.getObject().activate();
+        // no-op
     }
 
     @Override
     public void passivateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        // pooledObject.getObject().deactivate();
+        // no-op
     }
 }

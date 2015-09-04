@@ -28,9 +28,7 @@ public class EmailSender extends MessageSender {
 
     @Override
     public void send(MessageProto.Message message) {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Preparing email...");
-        }
+        LOG.debug("Preparing email...");
 
         try {
 
@@ -69,14 +67,10 @@ public class EmailSender extends MessageSender {
 
             Transport.send(mimeMessage);
 
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Email sent - SUBJ: " + subject + ", TO: " + toAddress + ", FROM: " + fromAddress);
-            }
+            LOG.debug("Email sent - SUBJ: {0}, TO: {1}, FROM: {2}", subject, toAddress, fromAddress);
 
         } catch (MessagingException e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Unable to send email", e);
-            }
+            LOG.error("Unable to send email", e);
             throw new RuntimeException(e);
         }
 
@@ -84,9 +78,7 @@ public class EmailSender extends MessageSender {
 
     @Override
     public void destroy() {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Destroying email session...");
-        }
+        LOG.debug("Destroying email session...");
         session = null;
     }
 

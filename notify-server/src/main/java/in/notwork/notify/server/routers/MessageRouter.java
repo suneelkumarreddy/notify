@@ -26,17 +26,11 @@ public class MessageRouter implements Router {
             sender.send(message);
             returnSenderToPool(message.getType(), sender);
         } catch (InvalidProtocolBufferException e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Unable to parse the message received from queue.", e);
-            }
+            LOG.error("Unable to parse the message received from queue.", e);
         } catch (IllegalStateException e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Error returning message sender to the pool.", e);
-            }
+            LOG.error("Error returning message sender to the pool.", e);
         } catch (Exception e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Unable to get message sender object from pool", e);
-            }
+            LOG.error("Unable to get message sender object from pool", e);
         }
     }
 

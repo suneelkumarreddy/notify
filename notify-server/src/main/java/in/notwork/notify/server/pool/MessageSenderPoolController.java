@@ -27,9 +27,7 @@ public final class MessageSenderPoolController {
     }
 
     private void preparePools() {
-        if (LOG.isInfoEnabled()) {
-            LOG.info("Preparing the MessageSender pool...");
-        }
+        LOG.info("Preparing the MessageSender pool...");
 
         initPool();
 
@@ -41,42 +39,42 @@ public final class MessageSenderPoolController {
             for (int i = 0; i < poolSizeEmail; ++i) {
                 pool.addObject(MessageType.EMAIL);
             }
-            if (LOG.isInfoEnabled()) {
-                LOG.info("Email Sender pool created.");
-            }
+            LOG.info("Email Sender pool created.");
             for (int i = 0; i < poolSizeSms; ++i) {
                 pool.addObject(MessageType.SMS);
             }
-            if (LOG.isInfoEnabled()) {
-                LOG.info("Sms Sender pool created.");
-            }
+            LOG.info("Sms Sender pool created.");
             for (int i = 0; i < poolSizePush; ++i) {
                 pool.addObject(MessageType.PUSH);
             }
-            if (LOG.isInfoEnabled()) {
-                LOG.info("Notification Sender pool created.");
-            }
+            LOG.info("Notification Sender pool created.");
         } catch (Exception e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Error while creating the pool of MessageSender objects.", e);
-            }
+            LOG.error("Error while creating the pool of MessageSender objects.", e);
         }
     }
 
     private void initPool() {
         GenericKeyedObjectPoolConfig config = new GenericKeyedObjectPoolConfig();
+        config.setTestOnBorrow(true);
+        config.setTestOnReturn(true);
+
+        LOG.debug("config.setTestOnBorrow(true)");
+        LOG.debug("config.setTestOnReturn(true)");
+
         MessageSenderPoolFactory poolFactory = new MessageSenderPoolFactory();
         pool = new MessageSenderPool(poolFactory, config);
 
         pool.setMinEvictableIdleTimeMillis(1000);
         pool.setTimeBetweenEvictionRunsMillis(600);
-
-        config.setTestOnBorrow(true);
-        config.setTestOnReturn(true);
-
         pool.setMaxIdlePerKey(1);
         pool.setMaxTotal(30);
         pool.setMaxTotalPerKey(10);
+
+        LOG.debug("pool.setMinEvictableIdleTimeMillis(1000)");
+        LOG.debug("pool.setTimeBetweenEvictionRunsMillis(600)");
+        LOG.debug("pool.setMaxIdlePerKey(1)");
+        LOG.debug("pool.setMaxTotal(30)");
+        LOG.debug("pool.setMaxTotalPerKey(10)");
     }
 
     public MessageSenderPool getPool() {

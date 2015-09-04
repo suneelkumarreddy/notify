@@ -4,8 +4,6 @@ import org.apache.commons.configuration.CompositeConfiguration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +41,7 @@ public final class PropertiesUtil {
             PropertiesConfiguration configuration = null;
 
             for (String file : files) {
-                LOG.debug("Reading properties file ... " + file);
+                LOG.debug("Reading properties file ...{0}", file);
                 configuration = new PropertiesConfiguration();
                 configuration.load(PropertiesUtil.class.getClassLoader().getResourceAsStream(file));
                 configuration.setReloadingStrategy(new FileChangedReloadingStrategy());

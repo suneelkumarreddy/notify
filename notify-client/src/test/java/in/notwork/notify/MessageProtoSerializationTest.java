@@ -3,9 +3,9 @@ package in.notwork.notify;
 import com.google.protobuf.InvalidProtocolBufferException;
 import in.notwork.notify.client.message.*;
 import in.notwork.notify.protos.MessageProto;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.junit.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,28 +14,28 @@ import static org.junit.Assert.assertEquals;
  */
 public class MessageProtoSerializationTest {
 
-    private static final Log log = LogFactory.getLog(MessageProtoSerializationTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MessageProtoSerializationTest.class);
 
     @BeforeClass
     public static void oneTimeSetUp() {
         // one-time initialization code
-        log.info("@BeforeClass - oneTimeSetUp");
+        LOG.info("@BeforeClass - oneTimeSetUp");
     }
 
     @AfterClass
     public static void oneTimeTearDown() {
         // one-time cleanup code
-        log.info("@AfterClass - oneTimeTearDown");
+        LOG.info("@AfterClass - oneTimeTearDown");
     }
 
     @Before
     public void setUp() {
-        log.info("@Before - setUp");
+        LOG.info("@Before - setUp");
     }
 
     @After
     public void tearDown() {
-        log.info("@After - tearDown");
+        LOG.info("@After - tearDown");
     }
 
     @Test

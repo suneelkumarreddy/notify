@@ -32,9 +32,7 @@ public final class MessageSenderPoolFactoryHelper {
                 classToUse = PropertiesUtil.getProperty(NOTIF_SENDER_IMPL);
                 break;
         }
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("For message type: " + messageType + ", using configured implementation: + " + classToUse);
-        }
+        LOG.debug("For message type: {0}, using configured implementation: {1}", messageType, classToUse);
         return classToUse;
     }
 
@@ -68,9 +66,7 @@ public final class MessageSenderPoolFactoryHelper {
     }
 
     public static Map<String, String> loadConfiguration(MessageType messageType) {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Loading configuration from properties for " + messageType + " sender...");
-        }
+        LOG.debug("Loading configuration from properties for {0} sender...", messageType);
         Map<String, String> config = null;
         switch (messageType) {
             case EMAIL:

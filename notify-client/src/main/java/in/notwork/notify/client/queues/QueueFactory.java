@@ -38,7 +38,7 @@ public final class QueueFactory {
                 | IllegalAccessException | NoSuchMethodException
                 | InvocationTargetException e) {
 
-            LOG.error("Unable to load the queue implementation - " + configuredImplementation, e);
+            LOG.error("Unable to load the queue implementation - {}", configuredImplementation, e);
         }
         if (null == queue) {
             queue = new RabbitMQ();

@@ -1,8 +1,8 @@
 package in.notwork.notify.client.queues.impl;
 
 import com.rabbitmq.client.*;
-import in.notwork.notify.client.router.Router;
 import in.notwork.notify.client.queues.Queue;
+import in.notwork.notify.client.router.Router;
 import in.notwork.notify.client.util.PropertiesUtil;
 import net.jodah.lyra.Connections;
 import net.jodah.lyra.config.Config;
@@ -39,9 +39,7 @@ public class RabbitMQ implements Queue {
     }
 
     private void initProperties() {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Reading queue properties...");
-        }
+        LOG.debug("Reading queue properties...");
         configuredQueue = PropertiesUtil.getProperty(QUEUE_NAME);
         host = PropertiesUtil.getProperty(QUEUE_HOST);
         username = PropertiesUtil.getProperty(QUEUE_USERNAME);
@@ -49,12 +47,8 @@ public class RabbitMQ implements Queue {
         durable = PropertiesUtil.getBooleanProperty(RMQ_DURABLE);
         autoDelete = PropertiesUtil.getBooleanProperty(RMQ_AUTO_DELETE);
         exclusive = PropertiesUtil.getBooleanProperty(RMQ_EXCLUSIVE);
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("queue:" + configuredQueue
-                    + "|host:" + host + "|username:" + username
-                    + "|durable:" + durable + "|autodelete:" + autoDelete
-                    + "|exclusive:" + exclusive);
-        }
+        LOG.debug("queue:{0}|host:{1}|username:{2}|durable:{3}|autodelete:{4}|exclusive:{5}",
+                configuredQueue, host, username, durable, autoDelete, exclusive);
     }
 
     @Override
@@ -74,6 +68,7 @@ public class RabbitMQ implements Queue {
     @Override
     public void publish(byte[] bytes) throws IOException {
         if (null == channel) {
+            LOG.error("Connection unavailable. Please check if you are connected to the queue.");
             throw new IOException("Connection unavailable. Please check if you are connected to the queue.");
         } else {
             channel.basicPublish("", configuredQueue, null, bytes);
@@ -83,15 +78,12 @@ public class RabbitMQ implements Queue {
     @Override
     public void disconnect() throws IOException, TimeoutException {
         if (null == channel || null == connection) {
+            LOG.error("Connection unavailable. Please check if you are connected to the queue.");
             throw new IOException("Connection unavailable. Please check if you are connected to the queue.");
         } else {
-            if (LOG.isWarnEnabled()) {
-                LOG.warn("Closing channel...");
-            }
+            LOG.warn("Closing channel...");
             channel.close();
-            if (LOG.isWarnEnabled()) {
-                LOG.warn("Closing connection...");
-            }
+            LOG.warn("Closing connection...");
             connection.close();
         }
     }
