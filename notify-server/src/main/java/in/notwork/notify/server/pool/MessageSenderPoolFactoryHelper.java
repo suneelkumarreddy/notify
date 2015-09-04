@@ -1,5 +1,6 @@
 package in.notwork.notify.server.pool;
 
+import in.notwork.notify.client.message.MessageType;
 import in.notwork.notify.client.util.PropertiesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

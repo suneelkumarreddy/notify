@@ -1,15 +1,15 @@
 package in.notwork.notify.server.routers;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import in.notwork.notify.client.message.MessageType;
 import in.notwork.notify.client.router.Router;
 import in.notwork.notify.protos.MessageProto;
 import in.notwork.notify.server.pool.MessageSenderPoolController;
-import in.notwork.notify.server.pool.MessageType;
 import in.notwork.notify.server.sender.MessageSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static in.notwork.notify.server.pool.MessageType.*;
+import static in.notwork.notify.client.message.MessageType.*;
 
 /**
  * @author rishabh.

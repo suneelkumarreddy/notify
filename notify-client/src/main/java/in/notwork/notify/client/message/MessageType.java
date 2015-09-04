@@ -3,6 +3,6 @@ package in.notwork.notify.client.message;
 /**
  * @author rishabh.
  */
-enum MessageType {
-    SMS, EMAIL, PUSH;
+public enum MessageType {
+    SMS, EMAIL, PUSH
 }
