@@ -37,4 +37,10 @@ public class NotifyConstants {
     public static final String POOL_SIZE_EMAIL = "pool.size.email";
     public static final String POOL_SIZE_SMS = "pool.size.sms";
     public static final String POOL_SIZE_PUSH = "pool.size.push";
+
+    public static final String FAYE_HOST = "faye.host";
+    public static final String FAYE_PORT = "faye.port";
+
+    public static final String PROXY_HOST = "proxy.host";
+    public static final String PROXY_PORT = "proxy.port";
 }

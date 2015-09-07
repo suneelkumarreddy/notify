@@ -20,7 +20,8 @@ public final class ServerConfigurationValidator {
             MAIL_USERNAME, MAIL_PASSWORD, MAIL_DEBUG,
             MAIL_SMTP_OVER_SSL, MAIL_SMTP_OVER_TLS,
             MAIL_SMTP_AUTH, MAIL_SMTP_HOST, MAIL_SMTP_PORT,
-            POOL_SIZE_EMAIL, POOL_SIZE_SMS, POOL_SIZE_PUSH
+            POOL_SIZE_EMAIL, POOL_SIZE_SMS, POOL_SIZE_PUSH,
+            FAYE_HOST, FAYE_PORT
     };
 
     private static ServerConfigurationValidator ourInstance = new ServerConfigurationValidator();
@@ -36,6 +37,29 @@ public final class ServerConfigurationValidator {
         LOG.debug("Validating the server properties...");
         validateForEmptyOrMultipleValues();
         validateSMTPProperties();
+        validateProxyProperties();
+    }
+
+    private void validateProxyProperties() {
+        String host = PropertiesUtil.getProperty(PROXY_HOST);
+        String port = PropertiesUtil.getProperty(PROXY_PORT);
+        if (null == host && null != port
+                || null != host && null == port
+                || null != host && host.isEmpty()
+                || null != port && port.isEmpty()) {
+            LOG.error("Please provide both proxy host and port configuration or comment them out completely.");
+            throw new IllegalStateException("Invalid proxy configuration. " +
+                    "Please provide both proxy host and port configuration or comment them out completely.");
+        }
+        try {
+            if (null != port) {
+                PropertiesUtil.getIntProperty(PROXY_PORT);
+            }
+        } catch (Exception e) {
+            LOG.error("Please provide valid proxy port configuration.");
+            throw new IllegalStateException("Invalid proxy port value. " +
+                    "Please provide valid proxy port configuration.");
+        }
     }
 
     private void validateSMTPProperties() {
