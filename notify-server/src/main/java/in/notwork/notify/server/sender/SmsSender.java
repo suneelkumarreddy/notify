@@ -10,6 +10,7 @@ import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class SmsSender extends MessageSender {
 
     private static final Log log = LogFactory.getLog(SmsSender.class);
 
-    public SmsSender(Map<String, String> config) {
+    public SmsSender(HashMap<String, String> config) {
         super(config);
     }
 
