@@ -32,13 +32,6 @@ message Receiver {
 message Content {
     optional string subject = 1;
     optional string body = 2;
-    repeated Attachment attachment = 3;
-}
-
-message Attachment {
-    required string name = 1;
-    required bytes content = 2;
-    required string contentType = 3;
 }
 
 enum Priority {

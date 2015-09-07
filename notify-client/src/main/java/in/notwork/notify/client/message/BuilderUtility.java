@@ -15,7 +15,7 @@ final class BuilderUtility {
             if (builder.hasReceiver()) {
                 builder.mergeReceiver(receiver);
             } else {
-                builder.setReceiver(receiver);
+                builder.mergeReceiver(receiver);
             }
         }
     }
@@ -37,12 +37,6 @@ final class BuilderUtility {
             } else {
                 builder.setContent(content);
             }
-        }
-    }
-
-    public static void mergeAttachment(MessageProto.Message.Builder builder, final MessageProto.Attachment attachment) {
-        if (null != builder && null != builder.getContentBuilder()) {
-            builder.getContentBuilder().addAttachment(attachment);
         }
     }
 
@@ -96,4 +90,5 @@ final class BuilderUtility {
         }
         return protoType;
     }
+
 }
