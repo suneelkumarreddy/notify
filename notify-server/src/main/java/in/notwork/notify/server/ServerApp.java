@@ -1,6 +1,7 @@
 package in.notwork.notify.server;
 
 import in.notwork.notify.client.queues.Queue;
+import in.notwork.notify.server.util.ServerConfigurationValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +20,7 @@ public final class ServerApp {
     private static int defaultCount = 5;
 
     public static void main(final String... args) {
-        checkAllPropertiesAreConfigured();
+        validateServerConfiguration();
         if (validate(args)) {
             final int threadCount = getConsumerCount(args[0]);
             final List<Future<Queue>> futureList = new ArrayList<>();
@@ -33,8 +34,11 @@ public final class ServerApp {
         }
     }
 
-    private static void checkAllPropertiesAreConfigured() {
-        throw new java.lang.UnsupportedOperationException("All properties are not configured!");
+    private static void validateServerConfiguration() {
+        LOG.info("Validating server configuration...");
+        ServerConfigurationValidator.getInstance().validate();
+        LOG.info("Server configuration validation... passed!");
+        // throw new IllegalStateException("Forced shutdown");
     }
 
     private static void addShutdownHook(final List<Future<Queue>> futureList, final ExecutorService executor) {
@@ -78,7 +82,7 @@ public final class ServerApp {
     private static int getConsumerCount(final String arg) {
         int threadCount = Integer.parseInt(arg);
         threadCount = threadCount > defaultCount ? defaultCount : threadCount;
-        LOG.info("Creating {0} consumers only.", threadCount);
+        LOG.info("Creating {} consumers only.", threadCount);
         return threadCount;
     }
 

@@ -41,7 +41,7 @@ public final class PropertiesUtil {
             PropertiesConfiguration configuration = null;
 
             for (String file : files) {
-                LOG.debug("Reading properties file ...{0}", file);
+                LOG.debug("Reading properties file ...{}", file);
                 configuration = new PropertiesConfiguration();
                 configuration.load(PropertiesUtil.class.getClassLoader().getResourceAsStream(file));
                 configuration.setReloadingStrategy(new FileChangedReloadingStrategy());
