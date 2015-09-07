@@ -4,10 +4,16 @@ import in.notwork.notify.protos.MessageProto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
@@ -62,9 +68,9 @@ public class EmailSender extends MessageSender {
             }
 
             String subject = message.getContent().getSubject();
-
             mimeMessage.setSubject(subject);
-            mimeMessage.setText(message.getContent().getBody());
+
+            prepareBody(message, mimeMessage);
 
             Transport.send(mimeMessage);
 
@@ -75,6 +81,28 @@ public class EmailSender extends MessageSender {
             throw new RuntimeException(e);
         }
 
+    }
+
+    private void prepareBody(MessageProto.Message message, Message mimeMessage) throws MessagingException {
+        Multipart multipart = new MimeMultipart();
+        BodyPart part = new MimeBodyPart();
+        part.setText(message.getContent().getBody());
+        multipart.addBodyPart(part);
+
+        if (message.getContent().getAttachmentCount() > 0) {
+            List<MessageProto.Attachment> attachments = message.getContent().getAttachmentList();
+            for (MessageProto.Attachment attachment : attachments) {
+                BodyPart bodyPart = new MimeBodyPart();
+                DataSource source = new ByteArrayDataSource(
+                        attachment.getContent().toByteArray(),
+                        attachment.getContentType());
+                bodyPart.setDataHandler(new DataHandler(source));
+                bodyPart.setFileName(attachment.getName());
+                multipart.addBodyPart(bodyPart);
+            }
+        }
+
+        mimeMessage.setContent(multipart);
     }
 
     @Override
