@@ -713,6 +713,12 @@ public final class MessageProto {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasContent()) {
+        if (!getContent().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1039,6 +1045,12 @@ public final class MessageProto {
         if (!hasType()) {
           
           return false;
+        }
+        if (hasContent()) {
+          if (!getContent().isInitialized()) {
+
+            return false;
+          }
         }
         return true;
       }
@@ -3675,6 +3687,34 @@ public final class MessageProto {
      */
     com.google.protobuf.ByteString
         getBodyBytes();
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    java.util.List<in.notwork.notify.protos.MessageProto.Attachment>
+    getAttachmentList();
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index);
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    int getAttachmentCount();
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
+    getAttachmentOrBuilderList();
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
+            int index);
   }
   /**
    * Protobuf type {@code notify.protos.Content}
@@ -3740,6 +3780,14 @@ public final class MessageProto {
               body_ = bs;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              attachment_.add(input.readMessage(in.notwork.notify.protos.MessageProto.Attachment.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3748,6 +3796,9 @@ public final class MessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          attachment_ = java.util.Collections.unmodifiableList(attachment_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3864,9 +3915,50 @@ public final class MessageProto {
       }
     }
 
+    public static final int ATTACHMENT_FIELD_NUMBER = 3;
+    private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_;
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
+      return attachment_;
+    }
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
+    getAttachmentOrBuilderList() {
+      return attachment_;
+    }
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    public int getAttachmentCount() {
+      return attachment_.size();
+    }
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
+      return attachment_.get(index);
+    }
+
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     */
+    public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
+            int index) {
+      return attachment_.get(index);
+    }
+
     private void initFields() {
       subject_ = "";
       body_ = "";
+      attachment_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3874,6 +3966,12 @@ public final class MessageProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      for (int i = 0; i < getAttachmentCount(); i++) {
+        if (!getAttachment(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3886,6 +3984,9 @@ public final class MessageProto {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getBodyBytes());
+      }
+      for (int i = 0; i < attachment_.size(); i++) {
+        output.writeMessage(3, attachment_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3902,7 +4003,11 @@ public final class MessageProto {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getBodyBytes());
+                .computeBytesSize(2, getBodyBytes());
+      }
+      for (int i = 0; i < attachment_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, attachment_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4013,6 +4118,7 @@ public final class MessageProto {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAttachmentFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4025,6 +4131,12 @@ public final class MessageProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         body_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (attachmentBuilder_ == null) {
+          attachment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          attachmentBuilder_.clear();
+        }
         return this;
       }
 
@@ -4061,6 +4173,15 @@ public final class MessageProto {
           to_bitField0_ |= 0x00000002;
         }
         result.body_ = body_;
+        if (attachmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            attachment_ = java.util.Collections.unmodifiableList(attachment_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.attachment_ = attachment_;
+        } else {
+          result.attachment_ = attachmentBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4087,11 +4208,43 @@ public final class MessageProto {
           body_ = other.body_;
           onChanged();
         }
+        if (attachmentBuilder_ == null) {
+          if (!other.attachment_.isEmpty()) {
+            if (attachment_.isEmpty()) {
+              attachment_ = other.attachment_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAttachmentIsMutable();
+              attachment_.addAll(other.attachment_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attachment_.isEmpty()) {
+            if (attachmentBuilder_.isEmpty()) {
+              attachmentBuilder_.dispose();
+              attachmentBuilder_ = null;
+              attachment_ = other.attachment_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              attachmentBuilder_ =
+                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                              getAttachmentFieldBuilder() : null;
+            } else {
+              attachmentBuilder_.addAllMessages(other.attachment_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        for (int i = 0; i < getAttachmentCount(); i++) {
+          if (!getAttachment(i).isInitialized()) {
+            
+            return false;
+          }
+        }
         return true;
       }
 
@@ -4266,6 +4419,266 @@ public final class MessageProto {
         return this;
       }
 
+      private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_ =
+              java.util.Collections.emptyList();
+
+      private void ensureAttachmentIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>(attachment_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> attachmentBuilder_;
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
+        if (attachmentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attachment_);
+        } else {
+          return attachmentBuilder_.getMessageList();
+        }
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public int getAttachmentCount() {
+        if (attachmentBuilder_ == null) {
+          return attachment_.size();
+        } else {
+          return attachmentBuilder_.getCount();
+        }
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
+        if (attachmentBuilder_ == null) {
+          return attachment_.get(index);
+        } else {
+          return attachmentBuilder_.getMessage(index);
+        }
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder setAttachment(
+              int index, in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.set(index, value);
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder setAttachment(
+              int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder addAttachment(in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.add(value);
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder addAttachment(
+              int index, in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.add(index, value);
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder addAttachment(
+              in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder addAttachment(
+              int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder addAllAttachment(
+              java.lang.Iterable<? extends in.notwork.notify.protos.MessageProto.Attachment> values) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, attachment_);
+          onChanged();
+        } else {
+          attachmentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder clearAttachment() {
+        if (attachmentBuilder_ == null) {
+          attachment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          attachmentBuilder_.clear();
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public Builder removeAttachment(int index) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.remove(index);
+          onChanged();
+        } else {
+          attachmentBuilder_.remove(index);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder getAttachmentBuilder(
+              int index) {
+        return getAttachmentFieldBuilder().getBuilder(index);
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
+              int index) {
+        if (attachmentBuilder_ == null) {
+          return attachment_.get(index);
+        } else {
+          return attachmentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
+      getAttachmentOrBuilderList() {
+        if (attachmentBuilder_ != null) {
+          return attachmentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attachment_);
+        }
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder() {
+        return getAttachmentFieldBuilder().addBuilder(
+                in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder(
+              int index) {
+        return getAttachmentFieldBuilder().addBuilder(
+                index, in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
+      }
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       */
+      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment.Builder>
+      getAttachmentBuilderList() {
+        return getAttachmentFieldBuilder().getBuilderList();
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
+      getAttachmentFieldBuilder() {
+        if (attachmentBuilder_ == null) {
+          attachmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>(
+                  attachment_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          attachment_ = null;
+        }
+        return attachmentBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:notify.protos.Content)
     }
 
@@ -4275,6 +4688,807 @@ public final class MessageProto {
     }
 
     // @@protoc_insertion_point(class_scope:notify.protos.Content)
+  }
+
+  public interface AttachmentOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:notify.protos.Attachment)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+    getNameBytes();
+
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    boolean hasContent();
+
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    com.google.protobuf.ByteString getContent();
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    boolean hasContentType();
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    java.lang.String getContentType();
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    com.google.protobuf.ByteString
+    getContentTypeBytes();
+  }
+
+  /**
+   * Protobuf type {@code notify.protos.Attachment}
+   */
+  public static final class Attachment extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:notify.protos.Attachment)
+          AttachmentOrBuilder {
+    // Use Attachment.newBuilder() to construct.
+    private Attachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+
+    private Attachment(boolean noInit) {
+      this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+
+    private static final Attachment defaultInstance;
+
+    public static Attachment getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Attachment getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private Attachment(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                      extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              content_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              contentType_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Attachment> PARSER =
+            new com.google.protobuf.AbstractParser<Attachment>() {
+              public Attachment parsePartialFrom(
+                      com.google.protobuf.CodedInputStream input,
+                      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                      throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Attachment(input, extensionRegistry);
+              }
+            };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Attachment> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+    getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString content_;
+
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public com.google.protobuf.ByteString getContent() {
+      return content_;
+    }
+
+    public static final int CONTENTTYPE_FIELD_NUMBER = 3;
+    private java.lang.Object contentType_;
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public boolean hasContentType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public java.lang.String getContentType() {
+      java.lang.Object ref = contentType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          contentType_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+    getContentTypeBytes() {
+      java.lang.Object ref = contentType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        contentType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      name_ = "";
+      content_ = com.google.protobuf.ByteString.EMPTY;
+      contentType_ = "";
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContent()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContentType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, content_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getContentTypeBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeBytesSize(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeBytesSize(2, content_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeBytesSize(3, getContentTypeBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return Builder.create();
+    }
+
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Attachment prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+
+    public Builder toBuilder() {
+      return newBuilder(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    /**
+     * Protobuf type {@code notify.protos.Attachment}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:notify.protos.Attachment)
+            in.notwork.notify.protos.MessageProto.AttachmentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+      }
+
+      // Construct using in.notwork.notify.protos.MessageProto.Attachment.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contentType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment getDefaultInstanceForType() {
+        return in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance();
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment build() {
+        in.notwork.notify.protos.MessageProto.Attachment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment buildPartial() {
+        in.notwork.notify.protos.MessageProto.Attachment result = new in.notwork.notify.protos.MessageProto.Attachment(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.content_ = content_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.contentType_ = contentType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof in.notwork.notify.protos.MessageProto.Attachment) {
+          return mergeFrom((in.notwork.notify.protos.MessageProto.Attachment) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Attachment other) {
+        if (other == in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasContent()) {
+          setContent(other.getContent());
+        }
+        if (other.hasContentType()) {
+          bitField0_ |= 0x00000004;
+          contentType_ = other.contentType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+
+          return false;
+        }
+        if (!hasContent()) {
+
+          return false;
+        }
+        if (!hasContentType()) {
+
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        in.notwork.notify.protos.MessageProto.Attachment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (in.notwork.notify.protos.MessageProto.Attachment) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+      getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public com.google.protobuf.ByteString getContent() {
+        return content_;
+      }
+
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentType_ = "";
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public boolean hasContentType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public java.lang.String getContentType() {
+        java.lang.Object ref = contentType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contentType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+      getContentTypeBytes() {
+        java.lang.Object ref = contentType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          contentType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder setContentType(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder clearContentType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contentType_ = getDefaultInstance().getContentType();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder setContentTypeBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:notify.protos.Attachment)
+    }
+
+    static {
+      defaultInstance = new Attachment(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:notify.protos.Attachment)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -4291,12 +5505,17 @@ public final class MessageProto {
     internal_static_notify_protos_Receiver_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_notify_protos_Receiver_fieldAccessorTable;
+          internal_static_notify_protos_Receiver_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_notify_protos_Content_descriptor;
+          internal_static_notify_protos_Content_descriptor;
+  private static
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_notify_protos_Content_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_notify_protos_Attachment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_notify_protos_Content_fieldAccessorTable;
+      internal_static_notify_protos_Attachment_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4313,16 +5532,19 @@ public final class MessageProto {
       "ntent\022\022\n\nmessage_id\030\004 \001(\t\022!\n\004type\030\005 \002(\0162" +
       "\023.notify.protos.Type\022%\n\006status\030\006 \001(\0162\025.n" +
       "otify.protos.Status\022.\n\010priority\030\007 \001(\0162\027." +
-      "notify.protos.Priority:\003LOW\">\n\006Sender\022\020\n" +
-      "\010email_id\030\001 \001(\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n" +
-      "\004name\030\003 \001(\t\"Y\n\010Receiver\022\020\n\010email_id\030\001 \001(",
-      "\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\n\n" +
-      "\002cc\030\004 \003(\t\022\013\n\003bcc\030\005 \003(\t\"(\n\007Content\022\017\n\007sub" +
-      "ject\030\001 \001(\t\022\014\n\004body\030\002 \001(\t*)\n\010Priority\022\007\n\003" +
-      "LOW\020\000\022\n\n\006MEDIUM\020\001\022\010\n\004HIGH\020\002*/\n\006Status\022\006\n" +
-      "\002IN\020\000\022\007\n\003OUT\020\001\022\010\n\004SENT\020\002\022\n\n\006FAILED\020\003*$\n\004" +
-      "Type\022\007\n\003SMS\020\000\022\t\n\005EMAIL\020\001\022\010\n\004PUSH\020\002B(\n\030in" +
-      ".notwork.notify.protosB\014MessageProto"
+              "notify.protos.Priority:\003LOW\">\n\006Sender\022\020\n" +
+              "\010email_id\030\001 \001(\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n" +
+              "\004name\030\003 \001(\t\"Y\n\010Receiver\022\020\n\010email_id\030\001 \001(",
+            "\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\n\n" +
+                    "\002cc\030\004 \003(\t\022\013\n\003bcc\030\005 \003(\t\"W\n\007Content\022\017\n\007sub" +
+                    "ject\030\001 \001(\t\022\014\n\004body\030\002 \001(\t\022-\n\nattachment\030\003" +
+                    " \003(\0132\031.notify.protos.Attachment\"@\n\nAttac" +
+                    "hment\022\014\n\004name\030\001 \002(\t\022\017\n\007content\030\002 \002(\014\022\023\n\013" +
+                    "contentType\030\003 \002(\t*)\n\010Priority\022\007\n\003LOW\020\000\022\n" +
+      "\n\006MEDIUM\020\001\022\010\n\004HIGH\020\002*/\n\006Status\022\006\n\002IN\020\000\022\007" +
+      "\n\003OUT\020\001\022\010\n\004SENT\020\002\022\n\n\006FAILED\020\003*$\n\004Type\022\007\n" +
+      "\003SMS\020\000\022\t\n\005EMAIL\020\001\022\010\n\004PUSH\020\002B(\n\030in.notwor" +
+      "k.notify.protosB\014MessageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4353,13 +5575,19 @@ public final class MessageProto {
     internal_static_notify_protos_Receiver_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_notify_protos_Receiver_descriptor,
-        new java.lang.String[] { "EmailId", "PhoneNumber", "Name", "Cc", "Bcc", });
+        new java.lang.String[]{"EmailId", "PhoneNumber", "Name", "Cc", "Bcc",});
     internal_static_notify_protos_Content_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+            getDescriptor().getMessageTypes().get(3);
     internal_static_notify_protos_Content_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_notify_protos_Content_descriptor,
+            new java.lang.String[]{"Subject", "Body", "Attachment",});
+    internal_static_notify_protos_Attachment_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_notify_protos_Attachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_notify_protos_Content_descriptor,
-        new java.lang.String[] { "Subject", "Body", });
+        internal_static_notify_protos_Attachment_descriptor,
+        new java.lang.String[] { "Name", "Content", "ContentType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

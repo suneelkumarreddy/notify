@@ -1,5 +1,6 @@
 package in.notwork.notify.client.message;
 
+import com.google.protobuf.ByteString;
 import in.notwork.notify.protos.MessageProto;
 
 /**
@@ -68,6 +69,18 @@ public class Email extends Builder {
                 this.builder,
                 MessageProto.Content.newBuilder()
                         .setBody(body)
+                        .build()
+        );
+        return this;
+    }
+
+    public Email attach(final String filename, final byte[] content, final String contentType) {
+        BuilderUtility.mergeAttachment(
+                this.builder,
+                MessageProto.Attachment.newBuilder()
+                        .setName(filename)
+                        .setContent(ByteString.copyFrom(content))
+                        .setContentType(contentType)
                         .build()
         );
         return this;
