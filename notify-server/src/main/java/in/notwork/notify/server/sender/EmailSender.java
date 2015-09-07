@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -21,7 +22,7 @@ public class EmailSender extends MessageSender {
 
     private Session session;
 
-    public EmailSender(Map<String, String> config) {
+    public EmailSender(HashMap<String, String> config) {
         super(config);
         prepareSession();
     }

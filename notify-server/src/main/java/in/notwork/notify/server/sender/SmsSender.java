@@ -2,14 +2,14 @@ package in.notwork.notify.server.sender;
 
 import in.notwork.notify.protos.MessageProto;
 
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  * @author rishabh.
  */
 public class SmsSender extends MessageSender {
 
-    public SmsSender(Map<String, String> config) {
+    public SmsSender(HashMap<String, String> config) {
         super(config);
     }
 

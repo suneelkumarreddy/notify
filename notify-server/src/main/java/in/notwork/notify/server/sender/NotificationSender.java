@@ -9,7 +9,7 @@ import org.eclipse.jetty.client.HttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
+import java.util.HashMap;
 
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
@@ -22,7 +22,7 @@ public class NotificationSender extends MessageSender {
 
     private BayeuxClient client;
 
-    public NotificationSender(final Map<String, String> config) {
+    public NotificationSender(final HashMap<String, String> config) {
         super(config);
         prepareBayeuxConnection();
     }
