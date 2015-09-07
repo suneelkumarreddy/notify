@@ -47,7 +47,7 @@ public class RabbitMQ implements Queue {
         durable = PropertiesUtil.getBooleanProperty(RMQ_DURABLE);
         autoDelete = PropertiesUtil.getBooleanProperty(RMQ_AUTO_DELETE);
         exclusive = PropertiesUtil.getBooleanProperty(RMQ_EXCLUSIVE);
-        LOG.debug("queue:{0}|host:{1}|username:{2}|durable:{3}|autodelete:{4}|exclusive:{5}",
+        LOG.debug("queue:{}|host:{}|username:{}|durable:{}|autodelete:{}|exclusive:{}",
                 configuredQueue, host, username, durable, autoDelete, exclusive);
     }
 

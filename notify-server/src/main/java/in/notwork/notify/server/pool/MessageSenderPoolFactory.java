@@ -24,7 +24,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public MessageSender create(MessageType messageType) throws Exception {
-        LOG.debug("Creating an instance for message type: {0}", messageType);
+        LOG.debug("Creating an instance for message type: {}", messageType);
         String configuredImplementation = getConfiguredImplementation(messageType);
         Map<String, String> config = loadConfiguration(messageType);
         try {
@@ -34,7 +34,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
                 | IllegalAccessException | NoSuchMethodException
                 | InvocationTargetException e) {
 
-            LOG.error("Unable to create the MessageSender implementation - {0}", configuredImplementation, e);
+            LOG.error("Unable to create the MessageSender implementation - {}", configuredImplementation, e);
             throw e;
         }
     }
@@ -51,14 +51,14 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public void destroyObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        LOG.debug("Destroying {0} for message type: {1}, as it is no longer needed by the pool.",
+        LOG.debug("Destroying {} for message type: {}, as it is no longer needed by the pool.",
                 pooledObject.toString(), messageType);
         pooledObject.getObject().destroy();
     }
 
     @Override
     public boolean validateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) {
-        LOG.debug("Validating {0} from pool. Using key - {1}", pooledObject, messageType);
+        LOG.debug("Validating {} from pool. Using key - {}", pooledObject, messageType);
         return pooledObject.getObject().isValid();
     }
 

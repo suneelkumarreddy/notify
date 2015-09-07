@@ -33,7 +33,7 @@ public final class MessageSenderPoolFactoryHelper {
                 classToUse = PropertiesUtil.getProperty(NOTIF_SENDER_IMPL);
                 break;
         }
-        LOG.debug("For message type: {0}, using configured implementation: {1}", messageType, classToUse);
+        LOG.debug("For message type: {}, using configured implementation: {}", messageType, classToUse);
         return classToUse;
     }
 
@@ -55,6 +55,8 @@ public final class MessageSenderPoolFactoryHelper {
         config.put(MAIL_USERNAME, PropertiesUtil.getProperty(MAIL_USERNAME));
         config.put(MAIL_PASSWORD, PropertiesUtil.getProperty(MAIL_PASSWORD));
         config.put(MAIL_DEBUG, PropertiesUtil.getProperty(MAIL_DEBUG));
+        config.put(MAIL_SMTP_OVER_TLS, PropertiesUtil.getProperty(MAIL_SMTP_OVER_TLS));
+        config.put(MAIL_SMTP_OVER_SSL, PropertiesUtil.getProperty(MAIL_SMTP_OVER_SSL));
 
         config.put(MAIL_SMTP_AUTH, PropertiesUtil.getProperty(MAIL_SMTP_AUTH));
         config.put(MAIL_SMTP_STARTTTLS_ENABLE, PropertiesUtil.getProperty(MAIL_SMTP_STARTTTLS_ENABLE));
@@ -66,8 +68,9 @@ public final class MessageSenderPoolFactoryHelper {
         return config;
     }
 
+
     public static Map<String, String> loadConfiguration(MessageType messageType) {
-        LOG.debug("Loading configuration from properties for {0} sender...", messageType);
+        LOG.debug("Loading configuration from properties for {} sender...", messageType);
         Map<String, String> config = null;
         switch (messageType) {
             case EMAIL:

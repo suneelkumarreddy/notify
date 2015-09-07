@@ -67,7 +67,7 @@ public class EmailSender extends MessageSender {
 
             Transport.send(mimeMessage);
 
-            LOG.debug("Email sent - SUBJ: {0}, TO: {1}, FROM: {2}", subject, toAddress, fromAddress);
+            LOG.debug("Email sent - SUBJ: {}, TO: {}, FROM: {}", subject, toAddress, fromAddress);
 
         } catch (MessagingException e) {
             LOG.error("Unable to send email", e);
