@@ -26,7 +26,7 @@ public class Task implements Callable<Queue> {
         try {
             queue.connect();
         } catch (IOException | TimeoutException e) {
-            LOG.error("Unable to connect to the queue..." + e.getCause(), e);
+            LOG.error("Unable to connect to the queue... {}", e.getCause(), e);
             throw new IOException("Unable to connect to the queue... " + e.getCause(), e);
         }
 
@@ -35,7 +35,7 @@ public class Task implements Callable<Queue> {
         try {
             queue.subscribe(router);
         } catch (IOException e) {
-            LOG.error("Unable to retrieve the message... " + e.getCause(), e);
+            LOG.error("Unable to retrieve the message... {}", e.getCause(), e);
             throw new IOException("Unable to retrieve the message... " + e.getCause(), e);
         }
 

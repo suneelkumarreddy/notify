@@ -1,5 +1,6 @@
 package in.notwork.notify.server.pool;
 
+import in.notwork.notify.client.message.MessageType;
 import in.notwork.notify.server.sender.MessageSender;
 import org.apache.commons.pool2.KeyedPooledObjectFactory;
 import org.apache.commons.pool2.impl.GenericKeyedObjectPool;

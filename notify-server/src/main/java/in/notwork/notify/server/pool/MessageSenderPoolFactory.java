@@ -1,5 +1,6 @@
 package in.notwork.notify.server.pool;
 
+import in.notwork.notify.client.message.MessageType;
 import in.notwork.notify.client.util.Instance;
 import in.notwork.notify.server.sender.MessageSender;
 import org.apache.commons.pool2.BaseKeyedPooledObjectFactory;
@@ -23,9 +24,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public MessageSender create(MessageType messageType) throws Exception {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Creating an instance for message type: " + messageType);
-        }
+        LOG.debug("Creating an instance for message type: {}", messageType);
         String configuredImplementation = getConfiguredImplementation(messageType);
         Map<String, String> config = loadConfiguration(messageType);
         try {
@@ -35,7 +34,7 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
                 | IllegalAccessException | NoSuchMethodException
                 | InvocationTargetException e) {
 
-            LOG.error("Unable to create the MessageSender implementation - " + configuredImplementation, e);
+            LOG.error("Unable to create the MessageSender implementation - {}", configuredImplementation, e);
             throw e;
         }
     }
@@ -52,28 +51,24 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
 
     @Override
     public void destroyObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Destroying " + pooledObject + " for message type: " + messageType
-                    + ", as it is no longer needed by the pool.");
-        }
+        LOG.debug("Destroying {} for message type: {}, as it is no longer needed by the pool.",
+                pooledObject.toString(), messageType);
         pooledObject.getObject().destroy();
     }
 
     @Override
     public boolean validateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Validating " + pooledObject + " from pool. Using key - " + messageType);
-        }
+        LOG.debug("Validating {} from pool. Using key - {}", pooledObject, messageType);
         return pooledObject.getObject().isValid();
     }
 
     @Override
     public void activateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        // pooledObject.getObject().activate();
+        // no-op
     }
 
     @Override
     public void passivateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
-        // pooledObject.getObject().deactivate();
+        // no-op
     }
 }

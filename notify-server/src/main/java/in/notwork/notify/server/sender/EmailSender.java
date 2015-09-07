@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -21,16 +22,14 @@ public class EmailSender extends MessageSender {
 
     private Session session;
 
-    public EmailSender(Map<String, String> config) {
+    public EmailSender(HashMap<String, String> config) {
         super(config);
         prepareSession();
     }
 
     @Override
     public void send(MessageProto.Message message) {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Preparing email...");
-        }
+        LOG.debug("Preparing email...");
 
         try {
 
@@ -69,14 +68,10 @@ public class EmailSender extends MessageSender {
 
             Transport.send(mimeMessage);
 
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Email sent - SUBJ: " + subject + ", TO: " + toAddress + ", FROM: " + fromAddress);
-            }
+            LOG.debug("Email sent - SUBJ: {}, TO: {}, FROM: {}", subject, toAddress, fromAddress);
 
         } catch (MessagingException e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error("Unable to send email", e);
-            }
+            LOG.error("Unable to send email", e);
             throw new RuntimeException(e);
         }
 
@@ -84,9 +79,7 @@ public class EmailSender extends MessageSender {
 
     @Override
     public void destroy() {
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("Destroying email session...");
-        }
+        LOG.debug("Destroying email session...");
         session = null;
     }
 
