@@ -30,8 +30,8 @@ public class KapSysUtil {
         log.info("Entering KapSysUtil sendKapSysSMS method");
         Gson gson = new Gson();
         KapsysSMS kapsysSMS = new KapsysSMS();
-        kapsysSMS.setparams("trans.kapsystem.com","Ad2c65b43d6633133355364f7e46cb8f2","KAPMSG");
-        //kapsysSMS.setparams(config.get(NotifyConstants.KAPSYS_URL),config.get(NotifyConstants.KAPSYS_WORKING_KEY),config.get(NotifyConstants.KAPSYS_SENDER_ID));
+        //kapsysSMS.setparams("trans.kapsystem.com","Ad2c65b43d6633133355364f7e46cb8f2","KAPMSG");
+        kapsysSMS.setparams(config.get(NotifyConstants.KAPSYS_URL),config.get(NotifyConstants.KAPSYS_WORKING_KEY),config.get(NotifyConstants.KAPSYS_SENDER_ID));
         KapSysSMSResponse kapSysSMSResponse=null;
         List<KapSysSMSResponse> kapSysSMSResponseList = new ArrayList<>();
             String responseJson = kapsysSMS.send_sms(to, content, NotifyConstants.KAPSYS_DLR_URL);
@@ -55,6 +55,7 @@ public class KapSysUtil {
                     kapSysSMSResponse.setGroupId(smsObj.getId().substring(0, smsObj.getId().indexOf("-")));
                     kapSysSMSResponse.setResponseDetails(message);
                     kapSysSMSResponse.setRequestContent(content);
+                    kapSysSMSResponse.setResponseCode(NotifyConstants.KAPSYS_SUCC_RESP_CODE);
                     kapSysSMSResponseList.add(kapSysSMSResponse);
 
                 }

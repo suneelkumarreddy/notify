@@ -30,6 +30,7 @@ public class NotifyConstants {
     public static final String KAPSYS_ERROR_STATUS="Error";
     public static final String KAPSYS_DELVRY_DATE_FORMAT="yyyy-MM-dd HH:mm:ss";
     public static final String KAPSYS_GROUP_ID="group_id";
+    public static final String KAPSYS_SUCC_RESP_CODE="000";
 
     public static final String EMAIL_SENDER_IMPL = "emailSender.impl";
     public static final String SMS_SENDER_IMPL = "smsSender.impl";

@@ -57,6 +57,6 @@ public class SmsSender extends MessageSender {
 
     @Override
     public boolean isValid() {
-        return false;
+        return true;
     }
 }
