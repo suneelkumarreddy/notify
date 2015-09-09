@@ -18,9 +18,9 @@ public class NotifyConstants {
     public static final String RMQ_AUTO_DELETE = "rmq.queue.autoDelete";
 
     // Kapsys constants
-    public static final String KAPSYS_URL="url";
-    public static final String KAPSYS_WORKING_KEY="workingKey";
-    public static final String KAPSYS_SENDER_ID="senderId";
+    public static final String KAPSYS_URL="kapsys.url";
+    public static final String KAPSYS_WORKING_KEY="kapsys.workingKey";
+    public static final String KAPSYS_SENDER_ID="kapsys.senderId";
     public static final String KAPSYS_DLR_URL="deliverURL";
     public static final String KAPSYS_STATUS="status";
     public static final String KAPSYS_STATUS_OK="OK";

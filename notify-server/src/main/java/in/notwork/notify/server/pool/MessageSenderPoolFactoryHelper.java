@@ -54,7 +54,9 @@ public final class MessageSenderPoolFactoryHelper {
 
     private static Map<String, String> getSmsConfiguration() {
         Map<String, String> config = new HashMap<>();
-        // TODO Get sms config from properties
+        config.put(KAPSYS_URL, PropertiesUtil.getProperty(KAPSYS_URL));
+        config.put(KAPSYS_WORKING_KEY, PropertiesUtil.getProperty(KAPSYS_WORKING_KEY));
+        config.put(KAPSYS_SENDER_ID, PropertiesUtil.getProperty(KAPSYS_SENDER_ID));
         return config;
     }
 
