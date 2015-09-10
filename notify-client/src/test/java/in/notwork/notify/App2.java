@@ -1,4 +1,4 @@
-package in.notwork.notify.server.notify.client.samples;
+package in.notwork.notify;
 
 import in.notwork.notify.client.Notify;
 import in.notwork.notify.client.message.Email;
