@@ -10,42 +10,6 @@ final class BuilderUtility {
     private BuilderUtility() {
     }
 
-    static void mergeReceiver(MessageProto.Message.Builder builder, final MessageProto.Receiver receiver) {
-        if (null != builder) {
-            if (builder.hasReceiver()) {
-                builder.mergeReceiver(receiver);
-            } else {
-                builder.setReceiver(receiver);
-            }
-        }
-    }
-
-    static void mergeSender(MessageProto.Message.Builder builder, final MessageProto.Sender sender) {
-        if (null != builder) {
-            if (builder.hasSender()) {
-                builder.mergeSender(sender);
-            } else {
-                builder.setSender(sender);
-            }
-        }
-    }
-
-    static void mergeContent(MessageProto.Message.Builder builder, final MessageProto.Content content) {
-        if (null != builder) {
-            if (builder.hasContent()) {
-                builder.mergeContent(content);
-            } else {
-                builder.setContent(content);
-            }
-        }
-    }
-
-    public static void mergeAttachment(MessageProto.Message.Builder builder, final MessageProto.Attachment attachment) {
-        if (null != builder && null != builder.getContentBuilder()) {
-            builder.getContentBuilder().addAttachment(attachment);
-        }
-    }
-
     static MessageProto.Priority getPriority(final MessagePriority priority) {
         MessageProto.Priority protoPriority;
         switch (priority) {
