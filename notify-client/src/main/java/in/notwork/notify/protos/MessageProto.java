@@ -295,43 +295,43 @@ public final class MessageProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    boolean hasSender();
+    boolean hasEmail();
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    in.notwork.notify.protos.MessageProto.Sender getSender();
+    in.notwork.notify.protos.MessageProto.Email getEmail();
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder();
+    in.notwork.notify.protos.MessageProto.EmailOrBuilder getEmailOrBuilder();
 
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    boolean hasReceiver();
+    boolean hasSms();
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    in.notwork.notify.protos.MessageProto.Receiver getReceiver();
+    in.notwork.notify.protos.MessageProto.Sms getSms();
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder();
+    in.notwork.notify.protos.MessageProto.SmsOrBuilder getSmsOrBuilder();
 
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    boolean hasContent();
+    boolean hasNotification();
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    in.notwork.notify.protos.MessageProto.Content getContent();
+    in.notwork.notify.protos.MessageProto.Notification getNotification();
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder();
+    in.notwork.notify.protos.MessageProto.NotificationOrBuilder getNotificationOrBuilder();
 
     /**
      * <code>optional string message_id = 4;</code>
@@ -427,40 +427,40 @@ public final class MessageProto {
               break;
             }
             case 10: {
-              in.notwork.notify.protos.MessageProto.Sender.Builder subBuilder = null;
+              in.notwork.notify.protos.MessageProto.Email.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = sender_.toBuilder();
+                subBuilder = email_.toBuilder();
               }
-              sender_ = input.readMessage(in.notwork.notify.protos.MessageProto.Sender.PARSER, extensionRegistry);
+              email_ = input.readMessage(in.notwork.notify.protos.MessageProto.Email.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(sender_);
-                sender_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(email_);
+                email_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
-              in.notwork.notify.protos.MessageProto.Receiver.Builder subBuilder = null;
+              in.notwork.notify.protos.MessageProto.Sms.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = receiver_.toBuilder();
+                subBuilder = sms_.toBuilder();
               }
-              receiver_ = input.readMessage(in.notwork.notify.protos.MessageProto.Receiver.PARSER, extensionRegistry);
+              sms_ = input.readMessage(in.notwork.notify.protos.MessageProto.Sms.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(receiver_);
-                receiver_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(sms_);
+                sms_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000002;
               break;
             }
             case 26: {
-              in.notwork.notify.protos.MessageProto.Content.Builder subBuilder = null;
+              in.notwork.notify.protos.MessageProto.Notification.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = content_.toBuilder();
+                subBuilder = notification_.toBuilder();
               }
-              content_ = input.readMessage(in.notwork.notify.protos.MessageProto.Content.PARSER, extensionRegistry);
+              notification_ = input.readMessage(in.notwork.notify.protos.MessageProto.Notification.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(content_);
-                content_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(notification_);
+                notification_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
               break;
@@ -544,67 +544,67 @@ public final class MessageProto {
     }
 
     private int bitField0_;
-    public static final int SENDER_FIELD_NUMBER = 1;
-    private in.notwork.notify.protos.MessageProto.Sender sender_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private in.notwork.notify.protos.MessageProto.Email email_;
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    public boolean hasSender() {
+    public boolean hasEmail() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    public in.notwork.notify.protos.MessageProto.Sender getSender() {
-      return sender_;
+    public in.notwork.notify.protos.MessageProto.Email getEmail() {
+      return email_;
     }
     /**
-     * <code>optional .notify.protos.Sender sender = 1;</code>
+     * <code>optional .notify.protos.Email email = 1;</code>
      */
-    public in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder() {
-      return sender_;
+    public in.notwork.notify.protos.MessageProto.EmailOrBuilder getEmailOrBuilder() {
+      return email_;
     }
 
-    public static final int RECEIVER_FIELD_NUMBER = 2;
-    private in.notwork.notify.protos.MessageProto.Receiver receiver_;
+    public static final int SMS_FIELD_NUMBER = 2;
+    private in.notwork.notify.protos.MessageProto.Sms sms_;
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    public boolean hasReceiver() {
+    public boolean hasSms() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    public in.notwork.notify.protos.MessageProto.Receiver getReceiver() {
-      return receiver_;
+    public in.notwork.notify.protos.MessageProto.Sms getSms() {
+      return sms_;
     }
     /**
-     * <code>optional .notify.protos.Receiver receiver = 2;</code>
+     * <code>optional .notify.protos.Sms sms = 2;</code>
      */
-    public in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder() {
-      return receiver_;
+    public in.notwork.notify.protos.MessageProto.SmsOrBuilder getSmsOrBuilder() {
+      return sms_;
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 3;
-    private in.notwork.notify.protos.MessageProto.Content content_;
+    public static final int NOTIFICATION_FIELD_NUMBER = 3;
+    private in.notwork.notify.protos.MessageProto.Notification notification_;
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    public boolean hasContent() {
+    public boolean hasNotification() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    public in.notwork.notify.protos.MessageProto.Content getContent() {
-      return content_;
+    public in.notwork.notify.protos.MessageProto.Notification getNotification() {
+      return notification_;
     }
     /**
-     * <code>optional .notify.protos.Content content = 3;</code>
+     * <code>optional .notify.protos.Notification notification = 3;</code>
      */
-    public in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder() {
-      return content_;
+    public in.notwork.notify.protos.MessageProto.NotificationOrBuilder getNotificationOrBuilder() {
+      return notification_;
     }
 
     public static final int MESSAGE_ID_FIELD_NUMBER = 4;
@@ -695,9 +695,9 @@ public final class MessageProto {
     }
 
     private void initFields() {
-      sender_ = in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance();
-      receiver_ = in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance();
-      content_ = in.notwork.notify.protos.MessageProto.Content.getDefaultInstance();
+      email_ = in.notwork.notify.protos.MessageProto.Email.getDefaultInstance();
+      sms_ = in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance();
+      notification_ = in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance();
       messageId_ = "";
       type_ = in.notwork.notify.protos.MessageProto.Type.SMS;
       status_ = in.notwork.notify.protos.MessageProto.Status.IN;
@@ -713,8 +713,8 @@ public final class MessageProto {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasContent()) {
-        if (!getContent().isInitialized()) {
+      if (hasEmail()) {
+        if (!getEmail().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -727,13 +727,13 @@ public final class MessageProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, sender_);
+        output.writeMessage(1, email_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, receiver_);
+        output.writeMessage(2, sms_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, content_);
+        output.writeMessage(3, notification_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getMessageIdBytes());
@@ -758,15 +758,15 @@ public final class MessageProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, sender_);
+          .computeMessageSize(1, email_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, receiver_);
+          .computeMessageSize(2, sms_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, content_);
+          .computeMessageSize(3, notification_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -893,9 +893,9 @@ public final class MessageProto {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getSenderFieldBuilder();
-          getReceiverFieldBuilder();
-          getContentFieldBuilder();
+          getEmailFieldBuilder();
+          getSmsFieldBuilder();
+          getNotificationFieldBuilder();
         }
       }
       private static Builder create() {
@@ -904,22 +904,22 @@ public final class MessageProto {
 
       public Builder clear() {
         super.clear();
-        if (senderBuilder_ == null) {
-          sender_ = in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance();
+        if (emailBuilder_ == null) {
+          email_ = in.notwork.notify.protos.MessageProto.Email.getDefaultInstance();
         } else {
-          senderBuilder_.clear();
+          emailBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (receiverBuilder_ == null) {
-          receiver_ = in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance();
+        if (smsBuilder_ == null) {
+          sms_ = in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance();
         } else {
-          receiverBuilder_.clear();
+          smsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (contentBuilder_ == null) {
-          content_ = in.notwork.notify.protos.MessageProto.Content.getDefaultInstance();
+        if (notificationBuilder_ == null) {
+          notification_ = in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance();
         } else {
-          contentBuilder_.clear();
+          notificationBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         messageId_ = "";
@@ -961,26 +961,26 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        if (senderBuilder_ == null) {
-          result.sender_ = sender_;
+        if (emailBuilder_ == null) {
+          result.email_ = email_;
         } else {
-          result.sender_ = senderBuilder_.build();
+          result.email_ = emailBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        if (receiverBuilder_ == null) {
-          result.receiver_ = receiver_;
+        if (smsBuilder_ == null) {
+          result.sms_ = sms_;
         } else {
-          result.receiver_ = receiverBuilder_.build();
+          result.sms_ = smsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        if (contentBuilder_ == null) {
-          result.content_ = content_;
+        if (notificationBuilder_ == null) {
+          result.notification_ = notification_;
         } else {
-          result.content_ = contentBuilder_.build();
+          result.notification_ = notificationBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
@@ -1014,14 +1014,14 @@ public final class MessageProto {
 
       public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Message other) {
         if (other == in.notwork.notify.protos.MessageProto.Message.getDefaultInstance()) return this;
-        if (other.hasSender()) {
-          mergeSender(other.getSender());
+        if (other.hasEmail()) {
+          mergeEmail(other.getEmail());
         }
-        if (other.hasReceiver()) {
-          mergeReceiver(other.getReceiver());
+        if (other.hasSms()) {
+          mergeSms(other.getSms());
         }
-        if (other.hasContent()) {
-          mergeContent(other.getContent());
+        if (other.hasNotification()) {
+          mergeNotification(other.getNotification());
         }
         if (other.hasMessageId()) {
           bitField0_ |= 0x00000008;
@@ -1046,9 +1046,9 @@ public final class MessageProto {
           
           return false;
         }
-        if (hasContent()) {
-          if (!getContent().isInitialized()) {
-
+        if (hasEmail()) {
+          if (!getEmail().isInitialized()) {
+            
             return false;
           }
         }
@@ -1074,352 +1074,352 @@ public final class MessageProto {
       }
       private int bitField0_;
 
-      private in.notwork.notify.protos.MessageProto.Sender sender_ = in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance();
+      private in.notwork.notify.protos.MessageProto.Email email_ = in.notwork.notify.protos.MessageProto.Email.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Sender, in.notwork.notify.protos.MessageProto.Sender.Builder, in.notwork.notify.protos.MessageProto.SenderOrBuilder> senderBuilder_;
+          in.notwork.notify.protos.MessageProto.Email, in.notwork.notify.protos.MessageProto.Email.Builder, in.notwork.notify.protos.MessageProto.EmailOrBuilder> emailBuilder_;
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public boolean hasSender() {
+      public boolean hasEmail() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Sender getSender() {
-        if (senderBuilder_ == null) {
-          return sender_;
+      public in.notwork.notify.protos.MessageProto.Email getEmail() {
+        if (emailBuilder_ == null) {
+          return email_;
         } else {
-          return senderBuilder_.getMessage();
+          return emailBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public Builder setSender(in.notwork.notify.protos.MessageProto.Sender value) {
-        if (senderBuilder_ == null) {
+      public Builder setEmail(in.notwork.notify.protos.MessageProto.Email value) {
+        if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          sender_ = value;
+          email_ = value;
           onChanged();
         } else {
-          senderBuilder_.setMessage(value);
+          emailBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public Builder setSender(
-          in.notwork.notify.protos.MessageProto.Sender.Builder builderForValue) {
-        if (senderBuilder_ == null) {
-          sender_ = builderForValue.build();
+      public Builder setEmail(
+          in.notwork.notify.protos.MessageProto.Email.Builder builderForValue) {
+        if (emailBuilder_ == null) {
+          email_ = builderForValue.build();
           onChanged();
         } else {
-          senderBuilder_.setMessage(builderForValue.build());
+          emailBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public Builder mergeSender(in.notwork.notify.protos.MessageProto.Sender value) {
-        if (senderBuilder_ == null) {
+      public Builder mergeEmail(in.notwork.notify.protos.MessageProto.Email value) {
+        if (emailBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              sender_ != in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance()) {
-            sender_ =
-              in.notwork.notify.protos.MessageProto.Sender.newBuilder(sender_).mergeFrom(value).buildPartial();
+              email_ != in.notwork.notify.protos.MessageProto.Email.getDefaultInstance()) {
+            email_ =
+              in.notwork.notify.protos.MessageProto.Email.newBuilder(email_).mergeFrom(value).buildPartial();
           } else {
-            sender_ = value;
+            email_ = value;
           }
           onChanged();
         } else {
-          senderBuilder_.mergeFrom(value);
+          emailBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public Builder clearSender() {
-        if (senderBuilder_ == null) {
-          sender_ = in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance();
+      public Builder clearEmail() {
+        if (emailBuilder_ == null) {
+          email_ = in.notwork.notify.protos.MessageProto.Email.getDefaultInstance();
           onChanged();
         } else {
-          senderBuilder_.clear();
+          emailBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Sender.Builder getSenderBuilder() {
+      public in.notwork.notify.protos.MessageProto.Email.Builder getEmailBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return getSenderFieldBuilder().getBuilder();
+        return getEmailFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
-      public in.notwork.notify.protos.MessageProto.SenderOrBuilder getSenderOrBuilder() {
-        if (senderBuilder_ != null) {
-          return senderBuilder_.getMessageOrBuilder();
+      public in.notwork.notify.protos.MessageProto.EmailOrBuilder getEmailOrBuilder() {
+        if (emailBuilder_ != null) {
+          return emailBuilder_.getMessageOrBuilder();
         } else {
-          return sender_;
+          return email_;
         }
       }
       /**
-       * <code>optional .notify.protos.Sender sender = 1;</code>
+       * <code>optional .notify.protos.Email email = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Sender, in.notwork.notify.protos.MessageProto.Sender.Builder, in.notwork.notify.protos.MessageProto.SenderOrBuilder> 
-          getSenderFieldBuilder() {
-        if (senderBuilder_ == null) {
-          senderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              in.notwork.notify.protos.MessageProto.Sender, in.notwork.notify.protos.MessageProto.Sender.Builder, in.notwork.notify.protos.MessageProto.SenderOrBuilder>(
-                  getSender(),
+          in.notwork.notify.protos.MessageProto.Email, in.notwork.notify.protos.MessageProto.Email.Builder, in.notwork.notify.protos.MessageProto.EmailOrBuilder> 
+          getEmailFieldBuilder() {
+        if (emailBuilder_ == null) {
+          emailBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Email, in.notwork.notify.protos.MessageProto.Email.Builder, in.notwork.notify.protos.MessageProto.EmailOrBuilder>(
+                  getEmail(),
                   getParentForChildren(),
                   isClean());
-          sender_ = null;
+          email_ = null;
         }
-        return senderBuilder_;
+        return emailBuilder_;
       }
 
-      private in.notwork.notify.protos.MessageProto.Receiver receiver_ = in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance();
+      private in.notwork.notify.protos.MessageProto.Sms sms_ = in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Receiver, in.notwork.notify.protos.MessageProto.Receiver.Builder, in.notwork.notify.protos.MessageProto.ReceiverOrBuilder> receiverBuilder_;
+          in.notwork.notify.protos.MessageProto.Sms, in.notwork.notify.protos.MessageProto.Sms.Builder, in.notwork.notify.protos.MessageProto.SmsOrBuilder> smsBuilder_;
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public boolean hasReceiver() {
+      public boolean hasSms() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Receiver getReceiver() {
-        if (receiverBuilder_ == null) {
-          return receiver_;
+      public in.notwork.notify.protos.MessageProto.Sms getSms() {
+        if (smsBuilder_ == null) {
+          return sms_;
         } else {
-          return receiverBuilder_.getMessage();
+          return smsBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public Builder setReceiver(in.notwork.notify.protos.MessageProto.Receiver value) {
-        if (receiverBuilder_ == null) {
+      public Builder setSms(in.notwork.notify.protos.MessageProto.Sms value) {
+        if (smsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          receiver_ = value;
+          sms_ = value;
           onChanged();
         } else {
-          receiverBuilder_.setMessage(value);
+          smsBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public Builder setReceiver(
-          in.notwork.notify.protos.MessageProto.Receiver.Builder builderForValue) {
-        if (receiverBuilder_ == null) {
-          receiver_ = builderForValue.build();
+      public Builder setSms(
+          in.notwork.notify.protos.MessageProto.Sms.Builder builderForValue) {
+        if (smsBuilder_ == null) {
+          sms_ = builderForValue.build();
           onChanged();
         } else {
-          receiverBuilder_.setMessage(builderForValue.build());
+          smsBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public Builder mergeReceiver(in.notwork.notify.protos.MessageProto.Receiver value) {
-        if (receiverBuilder_ == null) {
+      public Builder mergeSms(in.notwork.notify.protos.MessageProto.Sms value) {
+        if (smsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              receiver_ != in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance()) {
-            receiver_ =
-              in.notwork.notify.protos.MessageProto.Receiver.newBuilder(receiver_).mergeFrom(value).buildPartial();
+              sms_ != in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance()) {
+            sms_ =
+              in.notwork.notify.protos.MessageProto.Sms.newBuilder(sms_).mergeFrom(value).buildPartial();
           } else {
-            receiver_ = value;
+            sms_ = value;
           }
           onChanged();
         } else {
-          receiverBuilder_.mergeFrom(value);
+          smsBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public Builder clearReceiver() {
-        if (receiverBuilder_ == null) {
-          receiver_ = in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance();
+      public Builder clearSms() {
+        if (smsBuilder_ == null) {
+          sms_ = in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance();
           onChanged();
         } else {
-          receiverBuilder_.clear();
+          smsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Receiver.Builder getReceiverBuilder() {
+      public in.notwork.notify.protos.MessageProto.Sms.Builder getSmsBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
-        return getReceiverFieldBuilder().getBuilder();
+        return getSmsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
-      public in.notwork.notify.protos.MessageProto.ReceiverOrBuilder getReceiverOrBuilder() {
-        if (receiverBuilder_ != null) {
-          return receiverBuilder_.getMessageOrBuilder();
+      public in.notwork.notify.protos.MessageProto.SmsOrBuilder getSmsOrBuilder() {
+        if (smsBuilder_ != null) {
+          return smsBuilder_.getMessageOrBuilder();
         } else {
-          return receiver_;
+          return sms_;
         }
       }
       /**
-       * <code>optional .notify.protos.Receiver receiver = 2;</code>
+       * <code>optional .notify.protos.Sms sms = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Receiver, in.notwork.notify.protos.MessageProto.Receiver.Builder, in.notwork.notify.protos.MessageProto.ReceiverOrBuilder> 
-          getReceiverFieldBuilder() {
-        if (receiverBuilder_ == null) {
-          receiverBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              in.notwork.notify.protos.MessageProto.Receiver, in.notwork.notify.protos.MessageProto.Receiver.Builder, in.notwork.notify.protos.MessageProto.ReceiverOrBuilder>(
-                  getReceiver(),
+          in.notwork.notify.protos.MessageProto.Sms, in.notwork.notify.protos.MessageProto.Sms.Builder, in.notwork.notify.protos.MessageProto.SmsOrBuilder> 
+          getSmsFieldBuilder() {
+        if (smsBuilder_ == null) {
+          smsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Sms, in.notwork.notify.protos.MessageProto.Sms.Builder, in.notwork.notify.protos.MessageProto.SmsOrBuilder>(
+                  getSms(),
                   getParentForChildren(),
                   isClean());
-          receiver_ = null;
+          sms_ = null;
         }
-        return receiverBuilder_;
+        return smsBuilder_;
       }
 
-      private in.notwork.notify.protos.MessageProto.Content content_ = in.notwork.notify.protos.MessageProto.Content.getDefaultInstance();
+      private in.notwork.notify.protos.MessageProto.Notification notification_ = in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Content, in.notwork.notify.protos.MessageProto.Content.Builder, in.notwork.notify.protos.MessageProto.ContentOrBuilder> contentBuilder_;
+          in.notwork.notify.protos.MessageProto.Notification, in.notwork.notify.protos.MessageProto.Notification.Builder, in.notwork.notify.protos.MessageProto.NotificationOrBuilder> notificationBuilder_;
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public boolean hasContent() {
+      public boolean hasNotification() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Content getContent() {
-        if (contentBuilder_ == null) {
-          return content_;
+      public in.notwork.notify.protos.MessageProto.Notification getNotification() {
+        if (notificationBuilder_ == null) {
+          return notification_;
         } else {
-          return contentBuilder_.getMessage();
+          return notificationBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public Builder setContent(in.notwork.notify.protos.MessageProto.Content value) {
-        if (contentBuilder_ == null) {
+      public Builder setNotification(in.notwork.notify.protos.MessageProto.Notification value) {
+        if (notificationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          content_ = value;
+          notification_ = value;
           onChanged();
         } else {
-          contentBuilder_.setMessage(value);
+          notificationBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public Builder setContent(
-          in.notwork.notify.protos.MessageProto.Content.Builder builderForValue) {
-        if (contentBuilder_ == null) {
-          content_ = builderForValue.build();
+      public Builder setNotification(
+          in.notwork.notify.protos.MessageProto.Notification.Builder builderForValue) {
+        if (notificationBuilder_ == null) {
+          notification_ = builderForValue.build();
           onChanged();
         } else {
-          contentBuilder_.setMessage(builderForValue.build());
+          notificationBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public Builder mergeContent(in.notwork.notify.protos.MessageProto.Content value) {
-        if (contentBuilder_ == null) {
+      public Builder mergeNotification(in.notwork.notify.protos.MessageProto.Notification value) {
+        if (notificationBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              content_ != in.notwork.notify.protos.MessageProto.Content.getDefaultInstance()) {
-            content_ =
-              in.notwork.notify.protos.MessageProto.Content.newBuilder(content_).mergeFrom(value).buildPartial();
+              notification_ != in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance()) {
+            notification_ =
+              in.notwork.notify.protos.MessageProto.Notification.newBuilder(notification_).mergeFrom(value).buildPartial();
           } else {
-            content_ = value;
+            notification_ = value;
           }
           onChanged();
         } else {
-          contentBuilder_.mergeFrom(value);
+          notificationBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public Builder clearContent() {
-        if (contentBuilder_ == null) {
-          content_ = in.notwork.notify.protos.MessageProto.Content.getDefaultInstance();
+      public Builder clearNotification() {
+        if (notificationBuilder_ == null) {
+          notification_ = in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance();
           onChanged();
         } else {
-          contentBuilder_.clear();
+          notificationBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public in.notwork.notify.protos.MessageProto.Content.Builder getContentBuilder() {
+      public in.notwork.notify.protos.MessageProto.Notification.Builder getNotificationBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
-        return getContentFieldBuilder().getBuilder();
+        return getNotificationFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
-      public in.notwork.notify.protos.MessageProto.ContentOrBuilder getContentOrBuilder() {
-        if (contentBuilder_ != null) {
-          return contentBuilder_.getMessageOrBuilder();
+      public in.notwork.notify.protos.MessageProto.NotificationOrBuilder getNotificationOrBuilder() {
+        if (notificationBuilder_ != null) {
+          return notificationBuilder_.getMessageOrBuilder();
         } else {
-          return content_;
+          return notification_;
         }
       }
       /**
-       * <code>optional .notify.protos.Content content = 3;</code>
+       * <code>optional .notify.protos.Notification notification = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          in.notwork.notify.protos.MessageProto.Content, in.notwork.notify.protos.MessageProto.Content.Builder, in.notwork.notify.protos.MessageProto.ContentOrBuilder> 
-          getContentFieldBuilder() {
-        if (contentBuilder_ == null) {
-          contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              in.notwork.notify.protos.MessageProto.Content, in.notwork.notify.protos.MessageProto.Content.Builder, in.notwork.notify.protos.MessageProto.ContentOrBuilder>(
-                  getContent(),
+          in.notwork.notify.protos.MessageProto.Notification, in.notwork.notify.protos.MessageProto.Notification.Builder, in.notwork.notify.protos.MessageProto.NotificationOrBuilder> 
+          getNotificationFieldBuilder() {
+        if (notificationBuilder_ == null) {
+          notificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Notification, in.notwork.notify.protos.MessageProto.Notification.Builder, in.notwork.notify.protos.MessageProto.NotificationOrBuilder>(
+                  getNotification(),
                   getParentForChildren(),
                   isClean());
-          content_ = null;
+          notification_ = null;
         }
-        return contentBuilder_;
+        return notificationBuilder_;
       }
 
       private java.lang.Object messageId_ = "";
@@ -1614,2128 +1614,153 @@ public final class MessageProto {
     // @@protoc_insertion_point(class_scope:notify.protos.Message)
   }
 
-  public interface SenderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:notify.protos.Sender)
+  public interface EmailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:notify.protos.Email)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string email_id = 1;</code>
-     */
-    boolean hasEmailId();
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    java.lang.String getEmailId();
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getEmailIdBytes();
-
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    boolean hasPhoneNumber();
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    java.lang.String getPhoneNumber();
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getPhoneNumberBytes();
-
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    boolean hasName();
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    java.lang.String getName();
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-  }
-  /**
-   * Protobuf type {@code notify.protos.Sender}
-   */
-  public static final class Sender extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:notify.protos.Sender)
-      SenderOrBuilder {
-    // Use Sender.newBuilder() to construct.
-    private Sender(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Sender(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Sender defaultInstance;
-    public static Sender getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Sender getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Sender(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              emailId_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              phoneNumber_ = bs;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              name_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sender_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sender_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              in.notwork.notify.protos.MessageProto.Sender.class, in.notwork.notify.protos.MessageProto.Sender.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Sender> PARSER =
-        new com.google.protobuf.AbstractParser<Sender>() {
-      public Sender parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Sender(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Sender> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int EMAIL_ID_FIELD_NUMBER = 1;
-    private java.lang.Object emailId_;
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    public boolean hasEmailId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    public java.lang.String getEmailId() {
-      java.lang.Object ref = emailId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          emailId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getEmailIdBytes() {
-      java.lang.Object ref = emailId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        emailId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-    private java.lang.Object phoneNumber_;
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    public boolean hasPhoneNumber() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    public java.lang.String getPhoneNumber() {
-      java.lang.Object ref = phoneNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          phoneNumber_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPhoneNumberBytes() {
-      java.lang.Object ref = phoneNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        phoneNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 3;
-    private java.lang.Object name_;
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      emailId_ = "";
-      phoneNumber_ = "";
-      name_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getEmailIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getPhoneNumberBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getNameBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getEmailIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getPhoneNumberBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Sender parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Sender prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code notify.protos.Sender}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:notify.protos.Sender)
-        in.notwork.notify.protos.MessageProto.SenderOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sender_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sender_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                in.notwork.notify.protos.MessageProto.Sender.class, in.notwork.notify.protos.MessageProto.Sender.Builder.class);
-      }
-
-      // Construct using in.notwork.notify.protos.MessageProto.Sender.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        emailId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        phoneNumber_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sender_descriptor;
-      }
-
-      public in.notwork.notify.protos.MessageProto.Sender getDefaultInstanceForType() {
-        return in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance();
-      }
-
-      public in.notwork.notify.protos.MessageProto.Sender build() {
-        in.notwork.notify.protos.MessageProto.Sender result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public in.notwork.notify.protos.MessageProto.Sender buildPartial() {
-        in.notwork.notify.protos.MessageProto.Sender result = new in.notwork.notify.protos.MessageProto.Sender(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.emailId_ = emailId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.phoneNumber_ = phoneNumber_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.name_ = name_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof in.notwork.notify.protos.MessageProto.Sender) {
-          return mergeFrom((in.notwork.notify.protos.MessageProto.Sender)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Sender other) {
-        if (other == in.notwork.notify.protos.MessageProto.Sender.getDefaultInstance()) return this;
-        if (other.hasEmailId()) {
-          bitField0_ |= 0x00000001;
-          emailId_ = other.emailId_;
-          onChanged();
-        }
-        if (other.hasPhoneNumber()) {
-          bitField0_ |= 0x00000002;
-          phoneNumber_ = other.phoneNumber_;
-          onChanged();
-        }
-        if (other.hasName()) {
-          bitField0_ |= 0x00000004;
-          name_ = other.name_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        in.notwork.notify.protos.MessageProto.Sender parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (in.notwork.notify.protos.MessageProto.Sender) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object emailId_ = "";
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public boolean hasEmailId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public java.lang.String getEmailId() {
-        java.lang.Object ref = emailId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            emailId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEmailIdBytes() {
-        java.lang.Object ref = emailId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          emailId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder setEmailId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        emailId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder clearEmailId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        emailId_ = getDefaultInstance().getEmailId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder setEmailIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        emailId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object phoneNumber_ = "";
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public boolean hasPhoneNumber() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public java.lang.String getPhoneNumber() {
-        java.lang.Object ref = phoneNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            phoneNumber_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneNumberBytes() {
-        java.lang.Object ref = phoneNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phoneNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder setPhoneNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder clearPhoneNumber() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        phoneNumber_ = getDefaultInstance().getPhoneNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder setPhoneNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:notify.protos.Sender)
-    }
-
-    static {
-      defaultInstance = new Sender(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:notify.protos.Sender)
-  }
-
-  public interface ReceiverOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:notify.protos.Receiver)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    boolean hasEmailId();
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    java.lang.String getEmailId();
-    /**
-     * <code>optional string email_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getEmailIdBytes();
-
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    boolean hasPhoneNumber();
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    java.lang.String getPhoneNumber();
-    /**
-     * <code>optional string phone_number = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getPhoneNumberBytes();
-
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    boolean hasName();
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    java.lang.String getName();
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>repeated string cc = 4;</code>
+     * <code>repeated string to_email = 1;</code>
      */
     com.google.protobuf.ProtocolStringList
-        getCcList();
+        getToEmailList();
     /**
-     * <code>repeated string cc = 4;</code>
+     * <code>repeated string to_email = 1;</code>
      */
-    int getCcCount();
+    int getToEmailCount();
     /**
-     * <code>repeated string cc = 4;</code>
+     * <code>repeated string to_email = 1;</code>
      */
-    java.lang.String getCc(int index);
+    java.lang.String getToEmail(int index);
     /**
-     * <code>repeated string cc = 4;</code>
+     * <code>repeated string to_email = 1;</code>
      */
     com.google.protobuf.ByteString
-        getCcBytes(int index);
+        getToEmailBytes(int index);
 
     /**
-     * <code>repeated string bcc = 5;</code>
+     * <code>repeated string cc_email = 2;</code>
      */
     com.google.protobuf.ProtocolStringList
-        getBccList();
+        getCcEmailList();
     /**
-     * <code>repeated string bcc = 5;</code>
+     * <code>repeated string cc_email = 2;</code>
      */
-    int getBccCount();
+    int getCcEmailCount();
     /**
-     * <code>repeated string bcc = 5;</code>
+     * <code>repeated string cc_email = 2;</code>
      */
-    java.lang.String getBcc(int index);
+    java.lang.String getCcEmail(int index);
     /**
-     * <code>repeated string bcc = 5;</code>
+     * <code>repeated string cc_email = 2;</code>
      */
     com.google.protobuf.ByteString
-        getBccBytes(int index);
-  }
-  /**
-   * Protobuf type {@code notify.protos.Receiver}
-   */
-  public static final class Receiver extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:notify.protos.Receiver)
-      ReceiverOrBuilder {
-    // Use Receiver.newBuilder() to construct.
-    private Receiver(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Receiver(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        getCcEmailBytes(int index);
 
-    private static final Receiver defaultInstance;
-    public static Receiver getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Receiver getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Receiver(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              emailId_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              phoneNumber_ = bs;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              name_ = bs;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                cc_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              cc_.add(bs);
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                bcc_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              bcc_.add(bs);
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          cc_ = cc_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          bcc_ = bcc_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Receiver_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Receiver_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              in.notwork.notify.protos.MessageProto.Receiver.class, in.notwork.notify.protos.MessageProto.Receiver.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Receiver> PARSER =
-        new com.google.protobuf.AbstractParser<Receiver>() {
-      public Receiver parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Receiver(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Receiver> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int EMAIL_ID_FIELD_NUMBER = 1;
-    private java.lang.Object emailId_;
     /**
-     * <code>optional string email_id = 1;</code>
+     * <code>repeated string bcc_email = 3;</code>
      */
-    public boolean hasEmailId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
+    com.google.protobuf.ProtocolStringList
+        getBccEmailList();
     /**
-     * <code>optional string email_id = 1;</code>
+     * <code>repeated string bcc_email = 3;</code>
      */
-    public java.lang.String getEmailId() {
-      java.lang.Object ref = emailId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          emailId_ = s;
-        }
-        return s;
-      }
-    }
+    int getBccEmailCount();
     /**
-     * <code>optional string email_id = 1;</code>
+     * <code>repeated string bcc_email = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getEmailIdBytes() {
-      java.lang.Object ref = emailId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        emailId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-    private java.lang.Object phoneNumber_;
+    java.lang.String getBccEmail(int index);
     /**
-     * <code>optional string phone_number = 2;</code>
+     * <code>repeated string bcc_email = 3;</code>
      */
-    public boolean hasPhoneNumber() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
+    com.google.protobuf.ByteString
+        getBccEmailBytes(int index);
+
     /**
-     * <code>optional string phone_number = 2;</code>
+     * <code>optional string from_email = 4;</code>
      */
-    public java.lang.String getPhoneNumber() {
-      java.lang.Object ref = phoneNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          phoneNumber_ = s;
-        }
-        return s;
-      }
-    }
+    boolean hasFromEmail();
     /**
-     * <code>optional string phone_number = 2;</code>
+     * <code>optional string from_email = 4;</code>
      */
-    public com.google.protobuf.ByteString
-        getPhoneNumberBytes() {
-      java.lang.Object ref = phoneNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        phoneNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 3;
-    private java.lang.Object name_;
+    java.lang.String getFromEmail();
     /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
+     * <code>optional string from_email = 4;</code>
      */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string name = 3;</code>
-     *
-     * <pre>
-     * person or channel name
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CC_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList cc_;
-    /**
-     * <code>repeated string cc = 4;</code>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCcList() {
-      return cc_;
-    }
-    /**
-     * <code>repeated string cc = 4;</code>
-     */
-    public int getCcCount() {
-      return cc_.size();
-    }
-    /**
-     * <code>repeated string cc = 4;</code>
-     */
-    public java.lang.String getCc(int index) {
-      return cc_.get(index);
-    }
-    /**
-     * <code>repeated string cc = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getCcBytes(int index) {
-      return cc_.getByteString(index);
-    }
-
-    public static final int BCC_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList bcc_;
-    /**
-     * <code>repeated string bcc = 5;</code>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getBccList() {
-      return bcc_;
-    }
-    /**
-     * <code>repeated string bcc = 5;</code>
-     */
-    public int getBccCount() {
-      return bcc_.size();
-    }
-    /**
-     * <code>repeated string bcc = 5;</code>
-     */
-    public java.lang.String getBcc(int index) {
-      return bcc_.get(index);
-    }
-    /**
-     * <code>repeated string bcc = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getBccBytes(int index) {
-      return bcc_.getByteString(index);
-    }
-
-    private void initFields() {
-      emailId_ = "";
-      phoneNumber_ = "";
-      name_ = "";
-      cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getEmailIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getPhoneNumberBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getNameBytes());
-      }
-      for (int i = 0; i < cc_.size(); i++) {
-        output.writeBytes(4, cc_.getByteString(i));
-      }
-      for (int i = 0; i < bcc_.size(); i++) {
-        output.writeBytes(5, bcc_.getByteString(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getEmailIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getPhoneNumberBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < cc_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(cc_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getCcList().size();
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < bcc_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(bcc_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getBccList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static in.notwork.notify.protos.MessageProto.Receiver parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Receiver prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code notify.protos.Receiver}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:notify.protos.Receiver)
-        in.notwork.notify.protos.MessageProto.ReceiverOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Receiver_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Receiver_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                in.notwork.notify.protos.MessageProto.Receiver.class, in.notwork.notify.protos.MessageProto.Receiver.Builder.class);
-      }
-
-      // Construct using in.notwork.notify.protos.MessageProto.Receiver.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        emailId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        phoneNumber_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Receiver_descriptor;
-      }
-
-      public in.notwork.notify.protos.MessageProto.Receiver getDefaultInstanceForType() {
-        return in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance();
-      }
-
-      public in.notwork.notify.protos.MessageProto.Receiver build() {
-        in.notwork.notify.protos.MessageProto.Receiver result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public in.notwork.notify.protos.MessageProto.Receiver buildPartial() {
-        in.notwork.notify.protos.MessageProto.Receiver result = new in.notwork.notify.protos.MessageProto.Receiver(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.emailId_ = emailId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.phoneNumber_ = phoneNumber_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.name_ = name_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          cc_ = cc_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.cc_ = cc_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          bcc_ = bcc_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.bcc_ = bcc_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof in.notwork.notify.protos.MessageProto.Receiver) {
-          return mergeFrom((in.notwork.notify.protos.MessageProto.Receiver)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Receiver other) {
-        if (other == in.notwork.notify.protos.MessageProto.Receiver.getDefaultInstance()) return this;
-        if (other.hasEmailId()) {
-          bitField0_ |= 0x00000001;
-          emailId_ = other.emailId_;
-          onChanged();
-        }
-        if (other.hasPhoneNumber()) {
-          bitField0_ |= 0x00000002;
-          phoneNumber_ = other.phoneNumber_;
-          onChanged();
-        }
-        if (other.hasName()) {
-          bitField0_ |= 0x00000004;
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.cc_.isEmpty()) {
-          if (cc_.isEmpty()) {
-            cc_ = other.cc_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureCcIsMutable();
-            cc_.addAll(other.cc_);
-          }
-          onChanged();
-        }
-        if (!other.bcc_.isEmpty()) {
-          if (bcc_.isEmpty()) {
-            bcc_ = other.bcc_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureBccIsMutable();
-            bcc_.addAll(other.bcc_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        in.notwork.notify.protos.MessageProto.Receiver parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (in.notwork.notify.protos.MessageProto.Receiver) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object emailId_ = "";
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public boolean hasEmailId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public java.lang.String getEmailId() {
-        java.lang.Object ref = emailId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            emailId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEmailIdBytes() {
-        java.lang.Object ref = emailId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          emailId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder setEmailId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        emailId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder clearEmailId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        emailId_ = getDefaultInstance().getEmailId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string email_id = 1;</code>
-       */
-      public Builder setEmailIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        emailId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object phoneNumber_ = "";
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public boolean hasPhoneNumber() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public java.lang.String getPhoneNumber() {
-        java.lang.Object ref = phoneNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            phoneNumber_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneNumberBytes() {
-        java.lang.Object ref = phoneNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phoneNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder setPhoneNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder clearPhoneNumber() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        phoneNumber_ = getDefaultInstance().getPhoneNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string phone_number = 2;</code>
-       */
-      public Builder setPhoneNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 3;</code>
-       *
-       * <pre>
-       * person or channel name
-       * </pre>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCcIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          cc_ = new com.google.protobuf.LazyStringArrayList(cc_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCcList() {
-        return cc_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public int getCcCount() {
-        return cc_.size();
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public java.lang.String getCc(int index) {
-        return cc_.get(index);
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getCcBytes(int index) {
-        return cc_.getByteString(index);
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public Builder setCc(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcIsMutable();
-        cc_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public Builder addCc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcIsMutable();
-        cc_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public Builder addAllCc(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCcIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, cc_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public Builder clearCc() {
-        cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cc = 4;</code>
-       */
-      public Builder addCcBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcIsMutable();
-        cc_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureBccIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          bcc_ = new com.google.protobuf.LazyStringArrayList(bcc_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getBccList() {
-        return bcc_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public int getBccCount() {
-        return bcc_.size();
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public java.lang.String getBcc(int index) {
-        return bcc_.get(index);
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBccBytes(int index) {
-        return bcc_.getByteString(index);
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public Builder setBcc(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBccIsMutable();
-        bcc_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public Builder addBcc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBccIsMutable();
-        bcc_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public Builder addAllBcc(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureBccIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bcc_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public Builder clearBcc() {
-        bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string bcc = 5;</code>
-       */
-      public Builder addBccBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBccIsMutable();
-        bcc_.add(value);
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:notify.protos.Receiver)
-    }
-
-    static {
-      defaultInstance = new Receiver(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:notify.protos.Receiver)
-  }
-
-  public interface ContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:notify.protos.Content)
-      com.google.protobuf.MessageOrBuilder {
+    com.google.protobuf.ByteString
+        getFromEmailBytes();
 
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>optional string subject = 5;</code>
      */
     boolean hasSubject();
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>optional string subject = 5;</code>
      */
     java.lang.String getSubject();
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>optional string subject = 5;</code>
      */
     com.google.protobuf.ByteString
         getSubjectBytes();
 
     /**
-     * <code>optional string body = 2;</code>
+     * <code>optional string body = 6;</code>
      */
     boolean hasBody();
     /**
-     * <code>optional string body = 2;</code>
+     * <code>optional string body = 6;</code>
      */
     java.lang.String getBody();
     /**
-     * <code>optional string body = 2;</code>
+     * <code>optional string body = 6;</code>
      */
     com.google.protobuf.ByteString
         getBodyBytes();
 
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
      */
-    java.util.List<in.notwork.notify.protos.MessageProto.Attachment>
-    getAttachmentList();
-
+    java.util.List<in.notwork.notify.protos.MessageProto.Attachment> 
+        getAttachmentList();
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
      */
     in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index);
-
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
      */
     int getAttachmentCount();
-
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
      */
-    java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
-    getAttachmentOrBuilderList();
-
+    java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> 
+        getAttachmentOrBuilderList();
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
      */
     in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
-            int index);
+        int index);
   }
   /**
-   * Protobuf type {@code notify.protos.Content}
+   * Protobuf type {@code notify.protos.Email}
    */
-  public static final class Content extends
+  public static final class Email extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:notify.protos.Content)
-      ContentOrBuilder {
-    // Use Content.newBuilder() to construct.
-    private Content(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:notify.protos.Email)
+      EmailOrBuilder {
+    // Use Email.newBuilder() to construct.
+    private Email(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Content(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private Email(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Content defaultInstance;
-    public static Content getDefaultInstance() {
+    private static final Email defaultInstance;
+    public static Email getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Content getDefaultInstanceForType() {
+    public Email getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -3745,7 +1770,7 @@ public final class MessageProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Content(
+    private Email(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3770,20 +1795,53 @@ public final class MessageProto {
             }
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              subject_ = bs;
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                toEmail_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              toEmail_.add(bs);
               break;
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              body_ = bs;
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                ccEmail_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              ccEmail_.add(bs);
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>();
+                bccEmail_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
+              }
+              bccEmail_.add(bs);
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              fromEmail_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              subject_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              body_ = bs;
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>();
+                mutable_bitField0_ |= 0x00000040;
               }
               attachment_.add(input.readMessage(in.notwork.notify.protos.MessageProto.Attachment.PARSER, extensionRegistry));
               break;
@@ -3796,7 +1854,16 @@ public final class MessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          toEmail_ = toEmail_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          ccEmail_ = ccEmail_.getUnmodifiableView();
+        }
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          bccEmail_ = bccEmail_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           attachment_ = java.util.Collections.unmodifiableList(attachment_);
         }
         this.unknownFields = unknownFields.build();
@@ -3805,42 +1872,171 @@ public final class MessageProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Content_descriptor;
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Email_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Content_fieldAccessorTable
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Email_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.notwork.notify.protos.MessageProto.Content.class, in.notwork.notify.protos.MessageProto.Content.Builder.class);
+              in.notwork.notify.protos.MessageProto.Email.class, in.notwork.notify.protos.MessageProto.Email.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Content> PARSER =
-        new com.google.protobuf.AbstractParser<Content>() {
-      public Content parsePartialFrom(
+    public static com.google.protobuf.Parser<Email> PARSER =
+        new com.google.protobuf.AbstractParser<Email>() {
+      public Email parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Content(input, extensionRegistry);
+        return new Email(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Content> getParserForType() {
+    public com.google.protobuf.Parser<Email> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    public static final int SUBJECT_FIELD_NUMBER = 1;
-    private java.lang.Object subject_;
+    public static final int TO_EMAIL_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList toEmail_;
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>repeated string to_email = 1;</code>
      */
-    public boolean hasSubject() {
+    public com.google.protobuf.ProtocolStringList
+        getToEmailList() {
+      return toEmail_;
+    }
+    /**
+     * <code>repeated string to_email = 1;</code>
+     */
+    public int getToEmailCount() {
+      return toEmail_.size();
+    }
+    /**
+     * <code>repeated string to_email = 1;</code>
+     */
+    public java.lang.String getToEmail(int index) {
+      return toEmail_.get(index);
+    }
+    /**
+     * <code>repeated string to_email = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getToEmailBytes(int index) {
+      return toEmail_.getByteString(index);
+    }
+
+    public static final int CC_EMAIL_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList ccEmail_;
+    /**
+     * <code>repeated string cc_email = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCcEmailList() {
+      return ccEmail_;
+    }
+    /**
+     * <code>repeated string cc_email = 2;</code>
+     */
+    public int getCcEmailCount() {
+      return ccEmail_.size();
+    }
+    /**
+     * <code>repeated string cc_email = 2;</code>
+     */
+    public java.lang.String getCcEmail(int index) {
+      return ccEmail_.get(index);
+    }
+    /**
+     * <code>repeated string cc_email = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCcEmailBytes(int index) {
+      return ccEmail_.getByteString(index);
+    }
+
+    public static final int BCC_EMAIL_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList bccEmail_;
+    /**
+     * <code>repeated string bcc_email = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBccEmailList() {
+      return bccEmail_;
+    }
+    /**
+     * <code>repeated string bcc_email = 3;</code>
+     */
+    public int getBccEmailCount() {
+      return bccEmail_.size();
+    }
+    /**
+     * <code>repeated string bcc_email = 3;</code>
+     */
+    public java.lang.String getBccEmail(int index) {
+      return bccEmail_.get(index);
+    }
+    /**
+     * <code>repeated string bcc_email = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBccEmailBytes(int index) {
+      return bccEmail_.getByteString(index);
+    }
+
+    public static final int FROM_EMAIL_FIELD_NUMBER = 4;
+    private java.lang.Object fromEmail_;
+    /**
+     * <code>optional string from_email = 4;</code>
+     */
+    public boolean hasFromEmail() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>optional string from_email = 4;</code>
+     */
+    public java.lang.String getFromEmail() {
+      java.lang.Object ref = fromEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fromEmail_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string from_email = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFromEmailBytes() {
+      java.lang.Object ref = fromEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_FIELD_NUMBER = 5;
+    private java.lang.Object subject_;
+    /**
+     * <code>optional string subject = 5;</code>
+     */
+    public boolean hasSubject() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string subject = 5;</code>
      */
     public java.lang.String getSubject() {
       java.lang.Object ref = subject_;
@@ -3857,7 +2053,7 @@ public final class MessageProto {
       }
     }
     /**
-     * <code>optional string subject = 1;</code>
+     * <code>optional string subject = 5;</code>
      */
     public com.google.protobuf.ByteString
         getSubjectBytes() {
@@ -3873,13 +2069,2203 @@ public final class MessageProto {
       }
     }
 
+    public static final int BODY_FIELD_NUMBER = 6;
+    private java.lang.Object body_;
+    /**
+     * <code>optional string body = 6;</code>
+     */
+    public boolean hasBody() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string body = 6;</code>
+     */
+    public java.lang.String getBody() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          body_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string body = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBodyBytes() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        body_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ATTACHMENT_FIELD_NUMBER = 7;
+    private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_;
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+     */
+    public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
+      return attachment_;
+    }
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+     */
+    public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> 
+        getAttachmentOrBuilderList() {
+      return attachment_;
+    }
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+     */
+    public int getAttachmentCount() {
+      return attachment_.size();
+    }
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+     */
+    public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
+      return attachment_.get(index);
+    }
+    /**
+     * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+     */
+    public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
+        int index) {
+      return attachment_.get(index);
+    }
+
+    private void initFields() {
+      toEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      ccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      fromEmail_ = "";
+      subject_ = "";
+      body_ = "";
+      attachment_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getAttachmentCount(); i++) {
+        if (!getAttachment(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < toEmail_.size(); i++) {
+        output.writeBytes(1, toEmail_.getByteString(i));
+      }
+      for (int i = 0; i < ccEmail_.size(); i++) {
+        output.writeBytes(2, ccEmail_.getByteString(i));
+      }
+      for (int i = 0; i < bccEmail_.size(); i++) {
+        output.writeBytes(3, bccEmail_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(4, getFromEmailBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(5, getSubjectBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(6, getBodyBytes());
+      }
+      for (int i = 0; i < attachment_.size(); i++) {
+        output.writeMessage(7, attachment_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < toEmail_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(toEmail_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getToEmailList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ccEmail_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(ccEmail_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getCcEmailList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bccEmail_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(bccEmail_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getBccEmailList().size();
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getFromEmailBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getSubjectBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getBodyBytes());
+      }
+      for (int i = 0; i < attachment_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, attachment_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Email parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Email prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code notify.protos.Email}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:notify.protos.Email)
+        in.notwork.notify.protos.MessageProto.EmailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Email_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Email_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                in.notwork.notify.protos.MessageProto.Email.class, in.notwork.notify.protos.MessageProto.Email.Builder.class);
+      }
+
+      // Construct using in.notwork.notify.protos.MessageProto.Email.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAttachmentFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        toEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fromEmail_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        subject_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        body_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (attachmentBuilder_ == null) {
+          attachment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          attachmentBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Email_descriptor;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Email getDefaultInstanceForType() {
+        return in.notwork.notify.protos.MessageProto.Email.getDefaultInstance();
+      }
+
+      public in.notwork.notify.protos.MessageProto.Email build() {
+        in.notwork.notify.protos.MessageProto.Email result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Email buildPartial() {
+        in.notwork.notify.protos.MessageProto.Email result = new in.notwork.notify.protos.MessageProto.Email(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          toEmail_ = toEmail_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.toEmail_ = toEmail_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          ccEmail_ = ccEmail_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.ccEmail_ = ccEmail_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          bccEmail_ = bccEmail_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.bccEmail_ = bccEmail_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.fromEmail_ = fromEmail_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.subject_ = subject_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.body_ = body_;
+        if (attachmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            attachment_ = java.util.Collections.unmodifiableList(attachment_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.attachment_ = attachment_;
+        } else {
+          result.attachment_ = attachmentBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof in.notwork.notify.protos.MessageProto.Email) {
+          return mergeFrom((in.notwork.notify.protos.MessageProto.Email)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Email other) {
+        if (other == in.notwork.notify.protos.MessageProto.Email.getDefaultInstance()) return this;
+        if (!other.toEmail_.isEmpty()) {
+          if (toEmail_.isEmpty()) {
+            toEmail_ = other.toEmail_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureToEmailIsMutable();
+            toEmail_.addAll(other.toEmail_);
+          }
+          onChanged();
+        }
+        if (!other.ccEmail_.isEmpty()) {
+          if (ccEmail_.isEmpty()) {
+            ccEmail_ = other.ccEmail_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureCcEmailIsMutable();
+            ccEmail_.addAll(other.ccEmail_);
+          }
+          onChanged();
+        }
+        if (!other.bccEmail_.isEmpty()) {
+          if (bccEmail_.isEmpty()) {
+            bccEmail_ = other.bccEmail_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureBccEmailIsMutable();
+            bccEmail_.addAll(other.bccEmail_);
+          }
+          onChanged();
+        }
+        if (other.hasFromEmail()) {
+          bitField0_ |= 0x00000008;
+          fromEmail_ = other.fromEmail_;
+          onChanged();
+        }
+        if (other.hasSubject()) {
+          bitField0_ |= 0x00000010;
+          subject_ = other.subject_;
+          onChanged();
+        }
+        if (other.hasBody()) {
+          bitField0_ |= 0x00000020;
+          body_ = other.body_;
+          onChanged();
+        }
+        if (attachmentBuilder_ == null) {
+          if (!other.attachment_.isEmpty()) {
+            if (attachment_.isEmpty()) {
+              attachment_ = other.attachment_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureAttachmentIsMutable();
+              attachment_.addAll(other.attachment_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attachment_.isEmpty()) {
+            if (attachmentBuilder_.isEmpty()) {
+              attachmentBuilder_.dispose();
+              attachmentBuilder_ = null;
+              attachment_ = other.attachment_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              attachmentBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getAttachmentFieldBuilder() : null;
+            } else {
+              attachmentBuilder_.addAllMessages(other.attachment_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getAttachmentCount(); i++) {
+          if (!getAttachment(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        in.notwork.notify.protos.MessageProto.Email parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (in.notwork.notify.protos.MessageProto.Email) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList toEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureToEmailIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          toEmail_ = new com.google.protobuf.LazyStringArrayList(toEmail_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getToEmailList() {
+        return toEmail_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public int getToEmailCount() {
+        return toEmail_.size();
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public java.lang.String getToEmail(int index) {
+        return toEmail_.get(index);
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getToEmailBytes(int index) {
+        return toEmail_.getByteString(index);
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public Builder setToEmail(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureToEmailIsMutable();
+        toEmail_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public Builder addToEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureToEmailIsMutable();
+        toEmail_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public Builder addAllToEmail(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureToEmailIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, toEmail_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public Builder clearToEmail() {
+        toEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string to_email = 1;</code>
+       */
+      public Builder addToEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureToEmailIsMutable();
+        toEmail_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList ccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCcEmailIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          ccEmail_ = new com.google.protobuf.LazyStringArrayList(ccEmail_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCcEmailList() {
+        return ccEmail_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public int getCcEmailCount() {
+        return ccEmail_.size();
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public java.lang.String getCcEmail(int index) {
+        return ccEmail_.get(index);
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCcEmailBytes(int index) {
+        return ccEmail_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public Builder setCcEmail(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcEmailIsMutable();
+        ccEmail_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public Builder addCcEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcEmailIsMutable();
+        ccEmail_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public Builder addAllCcEmail(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCcEmailIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ccEmail_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public Builder clearCcEmail() {
+        ccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_email = 2;</code>
+       */
+      public Builder addCcEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcEmailIsMutable();
+        ccEmail_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList bccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureBccEmailIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          bccEmail_ = new com.google.protobuf.LazyStringArrayList(bccEmail_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBccEmailList() {
+        return bccEmail_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public int getBccEmailCount() {
+        return bccEmail_.size();
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public java.lang.String getBccEmail(int index) {
+        return bccEmail_.get(index);
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBccEmailBytes(int index) {
+        return bccEmail_.getByteString(index);
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public Builder setBccEmail(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccEmailIsMutable();
+        bccEmail_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public Builder addBccEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccEmailIsMutable();
+        bccEmail_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public Builder addAllBccEmail(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBccEmailIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bccEmail_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public Builder clearBccEmail() {
+        bccEmail_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_email = 3;</code>
+       */
+      public Builder addBccEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccEmailIsMutable();
+        bccEmail_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromEmail_ = "";
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public boolean hasFromEmail() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public java.lang.String getFromEmail() {
+        java.lang.Object ref = fromEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fromEmail_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromEmailBytes() {
+        java.lang.Object ref = fromEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public Builder setFromEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        fromEmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public Builder clearFromEmail() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fromEmail_ = getDefaultInstance().getFromEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string from_email = 4;</code>
+       */
+      public Builder setFromEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        fromEmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subject_ = "";
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public boolean hasSubject() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public java.lang.String getSubject() {
+        java.lang.Object ref = subject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subject_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubjectBytes() {
+        java.lang.Object ref = subject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public Builder setSubject(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        subject_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public Builder clearSubject() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        subject_ = getDefaultInstance().getSubject();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string subject = 5;</code>
+       */
+      public Builder setSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        subject_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object body_ = "";
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public boolean hasBody() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public java.lang.String getBody() {
+        java.lang.Object ref = body_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            body_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBodyBytes() {
+        java.lang.Object ref = body_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          body_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public Builder setBody(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public Builder clearBody() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        body_ = getDefaultInstance().getBody();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 6;</code>
+       */
+      public Builder setBodyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_ =
+        java.util.Collections.emptyList();
+      private void ensureAttachmentIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>(attachment_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> attachmentBuilder_;
+
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
+        if (attachmentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attachment_);
+        } else {
+          return attachmentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public int getAttachmentCount() {
+        if (attachmentBuilder_ == null) {
+          return attachment_.size();
+        } else {
+          return attachmentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
+        if (attachmentBuilder_ == null) {
+          return attachment_.get(index);
+        } else {
+          return attachmentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder setAttachment(
+          int index, in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.set(index, value);
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder setAttachment(
+          int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder addAttachment(in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.add(value);
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder addAttachment(
+          int index, in.notwork.notify.protos.MessageProto.Attachment value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentIsMutable();
+          attachment_.add(index, value);
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder addAttachment(
+          in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder addAttachment(
+          int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder addAllAttachment(
+          java.lang.Iterable<? extends in.notwork.notify.protos.MessageProto.Attachment> values) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attachment_);
+          onChanged();
+        } else {
+          attachmentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder clearAttachment() {
+        if (attachmentBuilder_ == null) {
+          attachment_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          attachmentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public Builder removeAttachment(int index) {
+        if (attachmentBuilder_ == null) {
+          ensureAttachmentIsMutable();
+          attachment_.remove(index);
+          onChanged();
+        } else {
+          attachmentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder getAttachmentBuilder(
+          int index) {
+        return getAttachmentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
+          int index) {
+        if (attachmentBuilder_ == null) {
+          return attachment_.get(index);  } else {
+          return attachmentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> 
+           getAttachmentOrBuilderList() {
+        if (attachmentBuilder_ != null) {
+          return attachmentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attachment_);
+        }
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder() {
+        return getAttachmentFieldBuilder().addBuilder(
+            in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder(
+          int index) {
+        return getAttachmentFieldBuilder().addBuilder(
+            index, in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .notify.protos.Attachment attachment = 7;</code>
+       */
+      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment.Builder> 
+           getAttachmentBuilderList() {
+        return getAttachmentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> 
+          getAttachmentFieldBuilder() {
+        if (attachmentBuilder_ == null) {
+          attachmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>(
+                  attachment_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          attachment_ = null;
+        }
+        return attachmentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:notify.protos.Email)
+    }
+
+    static {
+      defaultInstance = new Email(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:notify.protos.Email)
+  }
+
+  public interface AttachmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:notify.protos.Attachment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    boolean hasContent();
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    com.google.protobuf.ByteString getContent();
+
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    boolean hasContentType();
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    java.lang.String getContentType();
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getContentTypeBytes();
+  }
+  /**
+   * Protobuf type {@code notify.protos.Attachment}
+   */
+  public static final class Attachment extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:notify.protos.Attachment)
+      AttachmentOrBuilder {
+    // Use Attachment.newBuilder() to construct.
+    private Attachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Attachment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Attachment defaultInstance;
+    public static Attachment getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Attachment getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Attachment(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              content_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              contentType_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Attachment> PARSER =
+        new com.google.protobuf.AbstractParser<Attachment>() {
+      public Attachment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Attachment(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Attachment> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString content_;
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public com.google.protobuf.ByteString getContent() {
+      return content_;
+    }
+
+    public static final int CONTENTTYPE_FIELD_NUMBER = 3;
+    private java.lang.Object contentType_;
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public boolean hasContentType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public java.lang.String getContentType() {
+      java.lang.Object ref = contentType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          contentType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string contentType = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContentTypeBytes() {
+      java.lang.Object ref = contentType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      name_ = "";
+      content_ = com.google.protobuf.ByteString.EMPTY;
+      contentType_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContent()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContentType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, content_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getContentTypeBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, content_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getContentTypeBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Attachment prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code notify.protos.Attachment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:notify.protos.Attachment)
+        in.notwork.notify.protos.MessageProto.AttachmentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+      }
+
+      // Construct using in.notwork.notify.protos.MessageProto.Attachment.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contentType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment getDefaultInstanceForType() {
+        return in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance();
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment build() {
+        in.notwork.notify.protos.MessageProto.Attachment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public in.notwork.notify.protos.MessageProto.Attachment buildPartial() {
+        in.notwork.notify.protos.MessageProto.Attachment result = new in.notwork.notify.protos.MessageProto.Attachment(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.content_ = content_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.contentType_ = contentType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof in.notwork.notify.protos.MessageProto.Attachment) {
+          return mergeFrom((in.notwork.notify.protos.MessageProto.Attachment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Attachment other) {
+        if (other == in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasContent()) {
+          setContent(other.getContent());
+        }
+        if (other.hasContentType()) {
+          bitField0_ |= 0x00000004;
+          contentType_ = other.contentType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          
+          return false;
+        }
+        if (!hasContent()) {
+          
+          return false;
+        }
+        if (!hasContentType()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        in.notwork.notify.protos.MessageProto.Attachment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (in.notwork.notify.protos.MessageProto.Attachment) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public com.google.protobuf.ByteString getContent() {
+        return content_;
+      }
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentType_ = "";
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public boolean hasContentType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public java.lang.String getContentType() {
+        java.lang.Object ref = contentType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contentType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContentTypeBytes() {
+        java.lang.Object ref = contentType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder setContentType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder clearContentType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contentType_ = getDefaultInstance().getContentType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string contentType = 3;</code>
+       */
+      public Builder setContentTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:notify.protos.Attachment)
+    }
+
+    static {
+      defaultInstance = new Attachment(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:notify.protos.Attachment)
+  }
+
+  public interface SmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:notify.protos.Sms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getPhoneNumberList();
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    int getPhoneNumberCount();
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    java.lang.String getPhoneNumber(int index);
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPhoneNumberBytes(int index);
+
+    /**
+     * <code>optional string body = 2;</code>
+     */
+    boolean hasBody();
+    /**
+     * <code>optional string body = 2;</code>
+     */
+    java.lang.String getBody();
+    /**
+     * <code>optional string body = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBodyBytes();
+
+    /**
+     * <code>optional string from_number = 3;</code>
+     */
+    boolean hasFromNumber();
+    /**
+     * <code>optional string from_number = 3;</code>
+     */
+    java.lang.String getFromNumber();
+    /**
+     * <code>optional string from_number = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getFromNumberBytes();
+  }
+  /**
+   * Protobuf type {@code notify.protos.Sms}
+   */
+  public static final class Sms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:notify.protos.Sms)
+      SmsOrBuilder {
+    // Use Sms.newBuilder() to construct.
+    private Sms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Sms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Sms defaultInstance;
+    public static Sms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Sms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Sms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                phoneNumber_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              phoneNumber_.add(bs);
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              body_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              fromNumber_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          phoneNumber_ = phoneNumber_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              in.notwork.notify.protos.MessageProto.Sms.class, in.notwork.notify.protos.MessageProto.Sms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Sms> PARSER =
+        new com.google.protobuf.AbstractParser<Sms>() {
+      public Sms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Sms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Sms> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PHONE_NUMBER_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList phoneNumber_;
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPhoneNumberList() {
+      return phoneNumber_;
+    }
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    public int getPhoneNumberCount() {
+      return phoneNumber_.size();
+    }
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    public java.lang.String getPhoneNumber(int index) {
+      return phoneNumber_.get(index);
+    }
+    /**
+     * <code>repeated string phone_number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPhoneNumberBytes(int index) {
+      return phoneNumber_.getByteString(index);
+    }
+
     public static final int BODY_FIELD_NUMBER = 2;
     private java.lang.Object body_;
     /**
      * <code>optional string body = 2;</code>
      */
     public boolean hasBody() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>optional string body = 2;</code>
@@ -3915,50 +4301,52 @@ public final class MessageProto {
       }
     }
 
-    public static final int ATTACHMENT_FIELD_NUMBER = 3;
-    private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_;
-
+    public static final int FROM_NUMBER_FIELD_NUMBER = 3;
+    private java.lang.Object fromNumber_;
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>optional string from_number = 3;</code>
      */
-    public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
-      return attachment_;
+    public boolean hasFromNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>optional string from_number = 3;</code>
      */
-    public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
-    getAttachmentOrBuilderList() {
-      return attachment_;
+    public java.lang.String getFromNumber() {
+      java.lang.Object ref = fromNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fromNumber_ = s;
+        }
+        return s;
+      }
     }
-
     /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+     * <code>optional string from_number = 3;</code>
      */
-    public int getAttachmentCount() {
-      return attachment_.size();
-    }
-
-    /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-     */
-    public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
-      return attachment_.get(index);
-    }
-
-    /**
-     * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-     */
-    public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
-            int index) {
-      return attachment_.get(index);
+    public com.google.protobuf.ByteString
+        getFromNumberBytes() {
+      java.lang.Object ref = fromNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private void initFields() {
-      subject_ = "";
+      phoneNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       body_ = "";
-      attachment_ = java.util.Collections.emptyList();
+      fromNumber_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3966,12 +4354,6 @@ public final class MessageProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      for (int i = 0; i < getAttachmentCount(); i++) {
-        if (!getAttachment(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3979,14 +4361,14 @@ public final class MessageProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getSubjectBytes());
+      for (int i = 0; i < phoneNumber_.size(); i++) {
+        output.writeBytes(1, phoneNumber_.getByteString(i));
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(2, getBodyBytes());
       }
-      for (int i = 0; i < attachment_.size(); i++) {
-        output.writeMessage(3, attachment_.get(i));
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(3, getFromNumberBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3997,17 +4379,22 @@ public final class MessageProto {
       if (size != -1) return size;
 
       size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < phoneNumber_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(phoneNumber_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getPhoneNumberList().size();
+      }
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getSubjectBytes());
+          .computeBytesSize(2, getBodyBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-                .computeBytesSize(2, getBodyBytes());
-      }
-      for (int i = 0; i < attachment_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, attachment_.get(i));
+          .computeBytesSize(3, getFromNumberBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4021,53 +4408,53 @@ public final class MessageProto {
       return super.writeReplace();
     }
 
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(byte[] data)
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(java.io.InputStream input)
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseDelimitedFrom(java.io.InputStream input)
+    public static in.notwork.notify.protos.MessageProto.Sms parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseDelimitedFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static in.notwork.notify.protos.MessageProto.Content parseFrom(
+    public static in.notwork.notify.protos.MessageProto.Sms parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4076,7 +4463,7 @@ public final class MessageProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Content prototype) {
+    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Sms prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -4088,25 +4475,25 @@ public final class MessageProto {
       return builder;
     }
     /**
-     * Protobuf type {@code notify.protos.Content}
+     * Protobuf type {@code notify.protos.Sms}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:notify.protos.Content)
-        in.notwork.notify.protos.MessageProto.ContentOrBuilder {
+        // @@protoc_insertion_point(builder_implements:notify.protos.Sms)
+        in.notwork.notify.protos.MessageProto.SmsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Content_descriptor;
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sms_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Content_fieldAccessorTable
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sms_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                in.notwork.notify.protos.MessageProto.Content.class, in.notwork.notify.protos.MessageProto.Content.Builder.class);
+                in.notwork.notify.protos.MessageProto.Sms.class, in.notwork.notify.protos.MessageProto.Sms.Builder.class);
       }
 
-      // Construct using in.notwork.notify.protos.MessageProto.Content.newBuilder()
+      // Construct using in.notwork.notify.protos.MessageProto.Sms.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4118,7 +4505,6 @@ public final class MessageProto {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getAttachmentFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4127,16 +4513,12 @@ public final class MessageProto {
 
       public Builder clear() {
         super.clear();
-        subject_ = "";
+        phoneNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         body_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (attachmentBuilder_ == null) {
-          attachment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          attachmentBuilder_.clear();
-        }
+        fromNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -4146,61 +4528,62 @@ public final class MessageProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Content_descriptor;
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Sms_descriptor;
       }
 
-      public in.notwork.notify.protos.MessageProto.Content getDefaultInstanceForType() {
-        return in.notwork.notify.protos.MessageProto.Content.getDefaultInstance();
+      public in.notwork.notify.protos.MessageProto.Sms getDefaultInstanceForType() {
+        return in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance();
       }
 
-      public in.notwork.notify.protos.MessageProto.Content build() {
-        in.notwork.notify.protos.MessageProto.Content result = buildPartial();
+      public in.notwork.notify.protos.MessageProto.Sms build() {
+        in.notwork.notify.protos.MessageProto.Sms result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public in.notwork.notify.protos.MessageProto.Content buildPartial() {
-        in.notwork.notify.protos.MessageProto.Content result = new in.notwork.notify.protos.MessageProto.Content(this);
+      public in.notwork.notify.protos.MessageProto.Sms buildPartial() {
+        in.notwork.notify.protos.MessageProto.Sms result = new in.notwork.notify.protos.MessageProto.Sms(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          phoneNumber_ = phoneNumber_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.phoneNumber_ = phoneNumber_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.subject_ = subject_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+        result.body_ = body_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.body_ = body_;
-        if (attachmentBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            attachment_ = java.util.Collections.unmodifiableList(attachment_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.attachment_ = attachment_;
-        } else {
-          result.attachment_ = attachmentBuilder_.build();
-        }
+        result.fromNumber_ = fromNumber_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof in.notwork.notify.protos.MessageProto.Content) {
-          return mergeFrom((in.notwork.notify.protos.MessageProto.Content)other);
+        if (other instanceof in.notwork.notify.protos.MessageProto.Sms) {
+          return mergeFrom((in.notwork.notify.protos.MessageProto.Sms)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Content other) {
-        if (other == in.notwork.notify.protos.MessageProto.Content.getDefaultInstance()) return this;
-        if (other.hasSubject()) {
-          bitField0_ |= 0x00000001;
-          subject_ = other.subject_;
+      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Sms other) {
+        if (other == in.notwork.notify.protos.MessageProto.Sms.getDefaultInstance()) return this;
+        if (!other.phoneNumber_.isEmpty()) {
+          if (phoneNumber_.isEmpty()) {
+            phoneNumber_ = other.phoneNumber_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePhoneNumberIsMutable();
+            phoneNumber_.addAll(other.phoneNumber_);
+          }
           onChanged();
         }
         if (other.hasBody()) {
@@ -4208,43 +4591,16 @@ public final class MessageProto {
           body_ = other.body_;
           onChanged();
         }
-        if (attachmentBuilder_ == null) {
-          if (!other.attachment_.isEmpty()) {
-            if (attachment_.isEmpty()) {
-              attachment_ = other.attachment_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureAttachmentIsMutable();
-              attachment_.addAll(other.attachment_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.attachment_.isEmpty()) {
-            if (attachmentBuilder_.isEmpty()) {
-              attachmentBuilder_.dispose();
-              attachmentBuilder_ = null;
-              attachment_ = other.attachment_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              attachmentBuilder_ =
-                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                              getAttachmentFieldBuilder() : null;
-            } else {
-              attachmentBuilder_.addAllMessages(other.attachment_);
-            }
-          }
+        if (other.hasFromNumber()) {
+          bitField0_ |= 0x00000004;
+          fromNumber_ = other.fromNumber_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        for (int i = 0; i < getAttachmentCount(); i++) {
-          if (!getAttachment(i).isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -4252,11 +4608,11 @@ public final class MessageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        in.notwork.notify.protos.MessageProto.Content parsedMessage = null;
+        in.notwork.notify.protos.MessageProto.Sms parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (in.notwork.notify.protos.MessageProto.Content) e.getUnfinishedMessage();
+          parsedMessage = (in.notwork.notify.protos.MessageProto.Sms) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -4267,78 +4623,95 @@ public final class MessageProto {
       }
       private int bitField0_;
 
-      private java.lang.Object subject_ = "";
-      /**
-       * <code>optional string subject = 1;</code>
-       */
-      public boolean hasSubject() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+      private com.google.protobuf.LazyStringList phoneNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePhoneNumberIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          phoneNumber_ = new com.google.protobuf.LazyStringArrayList(phoneNumber_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>optional string subject = 1;</code>
+       * <code>repeated string phone_number = 1;</code>
        */
-      public java.lang.String getSubject() {
-        java.lang.Object ref = subject_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            subject_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public com.google.protobuf.ProtocolStringList
+          getPhoneNumberList() {
+        return phoneNumber_.getUnmodifiableView();
       }
       /**
-       * <code>optional string subject = 1;</code>
+       * <code>repeated string phone_number = 1;</code>
+       */
+      public int getPhoneNumberCount() {
+        return phoneNumber_.size();
+      }
+      /**
+       * <code>repeated string phone_number = 1;</code>
+       */
+      public java.lang.String getPhoneNumber(int index) {
+        return phoneNumber_.get(index);
+      }
+      /**
+       * <code>repeated string phone_number = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getSubjectBytes() {
-        java.lang.Object ref = subject_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subject_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getPhoneNumberBytes(int index) {
+        return phoneNumber_.getByteString(index);
       }
       /**
-       * <code>optional string subject = 1;</code>
+       * <code>repeated string phone_number = 1;</code>
        */
-      public Builder setSubject(
+      public Builder setPhoneNumber(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePhoneNumberIsMutable();
+        phoneNumber_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string phone_number = 1;</code>
+       */
+      public Builder addPhoneNumber(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
-        subject_ = value;
+  ensurePhoneNumberIsMutable();
+        phoneNumber_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string subject = 1;</code>
+       * <code>repeated string phone_number = 1;</code>
        */
-      public Builder clearSubject() {
+      public Builder addAllPhoneNumber(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePhoneNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, phoneNumber_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string phone_number = 1;</code>
+       */
+      public Builder clearPhoneNumber() {
+        phoneNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        subject_ = getDefaultInstance().getSubject();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string subject = 1;</code>
+       * <code>repeated string phone_number = 1;</code>
        */
-      public Builder setSubjectBytes(
+      public Builder addPhoneNumberBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
-        subject_ = value;
+  ensurePhoneNumberIsMutable();
+        phoneNumber_.add(value);
         onChanged();
         return this;
       }
@@ -4419,367 +4792,162 @@ public final class MessageProto {
         return this;
       }
 
-      private java.util.List<in.notwork.notify.protos.MessageProto.Attachment> attachment_ =
-              java.util.Collections.emptyList();
-
-      private void ensureAttachmentIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          attachment_ = new java.util.ArrayList<in.notwork.notify.protos.MessageProto.Attachment>(attachment_);
-          bitField0_ |= 0x00000004;
-        }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-              in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder> attachmentBuilder_;
-
+      private java.lang.Object fromNumber_ = "";
       /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       * <code>optional string from_number = 3;</code>
        */
-      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment> getAttachmentList() {
-        if (attachmentBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(attachment_);
-        } else {
-          return attachmentBuilder_.getMessageList();
-        }
+      public boolean hasFromNumber() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-
       /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
+       * <code>optional string from_number = 3;</code>
        */
-      public int getAttachmentCount() {
-        if (attachmentBuilder_ == null) {
-          return attachment_.size();
-        } else {
-          return attachmentBuilder_.getCount();
-        }
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.Attachment getAttachment(int index) {
-        if (attachmentBuilder_ == null) {
-          return attachment_.get(index);
-        } else {
-          return attachmentBuilder_.getMessage(index);
-        }
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder setAttachment(
-              int index, in.notwork.notify.protos.MessageProto.Attachment value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public java.lang.String getFromNumber() {
+        java.lang.Object ref = fromNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fromNumber_ = s;
           }
-          ensureAttachmentIsMutable();
-          attachment_.set(index, value);
-          onChanged();
+          return s;
         } else {
-          attachmentBuilder_.setMessage(index, value);
+          return (java.lang.String) ref;
         }
+      }
+      /**
+       * <code>optional string from_number = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromNumberBytes() {
+        java.lang.Object ref = fromNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string from_number = 3;</code>
+       */
+      public Builder setFromNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        fromNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string from_number = 3;</code>
+       */
+      public Builder clearFromNumber() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fromNumber_ = getDefaultInstance().getFromNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string from_number = 3;</code>
+       */
+      public Builder setFromNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        fromNumber_ = value;
+        onChanged();
         return this;
       }
 
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder setAttachment(
-              int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder addAttachment(in.notwork.notify.protos.MessageProto.Attachment value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAttachmentIsMutable();
-          attachment_.add(value);
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(value);
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder addAttachment(
-              int index, in.notwork.notify.protos.MessageProto.Attachment value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAttachmentIsMutable();
-          attachment_.add(index, value);
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder addAttachment(
-              in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.add(builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder addAttachment(
-              int index, in.notwork.notify.protos.MessageProto.Attachment.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder addAllAttachment(
-              java.lang.Iterable<? extends in.notwork.notify.protos.MessageProto.Attachment> values) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, attachment_);
-          onChanged();
-        } else {
-          attachmentBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder clearAttachment() {
-        if (attachmentBuilder_ == null) {
-          attachment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          attachmentBuilder_.clear();
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public Builder removeAttachment(int index) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.remove(index);
-          onChanged();
-        } else {
-          attachmentBuilder_.remove(index);
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.Attachment.Builder getAttachmentBuilder(
-              int index) {
-        return getAttachmentFieldBuilder().getBuilder(index);
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.AttachmentOrBuilder getAttachmentOrBuilder(
-              int index) {
-        if (attachmentBuilder_ == null) {
-          return attachment_.get(index);
-        } else {
-          return attachmentBuilder_.getMessageOrBuilder(index);
-        }
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public java.util.List<? extends in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
-      getAttachmentOrBuilderList() {
-        if (attachmentBuilder_ != null) {
-          return attachmentBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(attachment_);
-        }
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder() {
-        return getAttachmentFieldBuilder().addBuilder(
-                in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public in.notwork.notify.protos.MessageProto.Attachment.Builder addAttachmentBuilder(
-              int index) {
-        return getAttachmentFieldBuilder().addBuilder(
-                index, in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance());
-      }
-
-      /**
-       * <code>repeated .notify.protos.Attachment attachment = 3;</code>
-       */
-      public java.util.List<in.notwork.notify.protos.MessageProto.Attachment.Builder>
-      getAttachmentBuilderList() {
-        return getAttachmentFieldBuilder().getBuilderList();
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-              in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>
-      getAttachmentFieldBuilder() {
-        if (attachmentBuilder_ == null) {
-          attachmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                  in.notwork.notify.protos.MessageProto.Attachment, in.notwork.notify.protos.MessageProto.Attachment.Builder, in.notwork.notify.protos.MessageProto.AttachmentOrBuilder>(
-                  attachment_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          attachment_ = null;
-        }
-        return attachmentBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:notify.protos.Content)
+      // @@protoc_insertion_point(builder_scope:notify.protos.Sms)
     }
 
     static {
-      defaultInstance = new Content(true);
+      defaultInstance = new Sms(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:notify.protos.Content)
+    // @@protoc_insertion_point(class_scope:notify.protos.Sms)
   }
 
-  public interface AttachmentOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:notify.protos.Attachment)
-          com.google.protobuf.MessageOrBuilder {
+  public interface NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:notify.protos.Notification)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
-    boolean hasName();
-
+    boolean hasChannel();
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
-    java.lang.String getName();
-
+    java.lang.String getChannel();
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
     com.google.protobuf.ByteString
-    getNameBytes();
+        getChannelBytes();
 
     /**
-     * <code>required bytes content = 2;</code>
+     * <code>optional string body = 2;</code>
      */
-    boolean hasContent();
-
+    boolean hasBody();
     /**
-     * <code>required bytes content = 2;</code>
+     * <code>optional string body = 2;</code>
      */
-    com.google.protobuf.ByteString getContent();
-
+    java.lang.String getBody();
     /**
-     * <code>required string contentType = 3;</code>
-     */
-    boolean hasContentType();
-
-    /**
-     * <code>required string contentType = 3;</code>
-     */
-    java.lang.String getContentType();
-
-    /**
-     * <code>required string contentType = 3;</code>
+     * <code>optional string body = 2;</code>
      */
     com.google.protobuf.ByteString
-    getContentTypeBytes();
+        getBodyBytes();
   }
-
   /**
-   * Protobuf type {@code notify.protos.Attachment}
+   * Protobuf type {@code notify.protos.Notification}
    */
-  public static final class Attachment extends
-          com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:notify.protos.Attachment)
-          AttachmentOrBuilder {
-    // Use Attachment.newBuilder() to construct.
-    private Attachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  public static final class Notification extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:notify.protos.Notification)
+      NotificationOrBuilder {
+    // Use Notification.newBuilder() to construct.
+    private Notification(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
+    private Notification(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private Attachment(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-
-    private static final Attachment defaultInstance;
-
-    public static Attachment getDefaultInstance() {
+    private static final Notification defaultInstance;
+    public static Notification getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Attachment getDefaultInstanceForType() {
+    public Notification getDefaultInstanceForType() {
       return defaultInstance;
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private Attachment(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    private Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4790,7 +4958,7 @@ public final class MessageProto {
               break;
             default: {
               if (!parseUnknownField(input, unknownFields,
-                      extensionRegistry, tag)) {
+                                     extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4798,18 +4966,13 @@ public final class MessageProto {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = bs;
+              channel_ = bs;
               break;
             }
             case 18: {
-              bitField0_ |= 0x00000002;
-              content_ = input.readBytes();
-              break;
-            }
-            case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              contentType_ = bs;
+              bitField0_ |= 0x00000002;
+              body_ = bs;
               break;
             }
           }
@@ -4818,142 +4981,118 @@ public final class MessageProto {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this);
+            e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+        getDescriptor() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Notification_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-    internalGetFieldAccessorTable() {
-      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+        internalGetFieldAccessorTable() {
+      return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              in.notwork.notify.protos.MessageProto.Notification.class, in.notwork.notify.protos.MessageProto.Notification.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Attachment> PARSER =
-            new com.google.protobuf.AbstractParser<Attachment>() {
-              public Attachment parsePartialFrom(
-                      com.google.protobuf.CodedInputStream input,
-                      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                      throws com.google.protobuf.InvalidProtocolBufferException {
-                return new Attachment(input, extensionRegistry);
-              }
-            };
+    public static com.google.protobuf.Parser<Notification> PARSER =
+        new com.google.protobuf.AbstractParser<Notification>() {
+      public Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Notification(input, extensionRegistry);
+      }
+    };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Attachment> getParserForType() {
+    public com.google.protobuf.Parser<Notification> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private java.lang.Object name_;
-
+    public static final int CHANNEL_FIELD_NUMBER = 1;
+    private java.lang.Object channel_;
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
-    public boolean hasName() {
+    public boolean hasChannel() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          name_ = s;
+          channel_ = s;
         }
         return s;
       }
     }
-
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string channel = 1;</code>
      */
     public com.google.protobuf.ByteString
-    getNameBytes() {
-      java.lang.Object ref = name_;
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
-        name_ = b;
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString content_;
-
+    public static final int BODY_FIELD_NUMBER = 2;
+    private java.lang.Object body_;
     /**
-     * <code>required bytes content = 2;</code>
+     * <code>optional string body = 2;</code>
      */
-    public boolean hasContent() {
+    public boolean hasBody() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-
     /**
-     * <code>required bytes content = 2;</code>
+     * <code>optional string body = 2;</code>
      */
-    public com.google.protobuf.ByteString getContent() {
-      return content_;
-    }
-
-    public static final int CONTENTTYPE_FIELD_NUMBER = 3;
-    private java.lang.Object contentType_;
-
-    /**
-     * <code>required string contentType = 3;</code>
-     */
-    public boolean hasContentType() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-
-    /**
-     * <code>required string contentType = 3;</code>
-     */
-    public java.lang.String getContentType() {
-      java.lang.Object ref = contentType_;
+    public java.lang.String getBody() {
+      java.lang.Object ref = body_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          contentType_ = s;
+          body_ = s;
         }
         return s;
       }
     }
-
     /**
-     * <code>required string contentType = 3;</code>
+     * <code>optional string body = 2;</code>
      */
     public com.google.protobuf.ByteString
-    getContentTypeBytes() {
-      java.lang.Object ref = contentType_;
+        getBodyBytes() {
+      java.lang.Object ref = body_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
-        contentType_ = b;
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        body_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4961,51 +5100,32 @@ public final class MessageProto {
     }
 
     private void initFields() {
-      name_ = "";
-      content_ = com.google.protobuf.ByteString.EMPTY;
-      contentType_ = "";
+      channel_ = "";
+      body_ = "";
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasContent()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasContentType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getNameBytes());
+        output.writeBytes(1, getChannelBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, content_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getContentTypeBytes());
+        output.writeBytes(2, getBodyBytes());
       }
       getUnknownFields().writeTo(output);
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
@@ -5013,15 +5133,11 @@ public final class MessageProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-                .computeBytesSize(1, getNameBytes());
+          .computeBytesSize(1, getChannelBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-                .computeBytesSize(2, content_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-                .computeBytesSize(3, getContentTypeBytes());
+          .computeBytesSize(2, getBodyBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5029,145 +5145,121 @@ public final class MessageProto {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
-            throws java.io.ObjectStreamException {
+        throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
-    public static in.notwork.notify.protos.MessageProto.Attachment parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+    public static in.notwork.notify.protos.MessageProto.Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Attachment prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(in.notwork.notify.protos.MessageProto.Notification prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     * Protobuf type {@code notify.protos.Attachment}
+     * Protobuf type {@code notify.protos.Notification}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:notify.protos.Attachment)
-            in.notwork.notify.protos.MessageProto.AttachmentOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:notify.protos.Notification)
+        in.notwork.notify.protos.MessageProto.NotificationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+          getDescriptor() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Notification_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        in.notwork.notify.protos.MessageProto.Attachment.class, in.notwork.notify.protos.MessageProto.Attachment.Builder.class);
+          internalGetFieldAccessorTable() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                in.notwork.notify.protos.MessageProto.Notification.class, in.notwork.notify.protos.MessageProto.Notification.Builder.class);
       }
 
-      // Construct using in.notwork.notify.protos.MessageProto.Attachment.newBuilder()
+      // Construct using in.notwork.notify.protos.MessageProto.Notification.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
 
       public Builder clear() {
         super.clear();
-        name_ = "";
+        channel_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        content_ = com.google.protobuf.ByteString.EMPTY;
+        body_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        contentType_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -5176,65 +5268,58 @@ public final class MessageProto {
       }
 
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Attachment_descriptor;
+          getDescriptorForType() {
+        return in.notwork.notify.protos.MessageProto.internal_static_notify_protos_Notification_descriptor;
       }
 
-      public in.notwork.notify.protos.MessageProto.Attachment getDefaultInstanceForType() {
-        return in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance();
+      public in.notwork.notify.protos.MessageProto.Notification getDefaultInstanceForType() {
+        return in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance();
       }
 
-      public in.notwork.notify.protos.MessageProto.Attachment build() {
-        in.notwork.notify.protos.MessageProto.Attachment result = buildPartial();
+      public in.notwork.notify.protos.MessageProto.Notification build() {
+        in.notwork.notify.protos.MessageProto.Notification result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public in.notwork.notify.protos.MessageProto.Attachment buildPartial() {
-        in.notwork.notify.protos.MessageProto.Attachment result = new in.notwork.notify.protos.MessageProto.Attachment(this);
+      public in.notwork.notify.protos.MessageProto.Notification buildPartial() {
+        in.notwork.notify.protos.MessageProto.Notification result = new in.notwork.notify.protos.MessageProto.Notification(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.name_ = name_;
+        result.channel_ = channel_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.content_ = content_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.contentType_ = contentType_;
+        result.body_ = body_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof in.notwork.notify.protos.MessageProto.Attachment) {
-          return mergeFrom((in.notwork.notify.protos.MessageProto.Attachment) other);
+        if (other instanceof in.notwork.notify.protos.MessageProto.Notification) {
+          return mergeFrom((in.notwork.notify.protos.MessageProto.Notification)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Attachment other) {
-        if (other == in.notwork.notify.protos.MessageProto.Attachment.getDefaultInstance()) return this;
-        if (other.hasName()) {
+      public Builder mergeFrom(in.notwork.notify.protos.MessageProto.Notification other) {
+        if (other == in.notwork.notify.protos.MessageProto.Notification.getDefaultInstance()) return this;
+        if (other.hasChannel()) {
           bitField0_ |= 0x00000001;
-          name_ = other.name_;
+          channel_ = other.channel_;
           onChanged();
         }
-        if (other.hasContent()) {
-          setContent(other.getContent());
-        }
-        if (other.hasContentType()) {
-          bitField0_ |= 0x00000004;
-          contentType_ = other.contentType_;
+        if (other.hasBody()) {
+          bitField0_ |= 0x00000002;
+          body_ = other.body_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5242,30 +5327,18 @@ public final class MessageProto {
       }
 
       public final boolean isInitialized() {
-        if (!hasName()) {
-
-          return false;
-        }
-        if (!hasContent()) {
-
-          return false;
-        }
-        if (!hasContentType()) {
-
-          return false;
-        }
         return true;
       }
 
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        in.notwork.notify.protos.MessageProto.Attachment parsedMessage = null;
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        in.notwork.notify.protos.MessageProto.Notification parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (in.notwork.notify.protos.MessageProto.Attachment) e.getUnfinishedMessage();
+          parsedMessage = (in.notwork.notify.protos.MessageProto.Notification) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5274,221 +5347,169 @@ public final class MessageProto {
         }
         return this;
       }
-
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
-
+      private java.lang.Object channel_ = "";
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
-      public boolean hasName() {
+      public boolean hasChannel() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            name_ = s;
+            channel_ = s;
           }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
       public com.google.protobuf.ByteString
-      getNameBytes() {
-        java.lang.Object ref = name_;
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
-          name_ = b;
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
-      public Builder setName(
-              java.lang.String value) {
+      public Builder setChannel(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        name_ = value;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        channel_ = value;
         onChanged();
         return this;
       }
-
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
-      public Builder clearName() {
+      public Builder clearChannel() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = getDefaultInstance().getName();
+        channel_ = getDefaultInstance().getChannel();
         onChanged();
         return this;
       }
-
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string channel = 1;</code>
        */
-      public Builder setNameBytes(
-              com.google.protobuf.ByteString value) {
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        name_ = value;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        channel_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
-
+      private java.lang.Object body_ = "";
       /**
-       * <code>required bytes content = 2;</code>
+       * <code>optional string body = 2;</code>
        */
-      public boolean hasContent() {
+      public boolean hasBody() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-
       /**
-       * <code>required bytes content = 2;</code>
+       * <code>optional string body = 2;</code>
        */
-      public com.google.protobuf.ByteString getContent() {
-        return content_;
-      }
-
-      /**
-       * <code>required bytes content = 2;</code>
-       */
-      public Builder setContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        content_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>required bytes content = 2;</code>
-       */
-      public Builder clearContent() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object contentType_ = "";
-
-      /**
-       * <code>required string contentType = 3;</code>
-       */
-      public boolean hasContentType() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-
-      /**
-       * <code>required string contentType = 3;</code>
-       */
-      public java.lang.String getContentType() {
-        java.lang.Object ref = contentType_;
+      public java.lang.String getBody() {
+        java.lang.Object ref = body_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            contentType_ = s;
+            body_ = s;
           }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
-       * <code>required string contentType = 3;</code>
+       * <code>optional string body = 2;</code>
        */
       public com.google.protobuf.ByteString
-      getContentTypeBytes() {
-        java.lang.Object ref = contentType_;
+          getBodyBytes() {
+        java.lang.Object ref = body_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
-          contentType_ = b;
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          body_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
-       * <code>required string contentType = 3;</code>
+       * <code>optional string body = 2;</code>
        */
-      public Builder setContentType(
-              java.lang.String value) {
+      public Builder setBody(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        contentType_ = value;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        body_ = value;
         onChanged();
         return this;
       }
-
       /**
-       * <code>required string contentType = 3;</code>
+       * <code>optional string body = 2;</code>
        */
-      public Builder clearContentType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        contentType_ = getDefaultInstance().getContentType();
+      public Builder clearBody() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        body_ = getDefaultInstance().getBody();
         onChanged();
         return this;
       }
-
       /**
-       * <code>required string contentType = 3;</code>
+       * <code>optional string body = 2;</code>
        */
-      public Builder setContentTypeBytes(
-              com.google.protobuf.ByteString value) {
+      public Builder setBodyBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        contentType_ = value;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        body_ = value;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:notify.protos.Attachment)
+      // @@protoc_insertion_point(builder_scope:notify.protos.Notification)
     }
 
     static {
-      defaultInstance = new Attachment(true);
+      defaultInstance = new Notification(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:notify.protos.Attachment)
+    // @@protoc_insertion_point(class_scope:notify.protos.Notification)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -5497,25 +5518,25 @@ public final class MessageProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_notify_protos_Message_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_notify_protos_Sender_descriptor;
+    internal_static_notify_protos_Email_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_notify_protos_Sender_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_notify_protos_Receiver_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internal_static_notify_protos_Receiver_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_notify_protos_Content_descriptor;
-  private static
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_notify_protos_Content_fieldAccessorTable;
+      internal_static_notify_protos_Email_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_notify_protos_Attachment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_notify_protos_Attachment_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_notify_protos_Sms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_notify_protos_Sms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_notify_protos_Notification_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_notify_protos_Notification_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5525,26 +5546,27 @@ public final class MessageProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rmessage.proto\022\rnotify.protos\"\222\002\n\007Messa" +
-      "ge\022%\n\006sender\030\001 \001(\0132\025.notify.protos.Sende" +
-      "r\022)\n\010receiver\030\002 \001(\0132\027.notify.protos.Rece" +
-      "iver\022\'\n\007content\030\003 \001(\0132\026.notify.protos.Co" +
-      "ntent\022\022\n\nmessage_id\030\004 \001(\t\022!\n\004type\030\005 \002(\0162" +
-      "\023.notify.protos.Type\022%\n\006status\030\006 \001(\0162\025.n" +
-      "otify.protos.Status\022.\n\010priority\030\007 \001(\0162\027." +
-              "notify.protos.Priority:\003LOW\">\n\006Sender\022\020\n" +
-              "\010email_id\030\001 \001(\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n" +
-              "\004name\030\003 \001(\t\"Y\n\010Receiver\022\020\n\010email_id\030\001 \001(",
-            "\t\022\024\n\014phone_number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\n\n" +
-                    "\002cc\030\004 \003(\t\022\013\n\003bcc\030\005 \003(\t\"W\n\007Content\022\017\n\007sub" +
-                    "ject\030\001 \001(\t\022\014\n\004body\030\002 \001(\t\022-\n\nattachment\030\003" +
-                    " \003(\0132\031.notify.protos.Attachment\"@\n\nAttac" +
-                    "hment\022\014\n\004name\030\001 \002(\t\022\017\n\007content\030\002 \002(\014\022\023\n\013" +
-                    "contentType\030\003 \002(\t*)\n\010Priority\022\007\n\003LOW\020\000\022\n" +
-      "\n\006MEDIUM\020\001\022\010\n\004HIGH\020\002*/\n\006Status\022\006\n\002IN\020\000\022\007" +
-      "\n\003OUT\020\001\022\010\n\004SENT\020\002\022\n\n\006FAILED\020\003*$\n\004Type\022\007\n" +
-      "\003SMS\020\000\022\t\n\005EMAIL\020\001\022\010\n\004PUSH\020\002B(\n\030in.notwor" +
-      "k.notify.protosB\014MessageProto"
+      "\n\rmessage.proto\022\rnotify.protos\"\220\002\n\007Messa" +
+      "ge\022#\n\005email\030\001 \001(\0132\024.notify.protos.Email\022" +
+      "\037\n\003sms\030\002 \001(\0132\022.notify.protos.Sms\0221\n\014noti" +
+      "fication\030\003 \001(\0132\033.notify.protos.Notificat" +
+      "ion\022\022\n\nmessage_id\030\004 \001(\t\022!\n\004type\030\005 \002(\0162\023." +
+      "notify.protos.Type\022%\n\006status\030\006 \001(\0162\025.not" +
+      "ify.protos.Status\022.\n\010priority\030\007 \001(\0162\027.no" +
+      "tify.protos.Priority:\003LOW\"\240\001\n\005Email\022\020\n\010t" +
+      "o_email\030\001 \003(\t\022\020\n\010cc_email\030\002 \003(\t\022\021\n\tbcc_e" +
+      "mail\030\003 \003(\t\022\022\n\nfrom_email\030\004 \001(\t\022\017\n\007subjec",
+      "t\030\005 \001(\t\022\014\n\004body\030\006 \001(\t\022-\n\nattachment\030\007 \003(" +
+      "\0132\031.notify.protos.Attachment\"@\n\nAttachme" +
+      "nt\022\014\n\004name\030\001 \002(\t\022\017\n\007content\030\002 \002(\014\022\023\n\013con" +
+      "tentType\030\003 \002(\t\">\n\003Sms\022\024\n\014phone_number\030\001 " +
+      "\003(\t\022\014\n\004body\030\002 \001(\t\022\023\n\013from_number\030\003 \001(\t\"-" +
+      "\n\014Notification\022\017\n\007channel\030\001 \001(\t\022\014\n\004body\030" +
+      "\002 \001(\t*)\n\010Priority\022\007\n\003LOW\020\000\022\n\n\006MEDIUM\020\001\022\010" +
+      "\n\004HIGH\020\002*/\n\006Status\022\006\n\002IN\020\000\022\007\n\003OUT\020\001\022\010\n\004S" +
+      "ENT\020\002\022\n\n\006FAILED\020\003*$\n\004Type\022\007\n\003SMS\020\000\022\t\n\005EM" +
+      "AIL\020\001\022\010\n\004PUSH\020\002B(\n\030in.notwork.notify.pro",
+      "tosB\014MessageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5563,31 +5585,31 @@ public final class MessageProto {
     internal_static_notify_protos_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_notify_protos_Message_descriptor,
-        new java.lang.String[] { "Sender", "Receiver", "Content", "MessageId", "Type", "Status", "Priority", });
-    internal_static_notify_protos_Sender_descriptor =
+        new java.lang.String[] { "Email", "Sms", "Notification", "MessageId", "Type", "Status", "Priority", });
+    internal_static_notify_protos_Email_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_notify_protos_Sender_fieldAccessorTable = new
+    internal_static_notify_protos_Email_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_notify_protos_Sender_descriptor,
-        new java.lang.String[] { "EmailId", "PhoneNumber", "Name", });
-    internal_static_notify_protos_Receiver_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_notify_protos_Receiver_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_notify_protos_Receiver_descriptor,
-        new java.lang.String[]{"EmailId", "PhoneNumber", "Name", "Cc", "Bcc",});
-    internal_static_notify_protos_Content_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-    internal_static_notify_protos_Content_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_notify_protos_Content_descriptor,
-            new java.lang.String[]{"Subject", "Body", "Attachment",});
+        internal_static_notify_protos_Email_descriptor,
+        new java.lang.String[] { "ToEmail", "CcEmail", "BccEmail", "FromEmail", "Subject", "Body", "Attachment", });
     internal_static_notify_protos_Attachment_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_notify_protos_Attachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_notify_protos_Attachment_descriptor,
         new java.lang.String[] { "Name", "Content", "ContentType", });
+    internal_static_notify_protos_Sms_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_notify_protos_Sms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_notify_protos_Sms_descriptor,
+        new java.lang.String[] { "PhoneNumber", "Body", "FromNumber", });
+    internal_static_notify_protos_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_notify_protos_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_notify_protos_Notification_descriptor,
+        new java.lang.String[] { "Channel", "Body", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
