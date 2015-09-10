@@ -38,7 +38,6 @@ public final class ServerApp {
         LOG.info("Validating server configuration...");
         ServerConfigurationValidator.getInstance().validate();
         LOG.info("Server configuration validation... passed!");
-        // throw new IllegalStateException("Forced shutdown");
     }
 
     private static void addShutdownHook(final List<Future<Queue>> futureList, final ExecutorService executor) {
