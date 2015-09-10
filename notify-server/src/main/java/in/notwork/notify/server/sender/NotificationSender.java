@@ -41,8 +41,8 @@ public class NotificationSender extends MessageSender {
     @Override
     public void send(final MessageProto.Message message) {
         LOG.debug("Preparing push notification...");
-        final String channelName = message.getReceiver().getName();
-        final String content = message.getContent().getBody();
+        final String channelName = message.getNotification().getChannel();
+        final String content = message.getNotification().getBody();
         final ClientSessionChannel channel = client.getChannel(channelName);
         channel.publish(content);
         if (LOG.isDebugEnabled()) {
