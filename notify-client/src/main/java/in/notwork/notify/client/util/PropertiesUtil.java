@@ -11,7 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @@author rishabh <br/>
+ * @author rishabh <br/>
+ *
  * http://howtodoinjava.com/2012/10/19/auto-reload-configuration-when-
  * any-change-happen-part-2 <br>
  * http://stackoverflow.com/questions/11747453/loading-updated-

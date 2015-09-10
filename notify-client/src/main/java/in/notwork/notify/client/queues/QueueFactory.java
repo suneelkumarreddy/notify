@@ -10,6 +10,9 @@ import org.slf4j.LoggerFactory;
 import java.lang.reflect.InvocationTargetException;
 
 /**
+ * Factory that creates the implementation of the {@link Queue}
+ * based on the configured property.
+ *
  * @author rishabh.
  */
 public final class QueueFactory {
@@ -20,6 +23,9 @@ public final class QueueFactory {
 
     private String configuredImplementation;
 
+    /**
+     * @return Instance of this factory.
+     */
     public static QueueFactory getInstance() {
         return ourInstance;
     }
@@ -29,7 +35,9 @@ public final class QueueFactory {
         // TODO get other configuration also, if any.
     }
 
-
+    /**
+     * @return The configured implementation of {@link Queue}.
+     */
     public Queue getQueue() {
         Queue queue = null;
         try {

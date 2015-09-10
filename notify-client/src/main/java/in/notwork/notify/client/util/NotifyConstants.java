@@ -1,6 +1,8 @@
 package in.notwork.notify.client.util;
 
 /**
+ * Constants used in Notify.
+ *
  * @author rishabh.
  */
 public class NotifyConstants {
