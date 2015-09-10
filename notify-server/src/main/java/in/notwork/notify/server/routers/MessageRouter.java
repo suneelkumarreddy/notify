@@ -12,12 +12,19 @@ import org.slf4j.LoggerFactory;
 import static in.notwork.notify.client.message.MessageType.*;
 
 /**
+ * Implementation of {@link Router}.
+ * This class is responsible to send the message to respective {@link MessageSender}
+ * based on the {@link MessageType}.
+ *
  * @author rishabh.
  */
 public class MessageRouter implements Router {
 
     private static final Logger LOG = LoggerFactory.getLogger(MessageRouter.class);
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void routeMessage(final byte[] data) {
         try {

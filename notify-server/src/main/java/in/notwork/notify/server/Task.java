@@ -12,6 +12,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeoutException;
 
 /**
+ * Wrapper for Queue consumers. Allowing for each queue consumer to run on its own thread.
+ *
  * @author rishabh.
  */
 public class Task implements Callable<Queue> {

@@ -20,6 +20,8 @@ import java.util.Properties;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * {@link MessageSender} to send Emails.
+ *
  * @author rishabh.
  */
 public class EmailSender extends MessageSender {
@@ -28,11 +30,19 @@ public class EmailSender extends MessageSender {
 
     private Session session;
 
+    /**
+     * Constructor.
+     *
+     * @param config Configuration for sending email.
+     */
     public EmailSender(HashMap<String, String> config) {
         super(config);
         prepareSession();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void send(MessageProto.Message message) {
         LOG.debug("Preparing email...");
@@ -101,12 +111,18 @@ public class EmailSender extends MessageSender {
         mimeMessage.setContent(multipart);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void destroy() {
         LOG.debug("Destroying email session...");
         session = null;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isValid() {
         boolean flag = false;

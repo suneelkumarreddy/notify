@@ -10,6 +10,8 @@ import static in.notwork.notify.client.util.NotifyConstants.*;
 
 
 /**
+ * Responsible for the creating/initialising the {@link in.notwork.notify.server.sender.MessageSender} pool.
+ *
  * @author rishabh.
  */
 public final class MessageSenderPoolController {
@@ -20,6 +22,9 @@ public final class MessageSenderPoolController {
 
     private static MessageSenderPoolController ourInstance = new MessageSenderPoolController();
 
+    /**
+     * @return Instance of this class.
+     */
     public static MessageSenderPoolController getInstance() {
         return ourInstance;
     }
@@ -79,6 +84,9 @@ public final class MessageSenderPoolController {
         LOG.debug("pool.setMaxTotalPerKey(10)");
     }
 
+    /**
+     * @return The {@link in.notwork.notify.server.sender.MessageSender} pool.
+     */
     public MessageSenderPool getPool() {
         return pool;
     }

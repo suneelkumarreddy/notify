@@ -11,6 +11,8 @@ import java.util.Map;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * Helper used by the {@link MessageSenderPoolFactory} to create the objects for the pool.
+ *
  * @author rishabh.
  */
 public final class MessageSenderPoolFactoryHelper {
