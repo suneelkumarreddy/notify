@@ -5,7 +5,7 @@ A message sending module. The intention of developing Notify is to achieve one s
 Currently, it is being developed to make use of the following providers:
 
  - SMTP (SSL/TLS)
- - SMS Gateway (Rest API)
+ - SMS Gateway (Rest API) - under development
  - Pub-Sub System (Faye)
 
 Please see the [wiki](https://github.com/rishabh9/notify/wiki) for more details.
