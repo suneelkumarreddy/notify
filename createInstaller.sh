@@ -14,10 +14,6 @@ cp -R notify-server/target/lib notify-server-0.1.0/
 cp -R notify-server/target/conf notify-server-0.1.0/
 cp notify-server/target/notify-server-0.1.0.jar notify-server-0.1.0/
 
-# Copy the configuration files.
-cp notify-server/target/classes/log4j2.xml notify-server-0.1.0/conf/
-cp notify-server/target/classes/notify.properties notify-server-0.1.0/conf/
-
 # Copy the start and stop scripts.
 cp run.sh notify-server-0.1.0/
 cp stop.sh notify-server-0.1.0/
