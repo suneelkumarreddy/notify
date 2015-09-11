@@ -1,4 +1,4 @@
-package in.notwork.notify.server.notify.client.samples;
+package in.notwork.notify;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

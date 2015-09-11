@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * Validates the configuration while starting the server.
+ *
  * @author rishabh.
  */
 public final class ServerConfigurationValidator {
@@ -33,6 +35,11 @@ public final class ServerConfigurationValidator {
     private ServerConfigurationValidator() {
     }
 
+    /**
+     * Validate the server configuration.
+     *
+     * @throws IllegalStateException On invalid configuration.
+     */
     public void validate() throws IllegalStateException {
         LOG.debug("Validating the server properties...");
         validateForEmptyOrMultipleValues();

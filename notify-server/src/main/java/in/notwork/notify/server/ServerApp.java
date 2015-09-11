@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * Hello world!
+ * The Server starter.
  */
 public final class ServerApp {
 
@@ -19,6 +19,11 @@ public final class ServerApp {
 
     private static int defaultCount = 5;
 
+    /**
+     * The MAIN method.
+     *
+     * @param args Only one argument. The count of consumers to be created. Maximum allowed value is 5.
+     */
     public static void main(final String... args) {
         validateServerConfiguration();
         if (validate(args)) {
@@ -38,7 +43,6 @@ public final class ServerApp {
         LOG.info("Validating server configuration...");
         ServerConfigurationValidator.getInstance().validate();
         LOG.info("Server configuration validation... passed!");
-        // throw new IllegalStateException("Forced shutdown");
     }
 
     private static void addShutdownHook(final List<Future<Queue>> futureList, final ExecutorService executor) {

@@ -16,12 +16,17 @@ import static in.notwork.notify.server.pool.MessageSenderPoolFactoryHelper.getCo
 import static in.notwork.notify.server.pool.MessageSenderPoolFactoryHelper.loadConfiguration;
 
 /**
+ * Factory for the {@link MessageSender} pool.
+ *
  * @author rishabh.
  */
 public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<MessageType, MessageSender> {
 
     private static final Logger LOG = LoggerFactory.getLogger(MessageSenderPoolFactory.class);
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public MessageSender create(MessageType messageType) throws Exception {
         LOG.debug("Creating an instance for message type: {}", messageType);
@@ -39,16 +44,25 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PooledObject<MessageSender> wrap(MessageSender messageSender) {
         return new DefaultPooledObject<MessageSender>(messageSender);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PooledObject<MessageSender> makeObject(MessageType messageType) throws Exception {
         return wrap(create(messageType));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void destroyObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
         LOG.debug("Destroying {} for message type: {}, as it is no longer needed by the pool.",
@@ -56,17 +70,26 @@ public class MessageSenderPoolFactory extends BaseKeyedPooledObjectFactory<Messa
         pooledObject.getObject().destroy();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean validateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) {
         LOG.debug("Validating {} from pool. Using key - {}", pooledObject, messageType);
         return pooledObject.getObject().isValid();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void activateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
         // no-op
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void passivateObject(MessageType messageType, PooledObject<MessageSender> pooledObject) throws Exception {
         // no-op

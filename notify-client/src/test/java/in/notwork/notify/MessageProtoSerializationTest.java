@@ -66,12 +66,13 @@ public class MessageProtoSerializationTest {
     @Test
     public void testMessageEmail() throws InvalidProtocolBufferException {
         MessageProto.Message before02 = new Email()
-                .to("John Doe", "john.doe@mailinator.com")
+                .to("john.doe@mailinator.com")
+                .to("hulk.hogan@mailinator.com")
                 .cc("angel.jane@mailinator.com")
                 .cc("melodrama.tom@mailinator.com")
                 .bcc("hero.sam@mailinator.com")
                 .bcc("peter.pan@mailinator.com")
-                .from("Lily Dee", "lilly.dee@mailinator.com")
+                .from("lilly.dee@mailinator.com")
                 .subject("Hi!")
                 .body("Nice dress ;)")
                 .build();
@@ -83,8 +84,8 @@ public class MessageProtoSerializationTest {
     @Test
     public void testMessageEmailSimple() throws InvalidProtocolBufferException {
         MessageProto.Message before01 = new Email()
-                .to("John Doe", "john.doe@mailinator.com")
-                .from("Lily Dee", "lilly.dee@mailinator.com")
+                .to("john.doe@mailinator.com")
+                .from("lilly.dee@mailinator.com")
                 .subject("Hi!")
                 .body("Nice dress ;)")
                 .build();

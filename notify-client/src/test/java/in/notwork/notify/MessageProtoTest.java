@@ -33,22 +33,10 @@ public class MessageProtoTest extends TestCase {
      */
     public void testApp() {
         MessageProto.Message before = MessageProto.Message.newBuilder()
-                .setSender(
-                        MessageProto.Sender.newBuilder()
-                                .setName("John Doe")
-                                .setPhoneNumber("+1234567890")
-                                .setEmailId("john.doe@mailinator.com")
-                                .build()
-                )
-                .setReceiver(
-                        MessageProto.Receiver.newBuilder()
-                                .setName("Lily Dee")
-                                .setPhoneNumber("+9876543210")
-                                .setEmailId("lily.dee@mailinator.com")
-                                .build()
-                )
-                .setContent(
-                        MessageProto.Content.newBuilder()
+                .setEmail(
+                        MessageProto.Email.newBuilder()
+                                .addToEmail("john.doe@mailinator.com")
+                                .setFromEmail("lily.dee@mailinator.com")
                                 .setSubject("Hello!")
                                 .setBody("Hello Lily!")
                                 .build()

@@ -16,6 +16,8 @@ import java.util.concurrent.TimeoutException;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * RabbitMQ implementation of {@link Queue}.
+ *
  * @author rishabh.
  */
 public class RabbitMQ implements Queue {
@@ -51,6 +53,9 @@ public class RabbitMQ implements Queue {
                 configuredQueue, host, username, durable, autoDelete, exclusive);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void connect() throws IOException, TimeoutException {
         Config config = new Config().withRecoveryPolicy(RecoveryPolicies.recoverAlways());
@@ -65,6 +70,9 @@ public class RabbitMQ implements Queue {
         channel.queueDeclare(configuredQueue, durable, exclusive, autoDelete, null);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void publish(byte[] bytes) throws IOException {
         if (null == channel) {
@@ -75,6 +83,9 @@ public class RabbitMQ implements Queue {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void disconnect() throws IOException, TimeoutException {
         if (null == channel || null == connection) {
@@ -88,6 +99,9 @@ public class RabbitMQ implements Queue {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void subscribe(Router router) throws IOException {
         com.rabbitmq.client.Consumer consumer = new DefaultConsumer(channel) {
@@ -96,8 +110,6 @@ public class RabbitMQ implements Queue {
                                        AMQP.BasicProperties properties, byte[] body)
                     throws IOException {
 
-                String message = new String(body, "UTF-8");
-                System.out.println("[" + Thread.currentThread().getName() + "] Received '" + message + "'");
                 router.routeMessage(body);
             }
         };

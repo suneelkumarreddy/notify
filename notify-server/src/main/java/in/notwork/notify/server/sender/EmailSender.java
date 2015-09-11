@@ -20,6 +20,8 @@ import java.util.Properties;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * {@link MessageSender} to send Emails.
+ *
  * @author rishabh.
  */
 public class EmailSender extends MessageSender {
@@ -28,11 +30,19 @@ public class EmailSender extends MessageSender {
 
     private Session session;
 
+    /**
+     * Constructor.
+     *
+     * @param config Configuration for sending email.
+     */
     public EmailSender(HashMap<String, String> config) {
         super(config);
         prepareSession();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void send(MessageProto.Message message) {
         LOG.debug("Preparing email...");
@@ -41,40 +51,36 @@ public class EmailSender extends MessageSender {
 
             Message mimeMessage = new MimeMessage(session);
 
-            String fromAddress = message.getSender().getEmailId();
+            String fromAddress = message.getEmail().getFromEmail();
             mimeMessage.setFrom(new InternetAddress(fromAddress));
 
-            String toAddress = message.getReceiver().getEmailId();
-            mimeMessage.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(toAddress));
-
-            String[] ccList = new String[message.getReceiver().getCcCount()];
-            for (int i = 0; i < message.getReceiver().getCcCount(); i++) {
-                ccList[i] = message.getReceiver().getCc(i);
+            String toCsv = getToList(message);
+            if (!toCsv.isEmpty()) {
+                mimeMessage.setRecipients(Message.RecipientType.TO,
+                        InternetAddress.parse(toCsv));
             }
 
             String ccCsv = getCcList(message);
-
-            String bccCsv = getBccList(message);
-
-            if (null != ccCsv && !ccCsv.isEmpty()) {
+            if (!ccCsv.isEmpty()) {
                 mimeMessage.setRecipients(Message.RecipientType.CC,
                         InternetAddress.parse(ccCsv));
             }
 
-            if (null != bccCsv && !bccCsv.isEmpty()) {
+            String bccCsv = getBccList(message);
+            if (!bccCsv.isEmpty()) {
                 mimeMessage.setRecipients(Message.RecipientType.BCC,
                         InternetAddress.parse(bccCsv));
             }
 
-            String subject = message.getContent().getSubject();
+            String subject = message.getEmail().getSubject();
             mimeMessage.setSubject(subject);
 
             prepareBody(message, mimeMessage);
 
             Transport.send(mimeMessage);
 
-            LOG.debug("Email sent - SUBJ: {}, TO: {}, FROM: {}", subject, toAddress, fromAddress);
+            LOG.debug("Email sent - SUBJ: {}, TO: {}, CC: {}, BCC: {}, FROM: {}",
+                    subject, toCsv, ccCsv, bccCsv, fromAddress);
 
         } catch (MessagingException e) {
             LOG.error("Unable to send email", e);
@@ -86,11 +92,11 @@ public class EmailSender extends MessageSender {
     private void prepareBody(MessageProto.Message message, Message mimeMessage) throws MessagingException {
         Multipart multipart = new MimeMultipart();
         BodyPart part = new MimeBodyPart();
-        part.setText(message.getContent().getBody());
+        part.setText(message.getEmail().getBody());
         multipart.addBodyPart(part);
 
-        if (message.getContent().getAttachmentCount() > 0) {
-            List<MessageProto.Attachment> attachments = message.getContent().getAttachmentList();
+        if (message.getEmail().getAttachmentCount() > 0) {
+            List<MessageProto.Attachment> attachments = message.getEmail().getAttachmentList();
             for (MessageProto.Attachment attachment : attachments) {
                 BodyPart bodyPart = new MimeBodyPart();
                 DataSource source = new ByteArrayDataSource(
@@ -105,12 +111,18 @@ public class EmailSender extends MessageSender {
         mimeMessage.setContent(multipart);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void destroy() {
         LOG.debug("Destroying email session...");
         session = null;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isValid() {
         boolean flag = false;
@@ -120,11 +132,23 @@ public class EmailSender extends MessageSender {
         return flag;
     }
 
+    private String getToList(MessageProto.Message message) {
+        int count = message.getEmail().getToEmailCount();
+        StringBuilder toCsv = new StringBuilder("");
+        for (int i = 0; i < count; i++) {
+            toCsv.append(message.getEmail().getToEmail(i));
+            if (i < count - 1) {
+                toCsv.append(",");
+            }
+        }
+        return toCsv.toString();
+    }
+
     private String getBccList(MessageProto.Message message) {
-        int count = message.getReceiver().getBccCount();
+        int count = message.getEmail().getBccEmailCount();
         StringBuilder bccCsv = new StringBuilder("");
         for (int i = 0; i < count; i++) {
-            bccCsv.append(message.getReceiver().getBcc(i));
+            bccCsv.append(message.getEmail().getBccEmail(i));
             if (i < count - 1) {
                 bccCsv.append(",");
             }
@@ -133,10 +157,10 @@ public class EmailSender extends MessageSender {
     }
 
     private String getCcList(MessageProto.Message message) {
-        int count = message.getReceiver().getCcCount();
+        int count = message.getEmail().getCcEmailCount();
         StringBuilder ccCsv = new StringBuilder("");
         for (int i = 0; i < count; i++) {
-            ccCsv.append(message.getReceiver().getCc(i));
+            ccCsv.append(message.getEmail().getCcEmail(i));
             if (i < count - 1) {
                 ccCsv.append(",");
             }
