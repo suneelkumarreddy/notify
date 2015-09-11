@@ -39,7 +39,12 @@ public class SmsSender extends MessageSender {
     public void send(MessageProto.Message message) {
 
         try {
-            List<KapSysSMSResponse> kapSysSMSResponseList = KapSysUtil.sendKapSysSMS(config, message.getSms().Receiver().getPhoneNumber(), message.getContent().toString());
+            int phoneNumberCount = message.getSms().getPhoneNumberCount();
+            StringBuilder builder = new StringBuilder();
+            for(int i=0;i<phoneNumberCount;i++){
+                builder = builder.append(message.getSms().getPhoneNumber(i));
+            }
+            List<KapSysSMSResponse> kapSysSMSResponseList = KapSysUtil.sendKapSysSMS(config, builder.toString(), message.getSms().getBody());
             log.info(kapSysSMSResponseList);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
