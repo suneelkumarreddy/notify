@@ -15,21 +15,31 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * {@link MessageSender} to send SMS.
+ *
  * @author rishabh.
  */
 public class SmsSender extends MessageSender {
 
     private static final Log log = LogFactory.getLog(SmsSender.class);
 
+    /**
+     * Constructor.
+     *
+     * @param config Configuration for sending SMS.
+     */
     public SmsSender(HashMap<String, String> config) {
         super(config);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void send(MessageProto.Message message) {
 
         try {
-            List<KapSysSMSResponse> kapSysSMSResponseList = KapSysUtil.sendKapSysSMS(config, message.getReceiver().getPhoneNumber(), message.getContent().toString());
+            List<KapSysSMSResponse> kapSysSMSResponseList = KapSysUtil.sendKapSysSMS(config, message.getSms().Receiver().getPhoneNumber(), message.getContent().toString());
             log.info(kapSysSMSResponseList);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -50,11 +60,17 @@ public class SmsSender extends MessageSender {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void destroy() {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isValid() {
         return false;

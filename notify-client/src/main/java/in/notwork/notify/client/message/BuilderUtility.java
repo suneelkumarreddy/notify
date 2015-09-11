@@ -3,6 +3,8 @@ package in.notwork.notify.client.message;
 import in.notwork.notify.protos.MessageProto;
 
 /**
+ * Helper for the Builder class to build the protobuf message object.
+ *
  * @author rishabh.
  */
 final class BuilderUtility {
@@ -10,36 +12,12 @@ final class BuilderUtility {
     private BuilderUtility() {
     }
 
-    static void mergeReceiver(MessageProto.Message.Builder builder, final MessageProto.Receiver receiver) {
-        if (null != builder) {
-            if (builder.hasReceiver()) {
-                builder.mergeReceiver(receiver);
-            } else {
-                builder.mergeReceiver(receiver);
-            }
-        }
-    }
-
-    static void mergeSender(MessageProto.Message.Builder builder, final MessageProto.Sender sender) {
-        if (null != builder) {
-            if (builder.hasSender()) {
-                builder.mergeSender(sender);
-            } else {
-                builder.setSender(sender);
-            }
-        }
-    }
-
-    static void mergeContent(MessageProto.Message.Builder builder, final MessageProto.Content content) {
-        if (null != builder) {
-            if (builder.hasContent()) {
-                builder.mergeContent(content);
-            } else {
-                builder.setContent(content);
-            }
-        }
-    }
-
+    /**
+     * Converts {@link MessagePriority} to {@link MessageProto.Priority}
+     *
+     * @param priority The {@link MessagePriority} enum.
+     * @return {@link MessageProto.Priority} enum.
+     */
     static MessageProto.Priority getPriority(final MessagePriority priority) {
         MessageProto.Priority protoPriority;
         switch (priority) {
@@ -56,6 +34,12 @@ final class BuilderUtility {
         return protoPriority;
     }
 
+    /**
+     * Converts {@link MessageStatus} to {@link MessageProto.Status}
+     *
+     * @param status The {@link MessageStatus} enum.
+     * @return {@link MessageProto.Status} enum.
+     */
     static MessageProto.Status getStatus(final MessageStatus status) {
         MessageProto.Status protoStatus;
         switch (status) {
@@ -75,6 +59,12 @@ final class BuilderUtility {
         return protoStatus;
     }
 
+    /**
+     * Converts {@link MessageType} to {@link MessageProto.Type}
+     *
+     * @param type The {@link MessageType} enum.
+     * @return {@link MessageProto.Type} enum.
+     */
     static MessageProto.Type getType(final MessageType type) {
         MessageProto.Type protoType;
         switch (type) {
@@ -90,5 +80,4 @@ final class BuilderUtility {
         }
         return protoType;
     }
-
 }

@@ -6,31 +6,39 @@ option java_outer_classname = "MessageProto";
 
 message Message {
 
-    optional Sender sender = 1;
-    optional Receiver receiver = 2;
-    optional Content content = 3;
+    optional Email email = 1;
+    optional Sms sms = 2;
+    optional Notification notification = 3;
     optional string message_id = 4;
     required Type type = 5;
     optional Status status = 6;
     optional Priority priority = 7 [default = LOW];
 }
 
-message Sender {
-    optional string email_id = 1;
-    optional string phone_number = 2;
-    optional string name = 3; // person or channel name
+message Email {
+    repeated string to_email = 1;
+    repeated string cc_email = 2;
+    repeated string bcc_email = 3;
+    optional string from_email = 4;
+    optional string subject = 5;
+    optional string body = 6;
+    repeated Attachment attachment = 7;
 }
 
-message Receiver {
-    optional string email_id = 1;
-    optional string phone_number = 2;
-    optional string name = 3; // person or channel name
-    repeated string cc = 4;
-    repeated string bcc = 5;
+message Attachment {
+    required string name = 1;
+    required bytes content = 2;
+    required string contentType = 3;
 }
 
-message Content {
-    optional string subject = 1;
+message Sms {
+    repeated string phone_number = 1;
+    optional string body = 2;
+    optional string from_number = 3;
+}
+
+message Notification {
+    optional string channel = 1;
     optional string body = 2;
 }
 

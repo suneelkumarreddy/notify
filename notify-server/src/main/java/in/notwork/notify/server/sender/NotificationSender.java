@@ -14,6 +14,8 @@ import java.util.HashMap;
 import static in.notwork.notify.client.util.NotifyConstants.*;
 
 /**
+ * {@link MessageSender} to send Notifications.
+ *
  * @author rishabh.
  */
 public class NotificationSender extends MessageSender {
@@ -22,6 +24,11 @@ public class NotificationSender extends MessageSender {
 
     private BayeuxClient client;
 
+    /**
+     * Constructor.
+     *
+     * @param config Configuration for sending notifications.
+     */
     public NotificationSender(final HashMap<String, String> config) {
         super(config);
         prepareBayeuxConnection();
@@ -38,11 +45,14 @@ public class NotificationSender extends MessageSender {
         client.waitFor(1000, BayeuxClient.State.CONNECTED);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void send(final MessageProto.Message message) {
         LOG.debug("Preparing push notification...");
-        final String channelName = message.getReceiver().getName();
-        final String content = message.getContent().getBody();
+        final String channelName = message.getNotification().getChannel();
+        final String content = message.getNotification().getBody();
         final ClientSessionChannel channel = client.getChannel(channelName);
         channel.publish(content);
         if (LOG.isDebugEnabled()) {
@@ -53,6 +63,9 @@ public class NotificationSender extends MessageSender {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void destroy() {
         client.waitFor(5000, BayeuxClient.State.DISCONNECTED);
@@ -60,6 +73,9 @@ public class NotificationSender extends MessageSender {
         client = null;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isValid() {
         boolean flag = false;
